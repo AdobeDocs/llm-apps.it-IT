@@ -93,7 +93,7 @@ Compila i **[!UICONTROL dettagli app]** utilizzando i valori della sezione **[!U
 
 ![Finestra di dialogo Crea app](/help/assets/guide-create-app/app-details-1.png)
 
-In **[!UICONTROL Area dati di Analytics]**, selezionare l&#39;area in cui verranno archiviati i dati di Analytics. Impossibile modificare **** dopo la creazione dell&#39;app.
+In **[!UICONTROL Area dati di Analytics]**, selezionare l&#39;area in cui verranno archiviati i dati di Analytics. Impossibile modificare **&#x200B;**&#x200B;dopo la creazione dell&#39;app.
 
 >[!IMPORTANT]
 >
