@@ -1,15 +1,15 @@
 ---
-title: Sviluppo
+title: Sviluppo per le app Adobe LLM
 description: Struttura del progetto, flusso di lavoro di sviluppo locale e configurazione di test per il codice del gestore delle app Adobe LLM.
-source-git-commit: 483a71f5f1de5caf1bd89b26f4d67d2d5a0aa15a
+source-git-commit: 51ffb31eec82f9639bd7ade9052d61028c262d0e
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '318'
 ht-degree: 4%
 
 ---
 
 
-# Sviluppo
+# Sviluppo {#development}
 
 >[!IMPORTANT]
 >
