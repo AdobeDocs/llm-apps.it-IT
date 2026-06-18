@@ -1,9 +1,9 @@
 ---
 title: Sviluppo per le app Adobe LLM
 description: Struttura del progetto, flusso di lavoro di sviluppo locale e configurazione di test per il codice del gestore delle app Adobe LLM.
-source-git-commit: 51ffb31eec82f9639bd7ade9052d61028c262d0e
+source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '324'
 ht-degree: 4%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 4%
 
 >[!IMPORTANT]
 >
->**Dichiarazione di non responsabilità:** Versione beta di [!DNL LLM Apps]. Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale dell’applicazione o del prodotto.
+>[!DNL Adobe LLM Apps] è attualmente in Beta.
+>
+>Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
-Questa sezione descrive la struttura del progetto del gestore, il flusso di lavoro di sviluppo locale e la configurazione dei test. Per il contratto del gestore e il codice di esempio, vedere [Scrivere il gestore azioni](/help/guides/write-action-handler.md).
+Questa sezione descrive la struttura del progetto del gestore, il flusso di lavoro di sviluppo locale e la configurazione di test per [!DNL Adobe LLM Apps]. Per il contratto del gestore e il codice di esempio, vedere [Scrivere il gestore azioni](/help/guides/write-action-handler.md).
 
 ## Struttura del progetto
 

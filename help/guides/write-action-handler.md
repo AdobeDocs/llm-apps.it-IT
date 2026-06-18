@@ -1,9 +1,9 @@
 ---
 title: Scrivi il gestore azioni
 description: Scopri come scrivere un gestore di azioni per l’app Adobe LLM, incluso il contratto del gestore, structuredContent e un esempio funzionante.
-source-git-commit: 483a71f5f1de5caf1bd89b26f4d67d2d5a0aa15a
+source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '719'
 ht-degree: 0%
 
 ---
@@ -13,9 +13,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**Dichiarazione di non responsabilità:** Versione beta di [!DNL LLM Apps]. Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale dell’applicazione o del prodotto.
+>[!DNL Adobe LLM Apps] è attualmente in Beta.
+>
+>Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
-Dopo aver creato un&#39;azione nell&#39;interfaccia utente, i metadati vengono memorizzati nell&#39;API [!DNL LLM Apps], ma non è ancora presente codice. Questa guida illustra come scrivere la funzione di gestione che viene eseguita quando una piattaforma LLM (ad esempio [!DNL ChatGPT] o Claude) richiama l&#39;azione.
+Dopo aver creato un&#39;azione nell&#39;interfaccia utente di [!DNL Adobe LLM Apps], i metadati vengono memorizzati nell&#39;API di [!DNL LLM Apps], ma non è ancora presente codice. Questa guida illustra come scrivere la funzione di gestione che viene eseguita quando una piattaforma LLM (ad esempio [!DNL ChatGPT] o Claude) richiama l&#39;azione.
 
 Per i dettagli relativi al layout del progetto, allo sviluppo locale e ai test, vedere [Sviluppo](/help/reference/development.md).
 

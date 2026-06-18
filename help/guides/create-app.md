@@ -1,9 +1,9 @@
 ---
 title: Creare un’app
 description: Scopri come creare la prima app LLM e collegarla all’archivio GitHub.
-source-git-commit: 914b8a659e690ff47257c2c112f76816f4b0232c
+source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
 workflow-type: tm+mt
-source-wordcount: '735'
+source-wordcount: '745'
 ht-degree: 0%
 
 ---
@@ -11,19 +11,21 @@ ht-degree: 0%
 
 # Creare un’app
 
+>[!IMPORTANT]
+>
+>[!DNL Adobe LLM Apps] è attualmente in Beta.
+>
+>Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+
 >[!NOTE]
 >
 >Se sei un **partecipante al programma Beta**, utilizza invece la [guida all&#39;onboarding di Beta](/help/beta-onboarding/beta-onboarding.md), che copre l&#39;intera configurazione end-to-end dell&#39;app specifica.
-
->[!IMPORTANT]
->
->[!DNL Adobe LLM Apps] è attualmente in Beta. Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto.
 
 >[!NOTE]
 >
 >Prima di iniziare, assicurati che siano soddisfatti tutti i [prerequisiti](/help/overview/overview.md#prerequisites).
 
-Questa guida illustra come creare la prima app LLM, dallo stato vuoto a un progetto completamente configurato collegato all&#39;archivio [!DNL GitHub].
+Questa guida illustra come creare i primi [!DNL Adobe LLM Apps], dallo stato vuoto a un progetto completamente configurato collegato all&#39;archivio [!DNL GitHub].
 
 ## Apri [!DNL LLM Apps]
 
