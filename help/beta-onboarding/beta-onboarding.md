@@ -1,13 +1,15 @@
 ---
-title: Onboarding di Beta
+title: Onboarding di Beta per le app Adobe LLM
 description: Guida introduttiva alle app Adobe LLM come partecipante al programma Beta.
-source-git-commit: f144ccfc0ede6c556ccf4d99173f91d372add6f7
+source-git-commit: 98d5590c927bf8ffad54061ee027664452c129c1
 workflow-type: tm+mt
-source-wordcount: '1545'
+source-wordcount: '1551'
 ht-degree: 0%
 
 ---
 
+
+# Onboarding di Beta {#beta-onboarding}
 
 >[!IMPORTANT]
 >
