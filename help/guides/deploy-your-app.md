@@ -1,9 +1,9 @@
 ---
 title: Distribuire l’app
 description: Scopri come distribuire l’app Adobe LLM nell’ambiente di staging e produzione utilizzando l’interfaccia utente delle app LLM.
-source-git-commit: 483a71f5f1de5caf1bd89b26f4d67d2d5a0aa15a
+source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
 workflow-type: tm+mt
-source-wordcount: '354'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**Dichiarazione di non responsabilità:** Versione beta di [!DNL LLM Apps]. Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale dell’applicazione o del prodotto.
+>[!DNL Adobe LLM Apps] è attualmente in Beta.
+>
+>Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
 Dopo aver scritto il codice del gestore e averlo inviato all&#39;archivio collegato, puoi distribuire l&#39;app dall&#39;interfaccia utente [!DNL LLM Apps].
 

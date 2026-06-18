@@ -1,17 +1,23 @@
 ---
 title: Prerequisiti per le app Adobe LLM
 description: Cosa è necessario impostare prima della sessione di onboarding di Adobe LLM Apps Beta.
-source-git-commit: 98d5590c927bf8ffad54061ee027664452c129c1
+source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
 workflow-type: tm+mt
-source-wordcount: '539'
-ht-degree: 2%
+source-wordcount: '571'
+ht-degree: 1%
 
 ---
 
 
 # Prerequisiti per le app Adobe LLM {#prerequisites-for-adobe-llm-apps}
 
-Prima di iniziare la sessione di onboarding con Adobe, verifica di disporre dei seguenti elementi. Se possibile, eseguire i passaggi di verifica riportati di seguito. I risultati indicano chi deve trovarsi nella room e non se è possibile procedere.
+>[!IMPORTANT]
+>
+>[!DNL Adobe LLM Apps] è attualmente in Beta.
+>
+>Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+
+Prima della sessione di onboarding di [!DNL Adobe LLM Apps] con Adobe, verifica di disporre dei seguenti elementi. Se possibile, eseguire i passaggi di verifica riportati di seguito. I risultati indicano chi deve trovarsi nella room e non se è possibile procedere.
 
 ## Console per sviluppatori di Adobe
 

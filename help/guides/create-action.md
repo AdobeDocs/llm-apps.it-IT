@@ -1,15 +1,21 @@
 ---
 title: Creare un’azione
 description: Scopri come definire un’azione nell’interfaccia utente delle app LLM, inclusi metadati, parametri di input e configurazione dei widget.
-source-git-commit: 483a71f5f1de5caf1bd89b26f4d67d2d5a0aa15a
+source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '900'
 ht-degree: 1%
 
 ---
 
 
 # Creare un’azione
+
+>[!IMPORTANT]
+>
+>[!DNL Adobe LLM Apps] è attualmente in Beta.
+>
+>Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
 Questa guida illustra come definire un&#39;azione nell&#39;interfaccia utente di [!DNL LLM Apps]. Per informazioni generali sulle azioni e sul loro funzionamento, consulta [Concetti di base](/help/overview/overview.md#actions).
 

@@ -1,9 +1,9 @@
 ---
 title: Onboarding di Beta per le app Adobe LLM
 description: Guida introduttiva alle app Adobe LLM come partecipante al programma Beta.
-source-git-commit: 98d5590c927bf8ffad54061ee027664452c129c1
+source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
 workflow-type: tm+mt
-source-wordcount: '1551'
+source-wordcount: '1557'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->**Dichiarazione di non responsabilità:** Versione beta di [!DNL LLM Apps]. Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale dell’applicazione o del prodotto.
+>[!DNL Adobe LLM Apps] è attualmente in Beta.
+>
+>Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
 >[!NOTE]
 >
 >Prima di iniziare, assicurati che siano soddisfatti tutti i [prerequisiti](/help/beta-onboarding/prerequisites.md).
 
-In qualità di partecipante al programma Beta, riceverai un’e-mail con due archivi zip e un riferimento per la configurazione dell’app. Per scaricare la tua app live, segui i passaggi seguenti.
+In qualità di partecipante al programma Beta per [!DNL Adobe LLM Apps], riceverai un&#39;e-mail con due archivi zip e un riferimento alla configurazione dell&#39;app. Per scaricare la tua app live, segui i passaggi seguenti.
 
 ## Prima di iniziare
 
@@ -91,7 +93,7 @@ Compila i **[!UICONTROL dettagli app]** utilizzando i valori della sezione **[!U
 
 ![Finestra di dialogo Crea app](/help/assets/guide-create-app/app-details-1.png)
 
-In **[!UICONTROL Area dati di Analytics]**, selezionare l&#39;area in cui verranno archiviati i dati di Analytics. Impossibile modificare **&#x200B;**&#x200B;dopo la creazione dell&#39;app.
+In **[!UICONTROL Area dati di Analytics]**, selezionare l&#39;area in cui verranno archiviati i dati di Analytics. Impossibile modificare **** dopo la creazione dell&#39;app.
 
 >[!IMPORTANT]
 >
