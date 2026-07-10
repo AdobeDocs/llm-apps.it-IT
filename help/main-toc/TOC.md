@@ -2,10 +2,10 @@
 user-guide-title: Guida alle app LLM
 breadcrumb-title: App LLM
 user-guide-description: Crea, distribuisci e misura le esperienze del brand interattivo all’interno di assistenti AI come le piattaforme LLM (ChatGPT, Claude) utilizzando le app LLM di Adobe.
-source-git-commit: f144ccfc0ede6c556ccf4d99173f91d372add6f7
+source-git-commit: 344c5457eb79a19b1dae823732a1cd9866dcd9dc
 workflow-type: tm+mt
-source-wordcount: '59'
-ht-degree: 15%
+source-wordcount: '54'
+ht-degree: 11%
 
 ---
 
@@ -13,9 +13,6 @@ ht-degree: 15%
 # Guida di [!DNL LLM Apps] {#using}
 
 + [Panoramica](/help/overview/overview.md)
-+ Programma Beta {#beta}
-   + [Prerequisiti](/help/beta-onboarding/prerequisites.md)
-   + [Onboarding di Beta](/help/beta-onboarding/beta-onboarding.md)
 + Guide pratiche {#guides}
    + [Creare un’app](/help/guides/create-app.md)
    + [Creare un’azione](/help/guides/create-action.md)
