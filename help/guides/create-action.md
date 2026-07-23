@@ -1,7 +1,7 @@
 ---
 title: Creare un’azione
 description: Scopri come definire un’azione nell’interfaccia utente delle app LLM, inclusi metadati, parametri di input e configurazione dei widget.
-source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
+source-git-commit: ae2748319b5401555c3a616971f5697c17e74ac3
 workflow-type: tm+mt
 source-wordcount: '900'
 ht-degree: 1%
@@ -154,4 +154,3 @@ I metadati dell&#39;azione vengono salvati, ma non è ancora stato distribuito a
 ## Passaggi successivi
 
 - [Guida: configurazione del widget (EDS)](/help/guides/widgets.md)
-
