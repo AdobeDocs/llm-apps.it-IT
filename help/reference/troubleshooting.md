@@ -1,9 +1,9 @@
 ---
-title: Risoluzione dei problemi per le app Adobe LLM
-description: Soluzioni per problemi comuni durante la creazione, la distribuzione e il test delle app Adobe LLM.
-source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
+title: Risoluzione dei problemi relativi alle app Adobe LLM
+description: Risolvi i problemi comuni relativi a archivio, onboarding, gestore, widget, distribuzione e plug-in ChatGPT.
+source-git-commit: eec74b87457bc852d7a8dd0e46c2a4385a93ae0a
 workflow-type: tm+mt
-source-wordcount: '451'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -17,47 +17,55 @@ ht-degree: 0%
 >
 >Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
-Fornisce informazioni sulla risoluzione dei problemi durante l&#39;utilizzo di [!DNL Adobe LLM Apps].
+Inizia con il sintomo che puoi vedere. Durante la risoluzione dei problemi, non condividere credenziali, token, URL MCP privati o risultati sensibili del gestore.
 
-## Problemi comuni
+## Creazione e onboarding di app
 
-| Sintomo | Possibile causa | Cosa provare |
-|---------|----------------|-------------|
-| L’app non viene visualizzata nella piattaforma LLM | La sottoscrizione alla piattaforma LLM non supporta le app MCP personalizzate o la modalità sviluppatore non è abilitata | Verifica che il piano supporti le app MCP personalizzate. Attiva modalità sviluppatore in **Impostazioni → app → Impostazioni avanzate** |
-| Errore &quot;Impossibile connettersi&quot; nella piattaforma LLM | L&#39;URL del server MCP non è corretto o la distribuzione non è riuscita | Controlla nuovamente l’URL dalla pagina Dettagli app. Controllare la cronologia della distribuzione per individuare eventuali errori |
-| Azione non richiamata | La piattaforma LLM non è in grado di associare la domanda dell&#39;utente all&#39;azione | Utilizza `@YourApp` per richiamarlo esplicitamente. Migliora la descrizione dell’azione per facilitare la corrispondenza dell’intento del modello |
-| Widget non eseguito rendering | Gli URL dei widget EDS o i domini CSP non sono configurati correttamente | Verifica l’URL dello script e l’URL di incorporamento del widget nella finestra di dialogo Crea azione. Verifica che la risorsa CSP e i domini di connessione includano l’origine EDS |
-| Risposta vuota o di errore | Il gestore presenta un bug o è mancante | Eseguire prima il test localmente con `npm start`. Vedi [Sviluppo locale](/help/reference/development.md#local-development) |
-| Il widget viene caricato ma non mostra dati | La forma `structuredContent` non corrisponde a quanto previsto dal blocco | Registra `bridge.toolResult` nella funzione `decorate` del blocco e confronta con l&#39;output del gestore |
-| L’implementazione non riesce in &quot;Clone and build&quot; (Clona e genera) | Errore di `npm install` o di compilazione del webpack nel tuo archivio | Esegui `npm install && npm run build` localmente per riprodurre l&#39;errore |
-| La distribuzione non riesce in corrispondenza di &quot;Raccogli credenziali&quot; | Archivio non collegato o progetto Developer Console non configurato correttamente | Verifica che l’archivio sia collegato alla pagina Impostazioni dettagli app |
-| Errore CORS durante il caricamento del widget | Nel sito EDS mancano `access-control-allow-origin` intestazioni | Configurare le intestazioni CORS tramite `admin.hlx.page` |
-| L&#39;editor intestazioni HTTP restituisce `404 Error updating config: config not found` durante il salvataggio delle intestazioni CORS | Nella configurazione del sito manca una sezione `headers` | Consulta [Inizializzare la sezione delle intestazioni di configurazione del sito EDS](#initialize-the-eds-site-config-headers-section) di seguito |
-| Il widget esegue il rendering in anteprima ma non nella piattaforma LLM | Il blocco torna ai dati di esempio in modalità di anteprima ma non riesce con i dati live | Verifica con `structuredContent` reale utilizzando l&#39;ispettore MCP o il curl |
+| Sintomo | Cosa provare |
+|---------|-------------|
+| I nuovi archivi non vengono visualizzati | Seleziona **Gestisci repository su GitHub**, concedi all&#39;app GitHub delle app Adobe LLM l&#39;accesso a entrambi gli archivi, torna alla finestra di dialogo e aggiorna gli elenchi |
+| L&#39;archivio EDS richiede AEM Code Sync | Installa AEM Code Sync per l’archivio EDS, quindi torna alla finestra di dialogo Crea app LLM |
+| La convalida EDS indica che non si è amministratori | Seleziona **Apri AEM Live Admin**, aggiungi te stesso/a come amministratore per il sito EDS, quindi aggiorna l&#39;archivio |
+| L’onboarding è ancora in fase di generazione | Attendere circa 15 minuti. Puoi uscire dalla pagina e tornare in un secondo momento |
+| Report di onboarding non riusciti | Verifica che entrambi gli archivi siano accessibili e che il sito web sia pubblico tramite HTTPS, quindi contatta il team di Beta con il messaggio di errore visibile |
 
-## Inizializzare la sezione delle intestazioni di configurazione del sito EDS
+## Azioni e gestori
 
-Se l&#39;editor delle intestazioni HTTP restituisce `404 Error updating config: config not found`, nella configurazione del sito manca una sezione `headers`. Correggi manualmente:
+| Sintomo | Cosa provare |
+|---------|-------------|
+| Azione non richiamata | Allega il plug-in ChatGPT, conferma che **Esposizione al modello di IA** sia abilitato, migliora la descrizione dell&#39;azione e ridistribuisci le modifiche ai metadati |
+| Risposta vuota o di errore | Esegui `npm test`, quindi chiama il gestore con MCP Inspector o `curl`. Vedi [Sviluppo e test del gestore locale](/help/reference/development.md) |
+| Il gestore funziona localmente, ma non dopo la distribuzione | Conferma il push dell&#39;ultimo commit, la configurazione runtime è presente e l&#39;identificatore del codice azione corrisponde a `actions/<code-identifier>/index.js` |
+| L&#39;azione generata non può essere contrassegnata come rivista | Generazione del gestore e del widget di conferma completata. Controlla le richieste pull generate per i conflitti di unione, ricarica l&#39;azione e seleziona **Contrassegna come revisionato** |
 
-1. Vai a [tools.aem.live/tools/headers-edit/index.html](https://tools.aem.live/tools/headers-edit/index.html), immetti l&#39;organizzazione e il sito e fai clic su **[!UICONTROL Recupera]**.
-2. Aprire il browser DevTools (scheda Rete) e copiare il valore dell&#39;intestazione `x-auth-token` dalla richiesta Fetch.
-3. Recupera la configurazione del sito corrente:
+## Widget
 
-   ```bash
-   curl -H "x-auth-token: $TOKEN" \
-     https://admin.hlx.page/config/<your-github-org>/sites/<your-eds-repo>.json > config.json
-   ```
+| Sintomo | Cosa provare |
+|---------|-------------|
+| Widget non eseguito rendering | Verifica l’URL dello script, l’URL del widget, HTTPS, la pubblicazione EDS, i domini CSP e le intestazioni CORS |
+| Il widget esegue il rendering ma non mostra dati | Chiamare il gestore con MCP Inspector e confrontare la relativa forma `structuredContent` con i campi letti da `bridge.toolResult` |
+| Il widget funziona in anteprima diretta ma non in ChatGPT | L’anteprima diretta potrebbe utilizzare dati di esempio. Verifica il risultato del gestore distribuito e verifica che l’origine EDS sia consentita da CORS e CSP |
+| La richiesta del browser è bloccata | Aggiungi solo l’origine richiesta al campo CSP corretto e ridistribuisci |
+| L’editor intestazioni HTTP non può salvare la configurazione | Utilizza il [Servizio di configurazione AEM](https://aem.live/docs/config-service-setup) o chiedi all&#39;amministratore EDS di inizializzare la configurazione delle intestazioni del sito |
 
-4. Apri `config.json` e aggiungi `"headers": {}` all&#39;oggetto JSON.
-5. PUBBLICA di nuovo la configurazione aggiornata:
+Non registrare valori `bridge.toolResult` completi quando possono contenere dati personali o sensibili.
 
-   ```bash
-   curl -X POST \
-     -H "x-auth-token: $TOKEN" \
-     -H "Content-Type: application/json" \
-     -d @config.json \
-     "https://admin.hlx.page/config/<your-github-org>/sites/<your-eds-repo>.json"
-   ```
+## Distribuzione
 
-6. Ricarica l&#39;Editor intestazioni e salva l&#39;intestazione `Access-Control-Allow-Origin` normalmente.
+| Sintomo | Cosa provare |
+|---------|-------------|
+| Distribuzione non riuscita durante **la preparazione** | Verifica che l’archivio del gestore sia collegato e che l’accesso a Adobe Developer Console sia ancora valido |
+| Distribuzione non riuscita durante **Build app** | Eseguire `npm install`, `npm test` e `npm run build` localmente. Correggi gli errori di dipendenza, sintassi o test e invia le modifiche |
+| La distribuzione riesce ma mancano le modifiche | Conferma che il commit previsto è stato inviato e ridistribuito nello stesso ambiente |
+| L&#39;azione rimane **Non distribuita** | Ripeti la distribuzione dopo aver esaminato l’azione o averne modificato i metadati |
 
+## Plug-in ChatGPT
+
+| Sintomo | Cosa provare |
+|---------|-------------|
+| Il plug-in non viene visualizzato | Attiva la modalità sviluppatore, apri [chatgpt.com/plugins](https://chatgpt.com/plugins), verifica che il plug-in esista e seleziona **Connetti** |
+| Creazione del plug-in non riuscita | Conferma che la modalità sviluppatore è abilitata, copia di nuovo l&#39;URL del server MCP da **Verifica l&#39;app** e utilizza **URL del server** con **Nessuna autenticazione** |
+| Il plug-in si connette ma non può richiamare azioni | Conferma che il plug-in sia allegato alla chat, che le azioni siano esposte al modello e che sia distribuita la versione più recente |
+| Il plug-in utilizza l’ambiente errato | Modifica o ricrea il plug-in con l’URL del server MCP di stage o produzione previsto |
+
+Se il problema persiste, registra il nome dell’app, l’ambiente, il passaggio non riuscito, l’ora e il messaggio di errore visibile prima di contattare il team di Beta. Non includere segreti o dati sensibili dei clienti.
