@@ -1,15 +1,15 @@
 ---
-title: Creare la prima app LLM con Onboarding Agent
-description: Crea un’app Adobe LLM dal sito web, controlla le azioni generate, distribuiscila e testala in ChatGPT.
-source-git-commit: b9242903f930aa1770a999a2665e1e80d64d56b6
+title: Crea automaticamente la prima app LLM
+description: Crea un’app Adobe LLM dal sito web, controlla le azioni generate, distribuiscila e testala in una piattaforma LLM supportata, ad esempio ChatGPT.
+source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1217'
 ht-degree: 0%
 
 ---
 
 
-# Creare la prima app con l’agente di onboarding {#create-first-app}
+# Creare Automaticamente La Prima App {#create-first-app}
 
 >[!IMPORTANT]
 >
@@ -17,9 +17,9 @@ ht-degree: 0%
 >
 >Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
-L’agente di onboarding trasforma il tuo sito web in uno scaffold funzionante per app. Propone azioni, scrive il codice e i test dell&#39;handler, crea widget EDS e invia i file generati a due archivi [!DNL GitHub] di tua proprietà.
+La piattaforma trasforma il tuo sito web in un’app scaffold funzionante. Propone azioni, scrive il codice e i test dell&#39;handler, crea widget EDS e invia i file generati a due archivi [!DNL GitHub] di tua proprietà.
 
-Attendere circa 15 minuti per la generazione. Al termine di questa esercitazione, verrà distribuita un&#39;app che sarà possibile testare in [!DNL ChatGPT].
+Attendere circa 15 minuti per la generazione. Al termine di questa esercitazione, verrà distribuita un&#39;app che sarà possibile testare in una piattaforma LLM supportata, ad esempio [!DNL ChatGPT].
 
 **Percorso:** Conferma i requisiti → creare due archivi → creare l&#39;app → esaminare le azioni generate → distribuire in Stage → testare il plug-in → connettere i sistemi di produzione.
 
@@ -31,14 +31,14 @@ Questa esercitazione crea un&#39;app LLM per [Frescopa Coffee](https://frescopa.
 
 ## Creare due archivi vuoti
 
-L’agente di onboarding necessita di due archivi vuoti. Creare entrambi con lo stesso account o organizzazione [!DNL GitHub]:
+La piattaforma ha bisogno di due archivi vuoti. Creare entrambi con lo stesso account o organizzazione [!DNL GitHub]:
 
 - **Archivio gestori**: archivia i gestori azioni e i test. Ad esempio, `my-brand-llm-app`.
 - **Archivio EDS**: memorizza gli stili e i blocchi di widget generati. Ad esempio, `my-brand-llm-app-eds`.
 
 Vai a [github.com/new](https://github.com/new) per ogni archivio.
 
-Non inizializzare l&#39;archivio con una licenza README, `.gitignore` o. L’agente di onboarding prepara la struttura di progetto richiesta.
+Non inizializzare l&#39;archivio con una licenza README, `.gitignore` o. La piattaforma prepara la struttura di progetto richiesta.
 
 >[!TIP]
 >
@@ -55,7 +55,7 @@ Non inizializzare l&#39;archivio con una licenza README, `.gitignore` o. L’age
    >Una volta creata l’app, non è possibile modificare l’area di analisi.
 
 4. In **[!UICONTROL Genera la mia app]**, seleziona **[!UICONTROL Genera automaticamente la mia app]**.
-5. In **[!UICONTROL sito Web]**, immettere l&#39;URL del sito Web, incluso il protocollo `https://`. L’agente di onboarding analizza questo sito per determinare azioni utili e risultati di esempio rappresentativi.
+5. In **[!UICONTROL sito Web]**, immettere l&#39;URL del sito Web, incluso il protocollo `https://`. La piattaforma analizza questo sito per determinare azioni utili e risultati di esempio rappresentativi.
 
 ![Crea app LLM: dettagli app e la compilazione dell&#39;app sono abilitati](/help/assets/guide-onboarding-agent/app-details-onboarding.png)
 
@@ -118,13 +118,13 @@ Quando l&#39;archivio EDS selezionato è vuoto, [!DNL LLM Apps] lo inizializza c
 
 3. Torna a [!DNL LLM Apps], aggiorna l&#39;archivio EDS e seleziona di nuovo **[!UICONTROL Crea app]**.
 
-Dopo il superamento dei controlli di repository e amministratore, [!DNL LLM Apps] crea l&#39;app e avvia l&#39;agente di onboarding.
+Dopo il superamento dei controlli dell&#39;archivio e dell&#39;amministratore, [!DNL LLM Apps] crea l&#39;app e avvia la generazione di azioni.
 
 ## Attendi generazione azioni
 
 Vai alla pagina **[!UICONTROL Azioni]**, da sinistra. Nella pagina Azioni è visualizzato **Individuazione delle azioni per l&#39;esperienza di conversazione** durante l&#39;analisi del sito Web e la generazione dell&#39;app da parte dell&#39;agente. La generazione richiede in genere circa 15 minuti. Puoi uscire da questa pagina e tornare in un secondo momento.
 
-![Azioni: generazione di consigli da parte dell&#39;agente di onboarding](/help/assets/guide-onboarding-agent/actions-generating.png)
+![Azioni — generazione di consigli](/help/assets/guide-onboarding-agent/actions-generating.png)
 
 Durante la generazione, [!DNL LLM Apps]:
 
@@ -205,5 +205,5 @@ L’app generata utilizza dati di esempio. Prima di utilizzarlo con i clienti:
 6. **Verifica in Stage** — ridistribuisci e verifica ogni azione tramite il plug-in [!DNL ChatGPT].
 7. **Distribuisci in produzione** — dopo il completamento del test dello staging, distribuisci in produzione e crea o aggiorna il plug-in con l&#39;URL del server MCP di produzione.
 
-Per aggiungere una funzionalità non creata dall&#39;agente di onboarding, vedere [Creare un&#39;azione da zero](/help/guides/create-action.md).
+Per aggiungere una funzionalità non creata dalla piattaforma, vedere [Creare un&#39;azione da zero](/help/guides/create-action.md).
 

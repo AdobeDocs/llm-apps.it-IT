@@ -1,7 +1,7 @@
 ---
-source-git-commit: eec74b87457bc852d7a8dd0e46c2a4385a93ae0a
+source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,6 @@ Inizia da un sintomo osservabile.
 
 - **App Adobe LLM** — nome completo del prodotto alla prima menzione.
 - **App LLM**: un&#39;app gestita dal prodotto.
-- **Agente di onboarding**: funzionalità che crea lo scaffold iniziale.
 - **Genera la mia app** — Sezione interfaccia utente nella finestra di dialogo di creazione dell&#39;app.
 - **Crea automaticamente l&#39;app**. Etichetta di casella di controllo esatta.
 - **Azione**: funzionalità esposta alla piattaforma LLM.
@@ -74,10 +73,12 @@ Inizia da un sintomo osservabile.
 
 Evita il passaggio tra &quot;strumento&quot; e &quot;azione&quot; nella prosa rivolta all&#39;utente, a meno che non venga spiegato un dettaglio del protocollo MCP.
 
+Il prodotto è indipendente dalla piattaforma: il suo server MCP funziona con qualsiasi piattaforma LLM supportata, non solo ChatGPT. Utilizza &quot;una piattaforma LLM supportata, ad esempio ChatGPT&quot; (o simile) per affermazioni generali o illustrative. Denomina ChatGPT da solo solo in contenuti che sono effettivamente specifici di ChatGPT oggi — la guida Test in ChatGPT, i suoi collegamenti incrociati diretti e il riferimento specifico di ChatGPT o il contenuto per la risoluzione dei problemi.
+
 ## Percorso di lettura consigliato
 
 1. Panoramica e prerequisiti.
-2. Crea un’app con l’agente di onboarding.
+2. Crea automaticamente un’app.
 3. Esamina le azioni generate.
 4. Distribuisci nell’ambiente di staging e verifica il plug-in ChatGPT.
 5. Personalizza i gestori e i widget generati.

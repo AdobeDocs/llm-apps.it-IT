@@ -1,9 +1,9 @@
 ---
 title: Creare un’azione da zero
 description: Definisci i metadati delle azioni, implementane il gestore, connetti un widget EDS, verificalo e implementalo con le app Adobe LLM.
-source-git-commit: 4c259a4587c0a84bb634a9a56c043dfe1cfc31fb
+source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
 workflow-type: tm+mt
-source-wordcount: '1141'
+source-wordcount: '1137'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 >
 >Questa guida presuppone una conoscenza di base di Adobe Edge Delivery Services (EDS). Se non si ha familiarità con EDS, prima di connettere un widget leggere l&#39;esercitazione per sviluppatori [EDS](https://www.aem.live/developer/tutorial) e [Esplorare i blocchi](https://www.aem.live/docs/exploring-blocks) per apprendere gli elementi essenziali, ovvero i blocchi, la funzione `decorate` e la struttura del progetto EDS.
 
-Usa questa guida per aggiungere una funzionalità non creata dall’agente di onboarding. Definirai l&#39;azione in [!DNL LLM Apps], scriverai il relativo gestore nell&#39;archivio collegato, aggiungerai un widget se necessario, verificherai e implementerai.
+Usa questa guida per aggiungere una funzionalità che la piattaforma non ha creato. Definirai l&#39;azione in [!DNL LLM Apps], scriverai il relativo gestore nell&#39;archivio collegato, aggiungerai un widget se necessario, verificherai e implementerai.
 
 **Percorso:** Pianifica l&#39;azione → crearne i metadati → scrivere il gestore → connettere il widget → il test in locale → distribuire e testare il plug-in.
 
-Per la prima app, inizia con [Crea la tua prima app con l&#39;agente di onboarding](/help/guides/create-app.md).
+Per la prima app, inizia con [Crea automaticamente la prima app](/help/guides/create-app.md).
 
 ## Prima di iniziare
 

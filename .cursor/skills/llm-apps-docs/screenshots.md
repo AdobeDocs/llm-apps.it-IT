@@ -1,7 +1,7 @@
 ---
-source-git-commit: eec74b87457bc852d7a8dd0e46c2a4385a93ae0a
+source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '696'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,7 @@ L’utente deve acquisire gli stati pertinenti dal manifesto, tra cui:
 1. Crea un’app prima che GitHub sia connesso.
 2. Selezione dell’accesso all’archivio dell’app GitHub.
 3. **Crea automaticamente la mia app** abilitata con entrambi gli archivi selezionati.
-4. Creazione dell’app o avvio dell’agente di onboarding.
+4. Creazione di app o avvio automatico di app-build.
 5. Azioni in fase di generazione.
 6. Azioni generate pronte per la revisione.
 7. Metadati, gestore e widget di un’azione rappresentativa.

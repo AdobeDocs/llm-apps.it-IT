@@ -1,9 +1,9 @@
 ---
 title: Personalizzare un gestore di azioni generato
 description: Comprendi il contratto del gestore Adobe LLM Apps, sostituisci i dati di esempio generati e mantieni l’output del gestore allineato al relativo widget.
-source-git-commit: eec74b87457bc852d7a8dd0e46c2a4385a93ae0a
+source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '541'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 >
 >Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
-L’agente di onboarding crea un gestore di lavoro per ogni azione generata. Inizialmente il gestore restituisce dati di esempio in modo da poter testare l’esperienza completa.
+La piattaforma crea un gestore di lavoro per ogni azione generata. Inizialmente il gestore restituisce dati di esempio in modo da poter testare l’esperienza completa.
 
 Usa questa guida per comprendere il contratto del gestore e sostituire i dati di esempio con le API o le origini dati.
 

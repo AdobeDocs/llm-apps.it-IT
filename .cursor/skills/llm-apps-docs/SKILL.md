@@ -1,9 +1,9 @@
 ---
 name: llm-apps-docs
 description: Crea, aggiorna, rivedi e convalida la documentazione pubblica e le schermate delle app Adobe LLM. Utilizza ogni volta che modifichi gli articoli llm-apps.en, il relativo sommario di Experience League, la guida all’agente di onboarding, i documenti dei widget EDS, la guida di preparazione alla produzione o le schermate della documentazione.
-source-git-commit: ca0d8f49a295e6465f2e9b20809e69436bfa93d5
+source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '813'
 ht-degree: 0%
 
 ---
@@ -34,10 +34,11 @@ Se Produzione è in conflitto con l&#39;origine o i piani, documentare Produzion
 
 ## Regole di authoring
 
-- Guida gli utenti alle prime esperienze con Onboarding Agent.
+- Guida gli utenti alle prime fasi di creazione automatica dell&#39;app (flusso **[!UICONTROL Crea automaticamente l&#39;app]**).
 - Organizza la navigazione tra percorsi di utenti e risultati, non tra gli argomenti relativi all’implementazione.
 - Inserisci la sequenza di percorso vicino all’inizio di ogni guida e specifica il passaggio successivo condiviso.
-- Utilizza **Agente di onboarding** per le funzionalità del prodotto e copia esatta dell&#39;interfaccia utente, ad esempio **[!UICONTROL Crea automaticamente la mia app]** per i controlli.
+- Non utilizzare nomi in codice interni (ad esempio, &quot;Agente di onboarding&quot;) nei documenti rivolti al cliente; tale funzionalità non viene mai esposta nell’interfaccia utente del prodotto. Descrivilo genericamente (ad esempio, &quot;la piattaforma&quot;) e utilizza la copia esatta dell&#39;interfaccia utente, ad esempio **[!UICONTROL Crea automaticamente la mia app]** per i controlli.
+- [!DNL Adobe LLM Apps] è indipendente dalla piattaforma: il server MCP funziona con qualsiasi piattaforma LLM supportata, non solo [!DNL ChatGPT]. Non formulare affermazioni generali o illustrative come se [!DNL ChatGPT] fosse l&#39;unica destinazione (ad esempio, preferire &quot;una piattaforma LLM supportata come [!DNL ChatGPT]&quot; rispetto a &quot;ChatGPT&quot; da sola). Assegna esplicitamente un nome a [!DNL ChatGPT] solo nel contenuto autentico e al momento specifico di [!DNL ChatGPT]: la [Guida di prova in ChatGPT](/help/guides/test-in-chatgpt.md) dedicata, i collegamenti incrociati diretti/i passaggi procedurali e il contenuto di riferimento o risoluzione dei problemi specifico di [!DNL ChatGPT].
 - Spiega un concetto tecnico quando l’utente lo incontra per la prima volta; collega a un concetto più approfondito o materiale di riferimento.
 - Mantieni i tutorial lineari, guide pratiche incentrate sulle attività e pagine di riferimento basate sui fatti.
 - Includere solo le informazioni necessarie al lettore per l&#39;attività corrente; preferire frasi brevi e dirette.
@@ -45,7 +46,7 @@ Se Produzione è in conflitto con l&#39;origine o i piani, documentare Produzion
 - Distinguere lo scaffold generato dall’integrazione pronta per la produzione.
 - Evita nomi di lavoratori interni, campi del database, ticket di implementazione e dettagli instabili della pipeline.
 - Non duplicare le tabelle dei campi nelle guide; collega a riferimento.
-- Mantenere il frontmatter e le direttive di Experience League: `[!DNL]`, &grave;&grave;, `[!IMPORTANT]`, `[!NOTE]` e `[!TIP]`.
+- Mantenere il frontmatter e le direttive di Experience League: `[!DNL]`, ``, `[!IMPORTANT]`, `[!NOTE]` e `[!TIP]`.
 - Utilizzare collegamenti interni relativi alla directory principale: `/help/...`.
 - Utilizza la maiuscola/minuscola per titoli e intestazioni, a meno che l’etichetta del prodotto non richieda diversamente.
 - Utilizza un testo alternativo immagine descrittivo che spiega lo schermo e lo stato.

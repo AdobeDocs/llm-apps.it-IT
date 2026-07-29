@@ -1,9 +1,9 @@
 ---
 title: Panoramica delle app Adobe LLM
 description: Scopri cos’è un’app Adobe LLM, come funziona e cosa serve per iniziare.
-source-git-commit: 8b4027d0fd73b8134a7478a5044f992e6cf03024
+source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
 workflow-type: tm+mt
-source-wordcount: '972'
+source-wordcount: '970'
 ht-degree: 1%
 
 ---
@@ -34,17 +34,13 @@ ht-degree: 1%
 
 ## Perché [!DNL LLM Apps] conta
 
-Le interazioni LLM sono fondamentalmente diverse dalla ricerca tradizionale. La durata media della sessione di [!DNL ChatGPT] è quattro volte superiore a quella di una sessione di ricerca tradizionale. Oltre il 40% dei consumatori si affida agli strumenti di intelligenza artificiale per decisioni di acquisto complesse. Senza [!DNL LLM Apps], potresti vincere la menzione ma perdere il cliente. [!DNL LLM Apps] assicura che il tuo marchio non sia solo visibile ma utilizzabile nel momento esatto in cui un utente è pronto a decidere.
+Le interazioni LLM sono fondamentalmente diverse dalla ricerca tradizionale. La durata media della sessione LLM è quattro volte superiore a quella di una sessione di ricerca tradizionale. Oltre il 40% dei consumatori si affida agli strumenti di intelligenza artificiale per decisioni di acquisto complesse. Senza [!DNL LLM Apps], potresti vincere la menzione ma perdere il cliente. [!DNL LLM Apps] assicura che il tuo marchio non sia solo visibile ma utilizzabile nel momento esatto in cui un utente è pronto a decidere.
 
 ## Concetti fondamentali {#key-concepts}
 
 ### App LLM
 
 Il tuo assistente personalizzato con cui gli utenti interagiscono all&#39;interno di [!DNL ChatGPT] o altre piattaforme LLM. Raggruppa tutte le azioni e le distribuisce come una singola unità.
-
-### Agente di onboarding
-
-Il flusso di lavoro guidato per la creazione delle app è stato avviato da **[!UICONTROL Crea automaticamente l&#39;app]**. Analizza il sito web, propone azioni e genera un gestore e un widget per ogni azione.
 
 ### Azione {#actions}
 
@@ -133,23 +129,23 @@ Per verificare l&#39;accesso, aprire lo strumento di amministrazione utenti di [
 
 ### Sito Web
 
-È necessario un sito web HTTPS pubblico che rappresenti i prodotti, i servizi o le attività supportati dall’app. L’agente di onboarding analizza questo sito web per proporre azioni e creare dati di esempio rappresentativi.
+È necessario un sito web HTTPS pubblico che rappresenti i prodotti, i servizi o le attività supportati dall’app. La piattaforma analizza questo sito web per proporre azioni e creare dati di esempio rappresentativi.
 
 Non utilizzare siti web che espongono informazioni confidenziali o soggette al controllo degli accessi.
 
-### [!DNL ChatGPT] per il test
+### [!DNL ChatGPT] o [!DNL Claude] per il test
 
-Per completare l&#39;esercitazione introduttiva, utilizzare un piano [!DNL ChatGPT] supportato e abilitare la modalità sviluppatore. Gli amministratori di Workspace possono limitare l’accesso. Vedi [Test in ChatGPT](/help/guides/test-in-chatgpt.md#plan-requirements).
+Per completare l&#39;esercitazione introduttiva, utilizzare un piano [!DNL ChatGPT] supportato con la modalità sviluppatore abilitata oppure un piano [!DNL Claude] supportato con i connettori personalizzati abilitati. Gli amministratori di Workspace o dell’organizzazione possono limitare l’accesso. Vedi [Test in ChatGPT](/help/guides/test-in-chatgpt.md#plan-requirements) o [Test in Claude](/help/guides/test-in-claude.md#plan-requirements).
 
 ## Scegli il tuo percorso {#choose-your-journey}
 
 ### &#x200B;1. Creare e avviare la prima app
 
-Inizia con [Crea e avvia la tua prima app](/help/guides/create-app.md). Questo percorso inizia con due archivi vuoti e termina con un&#39;app pronta per la produzione testata come plug-in [!DNL ChatGPT].
+Inizia con [Crea e avvia la tua prima app](/help/guides/create-app.md). Questo percorso inizia con due archivi vuoti e termina con un&#39;app pronta per la produzione testata come plug-in in una piattaforma LLM supportata, ad esempio [!DNL ChatGPT].
 
 ### &#x200B;2. Personalizzare l’app generata
 
-Scegli questo percorso al momento della creazione dell’app da parte dell’agente di onboarding e vuoi sostituire il comportamento di esempio:
+Scegli questo percorso quando la piattaforma ha creato l’app automaticamente e vuoi sostituire il comportamento di esempio:
 
 1. [Personalizza i gestori generati](/help/guides/customize-handler.md) per connettere le API e definire i dati restituiti da ogni azione.
 2. [Personalizza i widget generati](/help/guides/widgets.md) per utilizzare tali dati e applicare le interazioni e la progettazione.
@@ -160,7 +156,7 @@ Scegli [Aggiungi una nuova azione da zero](/help/guides/create-action.md) per de
 
 ### &#x200B;4. Connettere un progetto EDS esistente
 
-Scegliere [Connetti un progetto EDS esistente](/help/guides/bring-your-own-eds.md) se si dispone già di un sito EDS o non si utilizza l&#39;agente di onboarding.
+Scegliere [Connetti un progetto EDS esistente](/help/guides/bring-your-own-eds.md) se si dispone già di un sito EDS o se l&#39;app non è stata generata automaticamente.
 
-Ogni percorso utilizza i passaggi [distribuzione](/help/guides/deploy-your-app.md) e [test del plug-in ChatGPT](/help/guides/test-in-chatgpt.md) condivisi.
+Ogni percorso utilizza il passaggio [distribuzione](/help/guides/deploy-your-app.md) condivisa, quindi [test del plug-in ChatGPT](/help/guides/test-in-chatgpt.md) o [test del connettore Claude](/help/guides/test-in-claude.md).
 

@@ -1,9 +1,9 @@
 ---
 title: Distribuire l’app
 description: Scopri come distribuire l’app Adobe LLM nell’ambiente di staging e produzione utilizzando l’interfaccia utente delle app LLM.
-source-git-commit: eec74b87457bc852d7a8dd0e46c2a4385a93ae0a
+source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: '322'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Dopo aver scritto il codice del gestore e averlo inviato all&#39;archivio collegato, puoi distribuire l&#39;app dall&#39;interfaccia utente [!DNL LLM Apps].
 
-Questo è un passaggio condiviso per ogni percorso. Dopo la distribuzione, continuare a [testare il plug-in ChatGPT](/help/guides/test-in-chatgpt.md).
+Questo è un passaggio condiviso per ogni percorso. Dopo la distribuzione, continuare a [testare il plug-in ChatGPT](/help/guides/test-in-chatgpt.md) o [testare il connettore Claude](/help/guides/test-in-claude.md).
 
 ## Avviare l’implementazione
 
@@ -63,5 +63,6 @@ distribuzione più recente completata.
 
 ## Passaggio successivo
 
-[Verifica l&#39;app distribuita come plug-in ChatGPT](/help/guides/test-in-chatgpt.md).
+- [Verifica l&#39;app distribuita come plug-in ChatGPT](/help/guides/test-in-chatgpt.md).
+- [Verifica l&#39;app distribuita come connettore Claude](/help/guides/test-in-claude.md).
 
