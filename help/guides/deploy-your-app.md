@@ -1,15 +1,15 @@
 ---
 title: Distribuire l’app
 description: Scopri come distribuire l’app Adobe LLM nell’ambiente di staging e produzione utilizzando l’interfaccia utente delle app LLM.
-source-git-commit: 1a99e2e80e50a3bcf9ce6fb910365202bf06e113
+source-git-commit: eec74b87457bc852d7a8dd0e46c2a4385a93ae0a
 workflow-type: tm+mt
-source-wordcount: '359'
+source-wordcount: '309'
 ht-degree: 0%
 
 ---
 
 
-# Distribuire l’app
+# Distribuire l’app {#deploy-your-app}
 
 >[!IMPORTANT]
 >
@@ -19,26 +19,24 @@ ht-degree: 0%
 
 Dopo aver scritto il codice del gestore e averlo inviato all&#39;archivio collegato, puoi distribuire l&#39;app dall&#39;interfaccia utente [!DNL LLM Apps].
 
+Questo è un passaggio condiviso per ogni percorso. Dopo la distribuzione, continuare a [testare il plug-in ChatGPT](/help/guides/test-in-chatgpt.md).
+
 ## Avviare l’implementazione
 
-Passa alla pagina Dettagli app. Fai clic sul pulsante **[!UICONTROL Distribuisci]** nell&#39;angolo in alto a destra:
+Aprire la pagina Dettagli app e selezionare **[!UICONTROL Distribuisci]**.
 
-![Dettagli app - Pronto per la distribuzione](/help/assets/guide-deploy/app-detail-deploy-ready.png)
+Selezionare l&#39;ambiente di destinazione, quindi selezionare **[!UICONTROL Distribuisci]**.
 
-Verrà aperta la finestra di dialogo di distribuzione. Seleziona l’ambiente di destinazione dal menu a discesa:
+![Distribuisci — seleziona l&#39;ambiente di destinazione](/help/assets/guide-onboarding-agent/deploy-stage.png)
 
-![Finestra di dialogo Distribuisci - Seleziona ambiente di destinazione](/help/assets/guide-deploy/deploy-pipeline-dropdown.png)
+La distribuzione prevede quattro passaggi:
 
-Fare clic su **[!UICONTROL Distribuisci]** per avviare la pipeline. Le quattro fasi sono:
+1. **Preparazione** - recupera la configurazione necessaria per distribuire l&#39;app.
+2. **Avvia distribuzione** — avvia il processo di distribuzione in background.
+3. **Genera app**: installa le dipendenze e crea il codice di archivio più recente.
+4. **Pubblica** — pubblica l&#39;app in [!DNL Adobe I/O Runtime].
 
-1. **Raccogli le credenziali**: legge i metadati dell&#39;app, genera un token [!DNL GitHub] e recupera le credenziali di runtime dall&#39;API della console.
-2. **Attiva pipeline di compilazione** - invia tutti i parametri alla pipeline di compilazione.
-3. **Clona e genera**: la pipeline clona l&#39;archivio, genera `actions.json` dai metadati dell&#39;interfaccia utente, esegue `npm install` e webpack per produrre `dist/index.js`.
-4. **Distribuisci in fase di esecuzione**: distribuisce il bundle nello spazio dei nomi [!DNL Adobe I/O Runtime] dell&#39;app.
-
-Una volta avviata, la pipeline viene eseguita automaticamente e mostra l’avanzamento in tempo reale:
-
-![Distribuisci pipeline in esecuzione](/help/assets/guide-deploy/deploy-pipeline-deploying.png)
+![Distribuzione: pipeline di distribuzione in esecuzione](/help/assets/guide-onboarding-agent/deploy-running.png)
 
 >[!NOTE]
 >
@@ -46,20 +44,24 @@ Una volta avviata, la pipeline viene eseguita automaticamente e mostra l’avanz
 
 ## Dopo una distribuzione corretta
 
-Al termine di tutti i passaggi, la finestra di dialogo mostra una conferma di **Distribuzione riuscita** con l&#39;URL distribuito e i dettagli dell&#39;artefatto:
+Al termine di tutti i passaggi, nella finestra di dialogo viene visualizzato **Distribuzione completata**.
 
-![Distribuzione completata](/help/assets/guide-deploy/app-detail-deploy-finish.png)
+![Distribuzione - distribuzione completata](/help/assets/guide-onboarding-agent/deploy-successful.png)
 
 Fai clic su **Chiudi** per chiudere la finestra di dialogo. Scorri verso il basso fino alla sezione **[!UICONTROL Verifica l&#39;app]** nella pagina Dettagli app:
 
-![Verifica dell&#39;app - URL distribuiti](/help/assets/guide-deploy/test-app-deployed.png)
+![Dettagli app — copia l&#39;URL del server MCP](/help/assets/guide-onboarding-agent/app-mcp-url.png)
 
-Ogni ambiente (**Gestione temporanea** e **Produzione**) mostra l&#39;URL del server MCP in [!DNL Adobe I/O Runtime]. Questo è l’URL fornito alla piattaforma LLM al momento della registrazione dell’app. Fai clic su **Copia URL** per copiarlo negli Appunti.
+Ogni ambiente distribuito mostra un URL del server MCP. Selezionare **[!UICONTROL Copia URL]** e utilizzarlo per creare un plug-in nella piattaforma LLM di destinazione.
 
-La sezione **Cronologia distribuzione** di seguito contiene un registro completo di ogni distribuzione tra gli ambienti:
+La sezione **Cronologia distribuzione** mostra le ultime 10 distribuzioni:
 
 ![Cronologia distribuzione](/help/assets/guide-deploy/deployment-history.png)
 
 Ogni riga mostra la destinazione **Ambiente** (stage o produzione), **Stato** (riuscito o non riuscito) e la data **Distribuito alle**. È possibile utilizzare questa tabella per tenere traccia di quando si sono verificate le distribuzioni e verificare che
 distribuzione più recente completata.
+
+## Passaggio successivo
+
+[Verifica l&#39;app distribuita come plug-in ChatGPT](/help/guides/test-in-chatgpt.md).
 
