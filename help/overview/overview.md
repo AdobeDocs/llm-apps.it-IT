@@ -1,9 +1,9 @@
 ---
 title: Panoramica delle app Adobe LLM
 description: Scopri cos’è un’app Adobe LLM, come funziona e cosa serve per iniziare.
-source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
+source-git-commit: 1d677c4e21963d1b126abb6287fccedfc1933c1a
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '938'
 ht-degree: 1%
 
 ---
@@ -109,23 +109,20 @@ Se trovi **Accesso limitato**, contatta l&#39;amministratore dell&#39;organizzaz
 
 ### [!DNL GitHub]
 
-È necessario un account [!DNL GitHub] in grado di:
+È necessario un account [!DNL GitHub] che **può** eseguire le operazioni seguenti. Questo è un controllo delle autorizzazioni — non installare ancora nulla:
 
 - Crea due archivi nell’account o nell’organizzazione di cui sarà proprietaria l’app.
-- Installare o richiedere l&#39;installazione dell&#39;app [!DNL GitHub] delle app Adobe LLM.
-- Installare o richiedere l&#39;installazione di AEM Code Sync per l&#39;archivio EDS.
+- Installa le app [!DNL GitHub] più avanti nel processo di installazione oppure dispone di un amministratore dell&#39;organizzazione che può approvarle.
 
 Per verificare l&#39;accesso alla creazione dell&#39;archivio, aprire [github.com/new](https://github.com/new) e verificare che l&#39;account o l&#39;organizzazione previsti siano visualizzati in **Proprietario**.
 
 ![GitHub — seleziona un proprietario del repository](/help/assets/overview/github-repo-owner-dropdown.png)
 
-Per gli archivi di proprietà dell&#39;organizzazione, l&#39;amministratore potrebbe dover approvare le app [!DNL GitHub]. Concedi a ogni app l’accesso solo agli archivi utilizzati dall’app LLM.
+Per gli archivi di proprietà dell&#39;organizzazione, l&#39;amministratore potrebbe dover approvare le app [!DNL GitHub].
 
-### AEM Sites con Edge Delivery Services
-
-La tua organizzazione ha bisogno di una licenza Adobe Experience Manager Sites che includa Edge Delivery Services (EDS). È inoltre necessario accedere come amministratore al sito EDS creato dall&#39;archivio widget.
-
-Per verificare l&#39;accesso, aprire lo strumento di amministrazione utenti di [EDS](https://tools.aem.live/tools/user-admin/index.html), immettere il nome dell&#39;organizzazione e recuperare gli utenti. Verifica che il tuo account disponga del badge **admin**.
+>[!NOTE]
+>
+>Questo è un controllo delle autorizzazioni, non un passaggio di configurazione. Non installare ancora [!DNL GitHub] app. [Crea automaticamente la prima app](/help/guides/create-app.md) illustra come installare ogni app, con l&#39;ambito esatto degli archivi creati, nel punto in cui è necessaria.
 
 ### Sito Web
 
