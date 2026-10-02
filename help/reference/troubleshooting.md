@@ -1,13 +1,11 @@
 ---
 title: Risoluzione dei problemi relativi alle app Adobe LLM
 description: Risolvi i problemi comuni relativi a archivio, onboarding, gestore, widget, distribuzione e plug-in ChatGPT.
-source-git-commit: eec74b87457bc852d7a8dd0e46c2a4385a93ae0a
+source-git-commit: fd41dbcabc4db0cae766de19cb042d7c85d8b7aa
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '1144'
 ht-degree: 0%
-
 ---
-
 
 # Risoluzione di problemi {#troubleshooting}
 
@@ -58,6 +56,29 @@ Non registrare valori `bridge.toolResult` completi quando possono contenere dati
 | Distribuzione non riuscita durante **Build app** | Eseguire `npm install`, `npm test` e `npm run build` localmente. Correggi gli errori di dipendenza, sintassi o test e invia le modifiche |
 | La distribuzione riesce ma mancano le modifiche | Conferma che il commit previsto è stato inviato e ridistribuito nello stesso ambiente |
 | L&#39;azione rimane **Non distribuita** | Ripeti la distribuzione dopo aver esaminato l’azione o averne modificato i metadati |
+
+## Autenticazione {#authentication}
+
+Applicabile quando **[!UICONTROL Abilita autenticazione]** è attivo. Consulta [Autenticazione degli utenti finali con il tuo provider di identità](/help/guides/authentication.md).
+
+| Sintomo | Cosa provare |
+|---------|-------------|
+| Le azioni rimangono pubbliche dopo il salvataggio delle impostazioni | Distribuisci nuovamente l’app in tale ambiente. Le modifiche di autenticazione hanno effetto alla prossima distribuzione |
+| Le impostazioni non vengono visualizzate correttamente dopo il passaggio a un altro ambiente | Conferma che il selettore **[!UICONTROL Workspace]** mostri l&#39;ambiente desiderato. **[!UICONTROL Stage]** e **[!UICONTROL Produzione]** sono configurati in modo indipendente |
+| L’accesso non si avvia | Verificare che l&#39;app sia stata distribuita dopo l&#39;abilitazione dell&#39;autenticazione e che l&#39;azione che si sta chiamando sia impostata su **[!UICONTROL Obbligatorio]**. Un&#39;azione **[!UICONTROL Facoltativa]** richiede l&#39;accesso solo quando il relativo gestore richiede l&#39;accesso |
+| La piattaforma invia l’utente alla pagina di accesso errata | Verifica che **[!UICONTROL Emittente]** corrisponda esattamente all&#39;URL dell&#39;emittente del provider di identità e che sia raggiungibile tramite HTTPS pubblico |
+| L’accesso ha esito positivo ma ogni chiamata viene ancora rifiutata | Conferma che il provider di identità emetta token il cui pubblico è l’URL del server MCP dell’app per tale ambiente e che il token è un JWT firmato con un algoritmo asimmetrico. Vedi [Requisiti del token](/help/reference/authentication-reference.md#token-requirements) |
+| Il provider di identità non riceve mai traffico | Gli endpoint di individuazione, autorizzazione e token del provider devono essere raggiungibili tramite HTTPS pubblico. Verifica la presenza di un firewall, un WAF o un elenco Consentiti IP di fronte a esso: l’app può essere raggiungibile mentre il provider non lo è |
+| Il provider di identità rifiuta di emettere un token per il pubblico richiesto | Alcuni provider rilasciano solo token per una risorsa registrata con loro. Conferma che l’URL del server MCP dell’app sia registrato come identificatore di risorsa nel provider di identità. |
+| All&#39;accesso non è richiesto un ambito appena aggiunto | Le piattaforme LLM memorizzano nella cache i metadati pubblicati dell’app per alcuni minuti. Attendi, quindi riprova l’accesso |
+| All&#39;utente viene richiesto di accedere nuovamente per un ambito | L’azione richiede un ambito che il token non contiene. Aggiungi l’ambito alla sovvenzione del client nel provider di identità o rimuovilo dall’azione |
+| All’utente viene richiesto di eseguire l’accesso ripetutamente, in modo | Un&#39;azione è impegnativa su ogni chiamata. Un gestore che restituisce `extra.challengeAuth()` senza prima verificare se il chiamante è già autenticato non può mai essere soddisfatto, perché l&#39;accesso produce nuovamente la stessa sfida. Sfida solo quando manca l’identità necessaria per l’azione |
+| L&#39;accesso viene rifiutato prima che l&#39;utente raggiunga il provider di identità | L’URI di reindirizzamento inviato dalla piattaforma LLM non è registrato nel server di autorizzazione. Alcune piattaforme ne rilasciano una diversa per ciascun connettore, pertanto registra il valore mostrato nella schermata di configurazione del connettore |
+| Il salvataggio è bloccato con un messaggio di ambito non supportato | Aggiungi l&#39;ambito a **[!UICONTROL Ambiti supportati]** o rimuovilo dall&#39;azione che lo richiede |
+| Un&#39;azione impostata su **[!UICONTROL Nessuno]** richiede ancora l&#39;accesso | Previsto su [!DNL Claude], che esegue l&#39;autenticazione per connettore anziché per azione. |
+| L&#39;app richiede l&#39;accesso anche se ogni azione è **[!UICONTROL Nessuna]** | Disattivare **[!UICONTROL Abilita autenticazione]** e distribuire. Quando è attiva, l’app annuncia un server di autorizzazione anche quando non viene inviata alcuna azione |
+
+Non incollare token di accesso, set di attestazioni o segreti client del provider di identità in una richiesta di supporto.
 
 ## Plug-in ChatGPT
 

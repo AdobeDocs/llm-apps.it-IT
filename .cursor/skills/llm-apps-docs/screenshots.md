@@ -1,9 +1,8 @@
 ---
-source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
+source-git-commit: 03c918b1643d9c4e8ebee40fd67694acb6751a14
 workflow-type: tm+mt
-source-wordcount: '696'
+source-wordcount: '703'
 ht-degree: 0%
-
 ---
 # Procedura per lo screenshot di produzione
 
@@ -102,7 +101,7 @@ Quando l’utente chiede di aggiornare la documentazione da una cartella di acqu
    - informazioni sensibili;
    - Comportamento di produzione in conflitto con la documentazione.
 6. Non modificare le acquisizioni di origine.
-7. Per ogni immagine accettata, creare una copia bonificata con il nome file del manifesto stabile in `help/assets/guide-onboarding-agent/`.
+7. Per ogni immagine accettata, crea una copia bonificata con il nome del file del manifesto stabile nella directory di output dichiarata dalla sezione del manifesto.
 8. Ritaglia solo quando l’interfaccia utente circostante non aggiunge alcun contesto utile.
 9. Valori sensibili alle maschere. Se non è possibile applicare una maschera di sicurezza, chiedere di rieseguire la cattura.
 10. Aggiorna l’articolo e il testo alt in modo che corrispondano al flusso di lavoro acquisito.
