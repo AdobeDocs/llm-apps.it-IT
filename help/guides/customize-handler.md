@@ -1,13 +1,11 @@
 ---
 title: Personalizzare un gestore di azioni generato
 description: Comprendi il contratto del gestore Adobe LLM Apps, sostituisci i dati di esempio generati e mantieni l’output del gestore allineato al relativo widget.
-source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
+source-git-commit: 2d8f44f4f258bf217992131de9d9450a4023560d
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '537'
 ht-degree: 0%
-
 ---
-
 
 # Personalizzare un gestore generato {#customize-generated-handler}
 
@@ -15,7 +13,7 @@ ht-degree: 0%
 >
 >[!DNL Adobe LLM Apps] è attualmente in Beta.
 >
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, inviare un messaggio e-mail a `llm-apps-beta@adobe.com`.
 
 La piattaforma crea un gestore di lavoro per ogni azione generata. Inizialmente il gestore restituisce dati di esempio in modo da poter testare l’esperienza completa.
 
