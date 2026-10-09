@@ -138,7 +138,7 @@ Per configurare l&#39;altro ambiente, selezionarlo in **[!UICONTROL Workspace]**
 3. Seleziona **[!UICONTROL Aggiorna]**.
 4. Distribuisci nuovamente l’app nello stesso ambiente e verifica il comportamento modificato.
 
-L’aggiornamento modifica solo il valore. Impossibile rinominare le variabili **1}. Per utilizzare un nome diverso, eliminare la variabile esistente e aggiungerne una nuova, quindi aggiornare il gestore per leggere il nuovo nome.**
+L’aggiornamento modifica solo il valore. Impossibile rinominare le variabili **1&rbrace;. Per utilizzare un nome diverso, eliminare la variabile esistente e aggiungerne una nuova, quindi aggiornare il gestore per leggere il nuovo nome.**
 
 ### Eliminare una variabile {#delete-a-variable}
 
@@ -175,7 +175,7 @@ L’aggiornamento modifica solo il valore. Impossibile rinominare le variabili *
 | *Esiste già una variabile con questo nome* | Aggiorna invece la variabile esistente. |
 | *La variabile è stata appena modificata altrove* | Aggiorna la pagina e riprova. |
 | *Impossibile caricare le variabili* | Ricarica la pagina. Se il problema persiste, verifica di avere accesso all’app. |
-| L’azione non utilizza il nuovo valore | Verifica di aver distribuito **dopo** il salvataggio della variabile nello stesso ambiente testato, che la modifica del gestore sia stata inviata e che il nome corrisponda esattamente a **3}.****[!UICONTROL Ultimo aggiornamento]** indica quando il valore è stato salvato, non quando è stato distribuito. |
+| L’azione non utilizza il nuovo valore | Verifica di aver distribuito **dopo** il salvataggio della variabile nello stesso ambiente testato, che la modifica del gestore sia stata inviata e che il nome corrisponda esattamente a **3&rbrace;.**&#x200B;**[!UICONTROL Ultimo aggiornamento]** indica quando il valore è stato salvato, non quando è stato distribuito. |
 | `getVariable is not a function` | L’app utilizza un runtime precedente alla versione 1.1.0. Aggiornalo come descritto in [Prima di iniziare](#before-you-begin), quindi distribuiscilo. |
 | L’azione non riesce dopo aver eliminato una variabile | Aggiungi nuovamente la variabile o aggiorna il gestore in modo che non sia più necessario, quindi distribuiscilo. |
 
