@@ -1,13 +1,11 @@
 ---
 title: Distribuire l’app
 description: Scopri come distribuire l’app Adobe LLM nell’ambiente di staging e produzione utilizzando l’interfaccia utente delle app LLM.
-source-git-commit: bb3d8a02f22a91ceeeba5999453aeb4221060f80
+source-git-commit: 4e447562c5d38f68c209ded7370e9d384a7c9701
 workflow-type: tm+mt
-source-wordcount: '322'
+source-wordcount: '352'
 ht-degree: 0%
-
 ---
-
 
 # Distribuire l’app {#deploy-your-app}
 
@@ -26,6 +24,8 @@ Questo è un passaggio condiviso per ogni percorso. Dopo la distribuzione, conti
 Aprire la pagina Dettagli app e selezionare **[!UICONTROL Distribuisci]**.
 
 Selezionare l&#39;ambiente di destinazione, quindi selezionare **[!UICONTROL Distribuisci]**.
+
+Se i gestori utilizzano [variabili app](/help/guides/app-variables.md), configurale per l&#39;ambiente di destinazione prima della distribuzione. Le variabili aggiunte, aggiornate o eliminate hanno effetto su questa distribuzione; Stage e Production hanno valori indipendenti.
 
 ![Distribuisci — seleziona l&#39;ambiente di destinazione](/help/assets/guide-onboarding-agent/deploy-stage.png)
 
@@ -65,4 +65,3 @@ distribuzione più recente completata.
 
 - [Verifica l&#39;app distribuita come plug-in ChatGPT](/help/guides/test-in-chatgpt.md).
 - [Verifica l&#39;app distribuita come connettore Claude](/help/guides/test-in-claude.md).
-
