@@ -1,9 +1,9 @@
 ---
 title: Personalizzare un gestore di azioni generato
 description: Comprendi il contratto del gestore Adobe LLM Apps, sostituisci i dati di esempio generati e mantieni l’output del gestore allineato al relativo widget.
-source-git-commit: 2d8f44f4f258bf217992131de9d9450a4023560d
+source-git-commit: d9fb493c0b1708e4566e93a4f883e99bb4166e18
 workflow-type: tm+mt
-source-wordcount: '537'
+source-wordcount: '581'
 ht-degree: 0%
 ---
 
@@ -215,6 +215,8 @@ module.exports = async ({ query = '' } = {}) => {
 ```
 
 Mantieni l&#39;accesso di rete protetto nel gestore. Non inserire mai le credenziali API in widget JavaScript o nel controllo del codice sorgente.
+
+Per le impostazioni non riservate necessarie al gestore, ad esempio l&#39;URL di un servizio, vedere [Configurare le variabili e i segreti dell&#39;app](/help/guides/app-variables.md). Le variabili sono configurate per ambiente e diventano effettive nella distribuzione successiva. Il supporto per i segreti non è ancora disponibile. Non utilizzare le variabili per archiviare le credenziali API.
 
 ## Gestire gli stati previsti
 
