@@ -1,9 +1,9 @@
 ---
 title: Panoramica delle app Adobe LLM
 description: Scopri cos’è un’app Adobe LLM, come funziona e come iniziare a creare la tua app.
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: 14d94a68dabddd2f2ef2cef65c51d31645d4a958
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '606'
 ht-degree: 0%
 ---
 
@@ -50,7 +50,7 @@ La funzione lato server che viene eseguita quando la piattaforma LLM richiama un
 
 ### Widget {#widgets-eds}
 
-La risposta visiva mostrata con la risposta di LLM, ad esempio una scheda, un carosello o una tabella. I widget generati sono blocchi in un archivio [!DNL Edge Delivery Services] (EDS). Con l’infrastruttura gestita di Adobe, Adobe prepara e ospita l’archivio per una prova. In alternativa, puoi collegare il tuo archivio.
+La risposta visiva mostrata con la risposta di LLM, ad esempio una scheda, un carosello o una tabella. I widget generati sono blocchi in un archivio [!DNL Edge Delivery Services] (EDS). Con l’infrastruttura gestita di Adobe, Adobe prepara e ospita l’archivio per te. In alternativa, puoi collegare il tuo archivio.
 
 ### Server MCP
 
@@ -76,7 +76,7 @@ Per informazioni tecniche su cosa generare e come funzionano i componenti insiem
 
 La creazione di un’app e delle relative azioni è un passaggio separato:
 
-1. [Configura l&#39;infrastruttura](/help/guides/create-app.md). Utilizza l&#39;infrastruttura gestita di Adobe per una prova o fornisci due archivi [!DNL GitHub] vuoti tramite la procedura guidata di creazione app. La piattaforma inizializza uno per i gestori di azioni e l&#39;altro per i widget.
+1. [Configura l&#39;infrastruttura](/help/guides/create-app.md). Utilizza l&#39;infrastruttura gestita di Adobe per una configurazione rapida oppure scegli di utilizzare i tuoi archivi [!DNL GitHub].
 2. [Crea le tue azioni](/help/guides/creating-actions.md). Chiedi alla piattaforma di analizzare il tuo sito web e generare azioni, o creale tu stesso.
 3. [Distribuisci e verifica l&#39;app](/help/guides/deploy-your-app.md). Rivedi il lavoro generato, distribuiscilo nell’ambiente di staging e testa in una piattaforma LLM supportata.
 

@@ -1,9 +1,9 @@
 ---
 name: llm-apps-docs
 description: Crea, rivedi e convalida la documentazione delle app Adobe LLM, applica gli standard editoriali e acquisisci le schermate correnti dell’interfaccia utente tramite l’automazione del browser. Utilizza per articoli, navigazione, schermate e bundle di revisione offline di llm-apps.en.
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: 14d94a68dabddd2f2ef2cef65c51d31645d4a958
 workflow-type: tm+mt
-source-wordcount: '1346'
+source-wordcount: '1380'
 ht-degree: 0%
 ---
 
@@ -41,6 +41,7 @@ solo il comportamento supportato dalle prove disponibili.
 ## Regole di authoring
 
 - Guidare gli utenti alle prime **impostazioni infrastruttura**, quindi **azioni creazione**. La procedura guidata Crea-app imposta solo l&#39;infrastruttura; **[!UICONTROL Genera azioni automaticamente]** e **[!UICONTROL Genera le mie azioni]** avviano la generazione di azioni basate su sito Web successivamente, dalla pagina dell&#39;app. Utilizza **Adobe managed infrastructure** per l&#39;opzione con etichetta **[!UICONTROL Gestiamola]** nell&#39;interfaccia utente.
+- Descrivere l&#39;infrastruttura gestita Adobe in modo neutro in base alla creazione e alla gestione dell&#39;infrastruttura Adobe. Non etichettarlo come versione di prova, configurazione temporanea o opzione non di sola produzione e non fare dichiarazioni non confermate sull’idoneità alla produzione.
 - Organizza la navigazione tra percorsi di utenti e risultati, non tra gli argomenti relativi all’implementazione.
 - All&#39;inizio di ogni guida, utilizzare **In questa guida:** seguito da una o due frasi in linguaggio semplice che illustrano l&#39;attività e il passaggio successivo. Preferisci &quot;Scopri come...&quot; sulle promesse del futuro. Non utilizzare etichette **Percorso:** o elenchi di passaggi separati da freccia.
 - Non utilizzare nomi in codice interni (ad esempio, &quot;Agente di onboarding&quot;) nei documenti rivolti al cliente; tale funzionalità non viene mai esposta nell’interfaccia utente del prodotto. Descrivilo genericamente (ad esempio, &quot;la piattaforma&quot;) e utilizza la copia corrente esatta dell&#39;interfaccia utente, ad esempio **[!UICONTROL Genera le mie azioni]** per i controlli.
@@ -52,7 +53,7 @@ solo il comportamento supportato dalle prove disponibili.
 - Distinguere lo scaffold generato dall’integrazione pronta per la produzione.
 - Evita nomi di lavoratori interni, campi del database, ticket di implementazione e dettagli instabili della pipeline.
 - Non duplicare le tabelle dei campi nelle guide; collega a riferimento.
-- Mantenere il frontmatter e le direttive di Experience League: `[!DNL]`, &grave;&grave;, `[!IMPORTANT]`, `[!NOTE]` e `[!TIP]`.
+- Mantenere il frontmatter e le direttive di Experience League: `[!DNL]`, ``, `[!IMPORTANT]`, `[!NOTE]` e `[!TIP]`.
 - Utilizzare collegamenti interni relativi alla directory principale: `/help/...`.
 - Utilizza la maiuscola/minuscola per titoli e intestazioni, a meno che l’etichetta del prodotto non richieda diversamente.
 - Utilizza un testo alternativo immagine descrittivo che spiega lo schermo e lo stato.

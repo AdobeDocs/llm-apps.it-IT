@@ -1,7 +1,7 @@
 ---
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: 14d94a68dabddd2f2ef2cef65c51d31645d4a958
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '715'
 ht-degree: 0%
 ---
 # Modello di contenuto e terminologia
@@ -61,7 +61,7 @@ Inizia da un sintomo osservabile.
 
 - **App Adobe LLM** — nome completo del prodotto alla prima menzione.
 - **App LLM**: un&#39;app gestita dal prodotto.
-- **Infrastruttura gestita Adobe**: infrastruttura di prova creata e ospitata da Adobe; selezionare **Gestiamola** nella procedura guidata di creazione-app.
+- **Infrastruttura gestita da Adobe**: infrastruttura creata e gestita da Adobe; selezionare **Gestiamola** nella procedura guidata di creazione-app. Non descrivere questa opzione come di sola prova o non presentare dichiarazioni non confermate sull’idoneità alla produzione.
 - **Verrà configurato da solo**: opzione della procedura guidata per la connessione dei propri archivi, non è necessario scrivere azioni manualmente. Il percorso predefinito inizia con due archivi vuoti inizializzati dalla piattaforma; i progetti esistenti compatibili sono facoltativi.
 - **Genera azioni automaticamente**: scelta consigliata per la creazione di azioni nella pagina dell&#39;app dopo la configurazione dell&#39;infrastruttura.
 - **Genera le mie azioni** — pulsante che avvia la generazione di azioni basate sul sito Web.

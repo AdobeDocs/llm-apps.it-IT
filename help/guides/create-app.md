@@ -1,9 +1,9 @@
 ---
 title: Configurazione dell’infrastruttura
 description: Crea un’app Adobe LLM utilizzando l’infrastruttura gestita di Adobe oppure fornisci due archivi GitHub vuoti da inizializzare per la piattaforma.
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: 14d94a68dabddd2f2ef2cef65c51d31645d4a958
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1337'
 ht-degree: 0%
 ---
 
@@ -44,14 +44,14 @@ La procedura guidata **[!UICONTROL Crea app LLM]** inizia con **[!UICONTROL Iniz
 
 | Opzione infrastruttura | Seleziona nella procedura guidata | Che cosa significa |
 |---|---|---|
-| **Infrastruttura gestita Adobe** | **[!UICONTROL Gestiamolo]** | Adobe crea e ospita gli archivi per la configurazione di una versione di prova. L’accesso al codice è disponibile su richiesta e puoi passare ai tuoi archivi in un secondo momento. |
+| **Infrastruttura gestita Adobe** | **[!UICONTROL Gestiamolo]** | Adobe crea e gestisce gli archivi e i servizi connessi per la tua app. L’accesso al codice è disponibile su richiesta. |
 | **Archivi personali** | **[!UICONTROL La configurerò io stesso]** | Fornisci due archivi GitHub vuoti e concedi l’accesso tramite la procedura guidata. La piattaforma inizializza uno per i gestori di azioni e l&#39;altro per i widget. |
 
 Entrambe le opzioni supportano la generazione automatica delle azioni in un secondo momento. Nessuna delle due opzioni richiede la scrittura manuale delle azioni.
 
 ## Utilizzare l’infrastruttura gestita di Adobe {#adobe-managed-infrastructure}
 
-Utilizzare questa opzione per provare l&#39;app senza prima creare archivi o installare [!DNL GitHub] app.
+Utilizza questa opzione per consentire ad Adobe di configurare e gestire gli archivi e i servizi connessi per la tua app. Non è necessario creare archivi o installare [!DNL GitHub] app.
 
 1. Seleziona **[!UICONTROL Gestione]**.
 2. Seleziona **[!UICONTROL Passaggio successivo]**.
