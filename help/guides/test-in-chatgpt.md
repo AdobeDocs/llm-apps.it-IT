@@ -1,10 +1,10 @@
 ---
 title: Testare l’app LLM come plug-in ChatGPT
 description: Crea un plug-in ChatGPT dall’URL del server MCP delle app Adobe LLM e testalo in una conversazione.
-source-git-commit: fd41dbcabc4db0cae766de19cb042d7c85d8b7aa
+source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
 workflow-type: tm+mt
-source-wordcount: '378'
-ht-degree: 1%
+source-wordcount: '546'
+ht-degree: 0%
 ---
 
 # Test dell&#39;app LLM come plug-in [!DNL ChatGPT] {#test-in-chatgpt}
@@ -17,20 +17,15 @@ ht-degree: 1%
 
 Dopo la distribuzione, l’app LLM espone un URL del server MCP. Aggiungi questo URL a [!DNL ChatGPT] come plug-in, quindi verifica le azioni e i widget generati.
 
-Questo è il passaggio di verifica finale dopo la creazione, la personalizzazione o l’estensione di un’app.
+**In questa guida:** Scopri come connettere l&#39;app distribuita a [!DNL ChatGPT] e testarne azioni e widget in una conversazione. Aggiorna la connessione dopo aver modificato l’app.
 
 ## Requisiti del piano
 
-La modalità Sviluppatore è disponibile sul web per gli account Pro, Plus, Business, Enterprise e Education. Gli amministratori di Workspace possono limitare l’accesso.
+Utilizza un account e un’area di lavoro che consentono l’aggiunta di server MCP personalizzati. I controlli relativi a disponibilità e amministratore variano in base all&#39;account e all&#39;area di lavoro. Consulta la documentazione [Connetti e verifica il plug-in](https://developers.openai.com/plugins/deploy/connect-chatgpt) corrente di OpenAI.
 
-## Abilita modalità sviluppatore
+## Controllare l&#39;accesso ai server MCP personalizzati
 
-In [!DNL ChatGPT]:
-
-1. Apri **[!UICONTROL Impostazioni] → [!UICONTROL Protezione e accesso]**.
-2. Attiva **[!UICONTROL Modalità sviluppatore]**.
-
-Il pulsante più nella pagina Plug-in crea i plug-in basati su MCP solo dopo l’abilitazione della modalità sviluppatore. Vedi [Modalità sviluppatore ChatGPT](https://developers.openai.com/api/docs/guides/developer-mode).
+Apri [Plug-in ChatGPT](https://chatgpt.com/plugins) e verifica che il tuo account consenta di aggiungere un server MCP personalizzato. Se l&#39;account richiede la modalità sviluppatore, abilitarla utilizzando i controlli dell&#39;account. Se l&#39;opzione del server MCP personalizzato risulta mancante o bloccata, rivolgersi all&#39;amministratore del workspace.
 
 ## Copia l&#39;URL del server MCP
 
@@ -38,41 +33,35 @@ In [!DNL LLM Apps]:
 
 1. Apri la pagina Dettagli app.
 2. Trova **[!UICONTROL Verifica l&#39;app]**.
-3. In **[!UICONTROL Ambiente di gestione temporanea]**, selezionare **[!UICONTROL Copia URL]**.
+3. In **[!UICONTROL Ambiente stage]**, selezionare **[!UICONTROL Copia URL]**.
 
 ## Creare il plug-in
 
 1. Apri [chatgpt.com/plugins](https://chatgpt.com/plugins).
-2. Nella scheda **[!UICONTROL Plug-in]**, seleziona **+** accanto al campo di ricerca.
-
-   ![ChatGPT - Pagina plug-in](/help/assets/guide-onboarding-agent/chatgpt-plugins-page.png)
-
-3. In **[!UICONTROL Nuovo plug-in]**, immettere:
+2. Selezionare **+**, quindi **[!UICONTROL Aggiungi server MCP personalizzato]**.
+3. Configura la connessione:
    - **[!UICONTROL Nome]**: il nome del plug-in.
    - **[!UICONTROL Descrizione]** — facoltativo.
-   - **[!UICONTROL Connessione]** — selezionare **[!UICONTROL URL server]** e incollare l&#39;URL del server MCP.
-   - **[!UICONTROL Autenticazione]** — selezionare **[!UICONTROL Nessuna autenticazione]**.
+   - Scegli il metodo di connessione al server pubblico e immetti l’URL completo del server MCP HTTPS dell’app.
+   - Scegli il metodo di autenticazione che corrisponde all&#39;app. Per un&#39;app pubblica con autenticazione disabilitata, utilizza **[!UICONTROL Nessuna autenticazione]**, dove disponibile.
 
    >[!NOTE]
    >
-   >**[!UICONTROL Nessuna autenticazione]** applicabile mentre ogni azione nell&#39;app è pubblica. Se hai attivato l&#39;autenticazione dell&#39;utente finale, seleziona **[!UICONTROL OAuth]** quando ogni azione è impostata su **[!UICONTROL Obbligatorio]** e **[!UICONTROL Misto]** per qualsiasi altra combinazione. Vedi [Autentica gli utenti finali con il tuo provider di identità](/help/guides/authentication.md).
+   >Se hai attivato l&#39;autenticazione dell&#39;utente finale, seleziona **[!UICONTROL OAuth]** quando ogni azione è impostata su **[!UICONTROL Obbligatorio]**, o **[!UICONTROL Misto]** per una combinazione di azioni pubbliche e protette, dove sono disponibili tali opzioni. Consulta [Autenticazione degli utenti finali con il tuo provider di identità](/help/guides/authentication.md).
 
 4. Seleziona **[!UICONTROL Confermo e desidero continuare]**.
-5. Seleziona **[!UICONTROL Crea]**.
+5. Seleziona **[!UICONTROL Crea come plug-in]**.
+6. Controlla gli strumenti e i metadati individuati, quindi installa o collega il plug-in risultante. Completa l&#39;accesso se l&#39;app lo richiede.
 
-   ![ChatGPT — crea un plug-in con l&#39;URL del server MCP](/help/assets/guide-onboarding-agent/chatgpt-new-plugin.png)
-
-6. Nella finestra di dialogo di conferma, seleziona **[!UICONTROL Connetti]**.
-
-   ![ChatGPT — connetti il nuovo plug-in](/help/assets/guide-onboarding-agent/chatgpt-plugin-connect.png)
+OpenAI è proprietaria dell’interfaccia utente di configurazione e il suo layout può variare a seconda dell’account. Segui le [istruzioni di connessione](https://developers.openai.com/plugins/deploy/connect-chatgpt) correnti se le etichette visualizzate sono diverse.
 
 ## Test del plug-in
 
 1. Avvia una nuova chat.
-2. Scegliere **[!UICONTROL Modalità sviluppatore]** dal menu Plus e selezionare il plug-in.
+2. Digitare `@` nella casella di richiesta e selezionare il plug-in installato.
 3. Fai una domanda che corrisponda a una delle azioni generate. Ad esempio: *Visualizza caffè.*
 
-![ChatGPT — risposta del plug-in dell&#39;app LLM generata](/help/assets/guide-onboarding-agent/chatgpt-generated-app.png)
+![Risposta ChatGPT illustrativa: un&#39;azione Frescopa restituisce schede prodotto nella conversazione](/help/assets/guide-onboarding-agent/chatgpt-generated-app.png)
 
 Verifica che:
 
@@ -80,6 +69,17 @@ Verifica che:
 - Il widget visualizza i dati di esempio previsti.
 - La risposta di testo corrisponde al widget.
 - I controlli widget funzionano come previsto.
+
+Inoltre, testa input non valido, risultati vuoti, prompt non correlati che non chiamano per l’app e azioni che modificano i dati. Esamina ogni richiesta di conferma e autenticazione anziché approvare tutte le richieste in anticipo.
+
+## Aggiorna dopo le modifiche dell’app
+
+Dopo aver modificato le descrizioni delle azioni, gli input, l’autenticazione o la configurazione dei widget:
+
+1. Distribuisci l’app aggiornata nello stesso ambiente.
+2. Apri la connessione su [Plug-in ChatGPT](https://chatgpt.com/plugins) e seleziona **[!UICONTROL Aggiorna]**.
+3. Verifica che le azioni annunciate siano cambiate.
+4. Avvia una nuova conversazione e ripeti i test interessati.
 
 ## Passaggio successivo
 

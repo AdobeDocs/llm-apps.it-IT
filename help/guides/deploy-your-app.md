@@ -1,9 +1,9 @@
 ---
 title: Distribuire l’app
 description: Scopri come distribuire l’app Adobe LLM nell’ambiente di staging e produzione utilizzando l’interfaccia utente delle app LLM.
-source-git-commit: 4e447562c5d38f68c209ded7370e9d384a7c9701
+source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '412'
 ht-degree: 0%
 ---
 
@@ -15,9 +15,9 @@ ht-degree: 0%
 >
 >Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
 
-Dopo aver scritto il codice del gestore e averlo inviato all&#39;archivio collegato, puoi distribuire l&#39;app dall&#39;interfaccia utente [!DNL LLM Apps].
+Dopo aver esaminato le azioni generate o inviato il codice del gestore personalizzato all&#39;archivio collegato, distribuire l&#39;app da [!DNL LLM Apps]. Per le azioni generate, rivedi e unisci il lavoro generato prima della distribuzione.
 
-Questo è un passaggio condiviso per ogni percorso. Dopo la distribuzione, continuare a [testare il plug-in ChatGPT](/help/guides/test-in-chatgpt.md) o [testare il connettore Claude](/help/guides/test-in-claude.md).
+**In questa guida:** scopri come distribuire l&#39;app nell&#39;ambiente di staging, controllare il risultato della distribuzione e copiare l&#39;URL del server MCP per i test. Distribuisci in produzione dopo il completamento del test.
 
 ## Avviare l’implementazione
 
@@ -36,30 +36,31 @@ La distribuzione prevede quattro passaggi:
 3. **Genera app**: installa le dipendenze e crea il codice di archivio più recente.
 4. **Pubblica** — pubblica l&#39;app in [!DNL Adobe I/O Runtime].
 
-![Distribuzione: pipeline di distribuzione in esecuzione](/help/assets/guide-onboarding-agent/deploy-running.png)
-
 >[!NOTE]
 >
->Se nell’interfaccia utente di un’azione sono presenti metadati ma nell’archivio non è presente alcun file di gestore corrispondente, l’azione viene comunque registrata. Le chiamate utilizzano un gestore di stub predefinito fino a quando non si aggiunge il codice effettivo.
+>Se nell’interfaccia utente di un’azione sono presenti metadati ma nell’archivio non è presente alcun file di gestore corrispondente, l’azione viene comunque registrata nella distribuzione. Le chiamate utilizzano un gestore di stub predefinito fino a quando non si aggiunge il codice effettivo.
 
 ## Dopo una distribuzione corretta
 
 Al termine di tutti i passaggi, nella finestra di dialogo viene visualizzato **Distribuzione completata**.
 
-![Distribuzione - distribuzione completata](/help/assets/guide-onboarding-agent/deploy-successful.png)
-
-Fai clic su **Chiudi** per chiudere la finestra di dialogo. Scorri verso il basso fino alla sezione **[!UICONTROL Verifica l&#39;app]** nella pagina Dettagli app:
+Per chiudere la finestra di dialogo, selezionare **Chiudi**. Nella pagina Dettagli app, scorri fino a **[!UICONTROL Verifica l&#39;app]**:
 
 ![Dettagli app — copia l&#39;URL del server MCP](/help/assets/guide-onboarding-agent/app-mcp-url.png)
 
-Ogni ambiente distribuito mostra un URL del server MCP. Selezionare **[!UICONTROL Copia URL]** e utilizzarlo per creare un plug-in nella piattaforma LLM di destinazione.
+Ogni ambiente distribuito mostra un URL del server MCP. Selezionare **[!UICONTROL Copia URL]** e utilizzarlo per creare un plug-in o un connettore nella piattaforma LLM di destinazione.
 
 La sezione **Cronologia distribuzione** mostra le ultime 10 distribuzioni:
 
 ![Cronologia distribuzione](/help/assets/guide-deploy/deployment-history.png)
 
-Ogni riga mostra la destinazione **Ambiente** (stage o produzione), **Stato** (riuscito o non riuscito) e la data **Distribuito alle**. È possibile utilizzare questa tabella per tenere traccia di quando si sono verificate le distribuzioni e verificare che
-distribuzione più recente completata.
+Ogni riga mostra la destinazione **Ambiente** (stage o produzione), **Stato** (riuscito o non riuscito) e **Distribuito in** data. Utilizzare la tabella per tenere traccia delle date di distribuzione e verificare che l&#39;ultima distribuzione sia stata completata correttamente.
+
+## Distribuire le modifiche alla configurazione
+
+Le modifiche ai metadati dell&#39;azione, agli switch **[!UICONTROL Visibilità]** della pagina dell&#39;app, all&#39;autenticazione e alle variabili dell&#39;app hanno effetto alla prossima distribuzione in tale ambiente. Il salvataggio di un&#39;impostazione non comporta l&#39;aggiornamento del server MCP distribuito.
+
+Controlla l’ambiente di destinazione ogni volta. La distribuzione nell’ambiente di staging non distribuisce le stesse modifiche nell’ambiente di produzione.
 
 ## Passaggio successivo
 
