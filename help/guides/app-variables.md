@@ -169,7 +169,7 @@ L’aggiornamento di una variabile ne modifica solo il valore. **impossibile** r
 | *Esiste già una variabile con questo nome* | Aggiorna invece la variabile esistente. |
 | *La variabile è stata appena modificata altrove* | Aggiorna la pagina e riprova. |
 | *Impossibile caricare le variabili* | Ricarica la pagina. Se l’errore persiste, controlla di avere accesso all’app. |
-| L’azione non utilizza il nuovo valore | Verifica di aver distribuito **dopo** il salvataggio della variabile e di aver testato lo stesso ambiente. Conferma che la modifica del gestore è stata inviata e che il nome della variabile corrisponde esattamente a **1}.****[!UICONTROL Ultimo aggiornamento]** mostra quando hai salvato il valore, non quando hai distribuito l&#39;app. |
+| L’azione non utilizza il nuovo valore | Verifica di aver distribuito **dopo** il salvataggio della variabile e di aver testato lo stesso ambiente. Conferma che la modifica del gestore è stata inviata e che il nome della variabile corrisponde esattamente a **1&rbrace;.**&#x200B;**[!UICONTROL Ultimo aggiornamento]** mostra quando hai salvato il valore, non quando hai distribuito l&#39;app. |
 | `getVariable is not a function` | L’app utilizza un runtime precedente alla versione 1.1.0. Aggiornalo come descritto in [Prima di iniziare](#before-you-begin), quindi distribuiscilo. |
 | L’azione non riesce dopo aver eliminato una variabile | Aggiungi nuovamente la variabile o aggiorna il gestore in modo che non sia più necessario, quindi distribuiscilo. |
 
