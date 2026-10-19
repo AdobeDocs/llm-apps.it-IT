@@ -53,7 +53,7 @@ solo il comportamento supportato dalle prove disponibili.
 - Distinguere lo scaffold generato dall’integrazione pronta per la produzione.
 - Evita nomi di lavoratori interni, campi del database, ticket di implementazione e dettagli instabili della pipeline.
 - Non duplicare le tabelle dei campi nelle guide; collega a riferimento.
-- Mantenere il frontmatter e le direttive di Experience League: `[!DNL]`, ``, `[!IMPORTANT]`, `[!NOTE]` e `[!TIP]`.
+- Mantenere il frontmatter e le direttive di Experience League: `[!DNL]`, &grave;&grave;, `[!IMPORTANT]`, `[!NOTE]` e `[!TIP]`.
 - Utilizzare collegamenti interni relativi alla directory principale: `/help/...`.
 - Utilizza la maiuscola/minuscola per titoli e intestazioni, a meno che l’etichetta del prodotto non richieda diversamente.
 - Utilizza un testo alternativo immagine descrittivo che spiega lo schermo e lo stato.
