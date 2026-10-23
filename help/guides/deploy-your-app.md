@@ -1,9 +1,9 @@
 ---
 title: Distribuire l’app
 description: Scopri come distribuire l’app Adobe LLM nell’ambiente di staging e produzione utilizzando l’interfaccia utente delle app LLM.
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '444'
 ht-degree: 0%
 ---
 
@@ -58,11 +58,14 @@ Ogni riga mostra la destinazione **Ambiente** (stage o produzione), **Stato** (r
 
 ## Distribuire le modifiche alla configurazione
 
-Le modifiche ai metadati dell&#39;azione, agli switch **[!UICONTROL Visibilità]** della pagina dell&#39;app, all&#39;autenticazione e alle variabili dell&#39;app hanno effetto alla prossima distribuzione in tale ambiente. Il salvataggio di un&#39;impostazione non comporta l&#39;aggiornamento del server MCP distribuito.
+Le modifiche ai metadati delle azioni, agli switch **[!UICONTROL Visibilità]** della pagina dell&#39;app, all&#39;autenticazione, alle variabili dell&#39;app e alle impostazioni di Analytics hanno effetto alla prossima distribuzione in tale ambiente. Il salvataggio di un&#39;impostazione non comporta l&#39;aggiornamento del server MCP distribuito.
 
 Controlla l’ambiente di destinazione ogni volta. La distribuzione nell’ambiente di staging non distribuisce le stesse modifiche nell’ambiente di produzione.
+
+Se l&#39;app non soddisfa i requisiti di runtime di Analytics o SDK, segui [Aggiorna un&#39;app esistente](/help/guides/upgrade-existing-app.md) prima di ridistribuirla.
 
 ## Passaggio successivo
 
 - [Verifica l&#39;app distribuita come plug-in ChatGPT](/help/guides/test-in-chatgpt.md).
 - [Verifica l&#39;app distribuita come connettore Claude](/help/guides/test-in-claude.md).
+- [Invia gli eventi dell&#39;app ad Adobe Analytics o Customer Journey Analytics](/help/guides/analytics-setup.md).

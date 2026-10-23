@@ -2,7 +2,7 @@
 title: Portate con voi il vostro progetto Edge Delivery Services
 description: Collega un progetto esistente di Adobe Edge Delivery Services a un’azione di Adobe LLM Apps.
 hidefromtoc: true
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
 workflow-type: tm+mt
 source-wordcount: '866'
 ht-degree: 1%
@@ -33,7 +33,7 @@ Hai bisogno di:
 
 Quando si collega un repository esistente, la piattaforma controlla `scripts/aem.js`, `blocks/`, `styles/styles.css` e `head.html`. L&#39;incorporamento importa anche `scripts/scripts.js` e chiama la funzione `decorateMain` esportata per preparare i blocchi. Mantenere intatto il contratto di blocco EDS. I soli file richiesti non confermano che il rendering di un progetto fortemente personalizzato sia corretto.
 
-## Installare il SDK delle app LLM
+## Installare il SDK delle app LLM {#install-the-llm-apps-sdk}
 
 Dalla directory principale del progetto EDS:
 
