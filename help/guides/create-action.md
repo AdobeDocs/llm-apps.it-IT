@@ -1,9 +1,9 @@
 ---
 title: Creare un’azione da zero
 description: Definisci i metadati delle azioni, implementane il gestore, connetti un widget EDS, verificalo e implementalo con le app Adobe LLM.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
 workflow-type: tm+mt
-source-wordcount: '1453'
+source-wordcount: '1476'
 ht-degree: 0%
 ---
 
@@ -147,9 +147,11 @@ query
 
 Utilizza nomi di parametri stabili. La modifica di un nome richiede anche la modifica del gestore e dei relativi test.
 
-### Configurare Analytics
+### Configurare Analytics {#configure-analytics}
 
 Abilitare **[!UICONTROL Raccogli intento utente]** quando si desidera che Analytics includa un riepilogo della conversazione che ha portato all&#39;azione.
+
+Se configuri [!DNL Adobe Analytics] o [!DNL Customer Journey Analytics], viene inviato anche l&#39;intento utente. Vedere [Configurazione di Adobe Analytics e Customer Journey Analytics](/help/guides/analytics-setup.md).
 
 La raccolta delle finalità utente è attivata per impostazione predefinita. Rivedi **[!UICONTROL Descrizione intento utente]**, che contiene le istruzioni per la richiesta del riepilogo. Limita le istruzioni a un intento non sensibile e anonimo e descrivi la raccolta di dati nell’informativa sulla privacy. La descrizione accetta fino a 2.000 caratteri.
 

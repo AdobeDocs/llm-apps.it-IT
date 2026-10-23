@@ -1,9 +1,9 @@
 ---
 title: Panoramica delle app Adobe LLM
 description: Scopri cos’è un’app Adobe LLM, come funziona e come iniziare a creare la tua app.
-source-git-commit: 14d94a68dabddd2f2ef2cef65c51d31645d4a958
+source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '624'
 ht-degree: 0%
 ---
 
@@ -81,3 +81,5 @@ La creazione di un’app e delle relative azioni è un passaggio separato:
 3. [Distribuisci e verifica l&#39;app](/help/guides/deploy-your-app.md). Rivedi il lavoro generato, distribuiscilo nell’ambiente di staging e testa in una piattaforma LLM supportata.
 
 La generazione automatica offre un punto di partenza con un comportamento di esempio. Prima di rendere l&#39;app disponibile ai clienti, [connetti i gestori ai sistemi](/help/guides/customize-handler.md) e [personalizza i widget](/help/guides/widgets.md).
+
+Per creare rapporti sull&#39;app nel tuo [!DNL Adobe Analytics] o [!DNL Customer Journey Analytics], vedi [Configurare Adobe Analytics e Customer Journey Analytics](/help/guides/analytics-setup.md).

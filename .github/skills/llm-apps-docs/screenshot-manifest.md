@@ -1,7 +1,7 @@
 ---
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
 workflow-type: tm+mt
-source-wordcount: '1052'
+source-wordcount: '1418'
 ht-degree: 1%
 ---
 # Manifesto della schermata
@@ -135,6 +135,28 @@ risposta. Non verifica l’interfaccia utente di configurazione corrente. Nuova 
 le schermate richiedono l&#39;accesso autenticato corrente; in caso contrario, utilizza il fornitore ufficiale
 e omettere le immagini non verificate.
 
+## Configurazione di Analytics
+
+Articolo: `/help/guides/analytics-setup.md`
+
+Directory di output: `help/assets/guide-analytics/`
+
+| Nome file | Stato e contesto utile | Testo alternativo consigliato |
+|---|---|---|
+| `analytics-settings.png` | Impostazioni app, scheda Analytics, Abilita Analytics su, ID Datastream vuoto, Requisiti espansi, Salvataggio delle modifiche disabilitato | Impostazioni app, scheda Analytics: abilitazione di Analytics attivata, campo ID stream di dati vuoto ed elenco esteso dei requisiti |
+| `datastream-analytics-service.png` | Raccolta dati, Aggiungi servizio, Adobe Analytics abilitato con un ID suite di rapporti fittizio | Aggiungi servizio: Adobe Analytics abilitato con un ID suite di rapporti di esempio |
+| `datastream-platform-service.png` | Raccolta dati, servizio Adobe Experience Platform con solo il set di dati evento selezionato | Servizio Adobe Experience Platform: il set di dati dell’evento selezionato e le altre opzioni cancellate |
+| `datastream-services.png` | Dettagli dello stream di dati con entrambi i servizi abilitati, un ID dello stream di dati fittizio e lo schema di mappatura | Dettagli dello stream di dati: entrambi i servizi sono abilitati, con l’ID dello stream di dati di esempio e lo schema di mappatura |
+
+Non acquisire mai un ID dello stream di dati reale. Non selezionare **Salva modifiche**: dopo un salvataggio,
+solo un amministratore può modificare lo stream di dati. Mostra Experience Platform, Adobe Analytics,
+e Customer Journey Analytics solo dove viene visualizzata un&#39;impostazione specifica per
+App LLM; collegamento ad Experience League per tutto il resto. Sostituisci organizzazione
+nomi, ID suite di rapporti, ID stream di dati, ID set di dati, e-mail e nomi personali
+con i seguenti valori fittizi: `example-org`, `demo.<suffix>` suite di rapporti,
+`00000000-0000-0000-0000-000000000000`, `0000…0001`, `user@example.com` e
+`Example User`.
+
 ## Provenienza della cattura esistente
 
 L’esecuzione dell’acquisizione 2026-10-19 ha utilizzato l’interfaccia utente locale richiesta dall’utente, con interfaccia/API corrispondente
@@ -162,3 +184,25 @@ l&#39;interruttore rimane il comando di attivazione/disattivazione dell&#39;azio
 rimani nell’editor. Il collegamento dell’archivio è mascherato e la navigazione dell’account è
 esclusi. Nessuna azione è stata salvata, approvata, attivata o distribuita durante l&#39;aggiornamento.
 Acquisizione raw: `docs-captures/2026-10-19/remove-enabled/`.
+
+### Impostazioni di Analytics, 2026-10-21
+
+Aggiornato `guide-analytics/analytics-settings.png` dal file fornito dall&#39;utente
+`Screenshot 2026-10-21 at 11.48.36.png`, non è un&#39;esecuzione basata su agenti. Origine
+ambiente: non registrato e non visibile sull&#39;immagine; la parità di produzione non è
+verificato. Revisione visiva confermata Abilitazione di Analytics attivata, campo ID dello stream di dati
+è vuoto, l&#39;opzione Requisiti è espansa e l&#39;opzione Salva modifiche è disabilitata. L’immagine era
+copiato senza modifiche; non sono visibili identificatori o dettagli dell’account.
+
+### Schermate dello stream di dati, 2026-10-19
+
+Aggiunto `guide-analytics/datastream-analytics-service.png`,
+`datastream-platform-service.png` e `datastream-services.png` da esistenti
+acquisizioni interne di Data Collection (29/07/2026 e 10/19/2026). ID suite di rapporti
+e l&#39;ID dello stream di dati sono stati sostituiti con sovrapposizioni di testo fittizie (`demo.aem.llm` e
+`00000000-0000-0000-0000-000000000000`); il font di sovrapposizione è San Francisco, quindi
+differisce leggermente dal font del prodotto. L’immagine del servizio piattaforma non era necessaria
+modifiche. L’immagine del servizio Analytics mostra ancora il puntatore del mouse dalla
+acquisizione originale. Un passaggio OCR sulle immagini finali non ha trovato identificatori originali.
+Sostituiscili con nuove acquisizioni che utilizzano valori fittizi digitati nell’interfaccia utente quando
+l’articolo viene quindi aggiornato.
