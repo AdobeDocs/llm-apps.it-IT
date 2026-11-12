@@ -1,7 +1,7 @@
 ---
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: fa80b7b68e1b905eb22d4789a74b2f0de886d70c
 workflow-type: tm+mt
-source-wordcount: '1109'
+source-wordcount: '1174'
 ht-degree: 0%
 ---
 # Procedura di screenshot guidata dall&#39;agente
@@ -106,6 +106,13 @@ docs-captures/<run-id>/
 Utilizza nomi di file descrittivi come `setup-choice.png`, `action-basic-info.png`,
 e `generated-action-review.png`. Mantieni le acquisizioni di origine invariate. Mantieni raw
 acquisisce e visualizza i profili di browser da commit e archivi di revisione.
+
+Prima di modificare le schermate, chiedi all’utente quali dettagli non sensibili confondere
+e se aggiungere didascalie a struttura rossa intorno ai campi o ai controlli rilevanti.
+Riutilizza le preferenze già fornite, anziché ripetere la richiesta. Conferma se
+per mantenere l&#39;intera finestra o ritagliarla, mantenendo la navigazione necessaria per l&#39;attività.
+Non rimuovere le etichette dai callout e spiegare che si tratta di annotazioni, non di interfaccia utente
+errori. Non memorizzare la cronologia delle conversazioni di modifica o delle iterazioni nell&#39;abilità.
 
 Crea copie finali nelle directory di output nel manifesto:
 

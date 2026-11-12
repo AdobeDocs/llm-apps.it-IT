@@ -1,9 +1,9 @@
 ---
 title: Testare l’app LLM come plug-in ChatGPT
 description: Crea un plug-in ChatGPT dall’URL del server MCP delle app Adobe LLM e testalo in una conversazione.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 2892acf4b3042c296203377a06bc3ff80fd375a5
 workflow-type: tm+mt
-source-wordcount: '546'
+source-wordcount: '627'
 ht-degree: 0%
 ---
 
@@ -71,6 +71,10 @@ Verifica che:
 - I controlli widget funzionano come previsto.
 
 Inoltre, testa input non valido, risultati vuoti, prompt non correlati che non chiamano per l’app e azioni che modificano i dati. Esamina ogni richiesta di conferma e autenticazione anziché approvare tutte le richieste in anticipo.
+
+### Verificare le estensioni facoltative
+
+Se hai configurato [Estensioni ChatGPT](/help/guides/chatgpt-extensions.md), prova ogni punto di ingresso selezionato, impostazione di visualizzazione e ricerca del compositore e confronta il risultato con il comportamento previsto in tale guida. Se più punti di ingresso utilizzano lo stesso widget, verificate ogni modo selezionato di aprirlo, anche senza un file per Global o Thread. La connessione dell’app o la chiamata di un’azione in una conversazione non verifica queste funzioni. Controlla prima i [requisiti client](/help/guides/chatgpt-extensions.md#before-you-begin): i punti di ingresso dei file richiedono il desktop e il supporto Web dell&#39;estensione di OpenAI esclude il classico ChatGPT.
 
 ## Aggiorna dopo le modifiche dell’app
 

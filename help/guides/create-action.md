@@ -1,9 +1,9 @@
 ---
 title: Creare un’azione da zero
 description: Definisci i metadati delle azioni, implementane il gestore, connetti un widget EDS, verificalo e implementalo con le app Adobe LLM.
-source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
+source-git-commit: 74769d0b2eb2d9323a39ae645dc5359404450164
 workflow-type: tm+mt
-source-wordcount: '1476'
+source-wordcount: '1518'
 ht-degree: 0%
 ---
 
@@ -66,7 +66,9 @@ Mantieni separate le attività correlate ma diverse. Utilizza azioni separate pe
 
 Apri l&#39;app e seleziona **[!UICONTROL Azioni]**, quindi seleziona **[!UICONTROL Crea azione]**.
 
-La finestra di dialogo per la creazione contiene **[!UICONTROL schede Azione]** e **[!UICONTROL Metadati widget]**. Espandi ogni sezione per configurare i relativi campi.
+La finestra di dialogo per la creazione contiene **[!UICONTROL schede Azione]**, **[!UICONTROL Metadati widget]** e **[!UICONTROL Estensioni ChatGPT]**. Espandi ogni sezione per configurare i relativi campi.
+
+Le impostazioni facoltative delle estensioni **[!UICONTROL ChatGPT]** consentono alle persone di aprire direttamente l&#39;app, utilizzare un visualizzatore di file personalizzato o trovare risorse nel compositore sui client supportati. Configura questi quando l&#39;azione corrispondente e il comportamento del widget sono pronti. Consulta [Configurare le estensioni ChatGPT](/help/guides/chatgpt-extensions.md).
 
 ### Immetti le informazioni di base
 
