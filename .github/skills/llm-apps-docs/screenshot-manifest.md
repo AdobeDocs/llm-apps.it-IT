@@ -1,7 +1,7 @@
 ---
-source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
+source-git-commit: fa80b7b68e1b905eb22d4789a74b2f0de886d70c
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1963'
 ht-degree: 1%
 ---
 # Manifesto della schermata
@@ -69,8 +69,10 @@ Directory di output: `help/assets/guide-create-action/`
 | `widget-permissions.png` | Autorizzazioni browser facoltative, con autorizzazioni non utilizzate disattivate | Crea nuova azione - Autorizzazioni browser |
 | `widget-csp.png` | Controlli del dominio URI di base, di risorsa, connessione, frame e reindirizzamento | Crea nuova azione: domini dei criteri di sicurezza dei contenuti |
 
-La finestra di dialogo per la creazione contiene **schede Azione** e **Metadati widget**. L’editor salvato
-ha **Dettagli widget LLM**, **Dettagli azione** e **Schede Analytics**. Acquisire
+Le acquisizioni esistenti mostrano **Azione** e **Metadati widget** nella creazione
+e **Dettagli widget LLM**, **Dettagli azione** e **Analytics** in
+editor salvato. L&#39;implementazione corrente dispone anche di **Estensioni ChatGPT** in entrambe
+flussi; verifica tale scheda nell’interfaccia utente in esecuzione durante l’aggiornamento delle immagini. Acquisire
 layout utilizzato dalla routine. Compila i campi di esempio senza salvare, quindi
 elimina le modifiche.
 
@@ -113,6 +115,65 @@ valore di sostituzione. Non acquisire mai un valore di configurazione reale.
 L’apertura di una finestra di dialogo non autorizza il salvataggio o l’eliminazione. Riutilizzare un elemento esistente sicuro
 variabile di staffaggio o richiesta prima di crearne una. Mantieni un&#39;immagine precedente solo dopo
 verifica che i campi e i controlli corrispondano ancora all’interfaccia utente corrente.
+
+## Estensioni ChatGPT
+
+Articolo: `/help/guides/chatgpt-extensions.md`
+
+Directory di output: `help/assets/guide-chatgpt-extensions/`
+
+Schermate di entrypoint globali e di thread, impostazioni di visualizzazione e menzione del compositore
+le schermate di configurazione sono state fornite il 10/11/2026 e sono pubblicate come
+registrati di seguito. Altri punti di controllo rimangono pianificati, non risorse esistenti. Do not
+aggiungi i collegamenti alle immagini dell&#39;articolo fino a quando le clip reali non sono state bonificate e visualizzate
+rivisto.
+
+| Nome file | Stato e contesto utile | Testo alternativo consigliato |
+|---|---|---|
+| `extensions-tab.png` | Azione salvata e supportata da widget con le estensioni ChatGPT selezionate | Estensioni ChatGPT: punti di ingresso, modalità di visualizzazione e menzioni del compositore |
+| `global-thread-entrypoints.png` | Globale e Thread selezionati insieme per il widget Home, con File deselezionato | Estensioni ChatGPT: globali e thread selezionati per l’azione Home |
+| `global-entrypoint-menu.png` | Punto di ingresso principale nel menu di navigazione del client | Menu di navigazione di ChatGPT che mostra il punto di ingresso globale della Home |
+| `global-entrypoint-open.png` | Finestra client completa con la pagina Home a schermo intero aperta e barra di navigazione visibile | Dashboard principale aperto dal punto di ingresso globale |
+| `thread-entrypoint-menu.png` | Menu Conversazione con plug-in espanso | Menu Conversazione: scegli il punto di ingresso del thread predefinito |
+| `thread-entrypoint-open.png` | Dashboard principale accanto a una conversazione | Dashboard principale aperta accanto a una conversazione ChatGPT |
+| `file-entrypoint.png` | Punto di ingresso file non salvato con estensione csv | File entrypoint - Offri un visualizzatore personalizzato per i file CSV |
+| `entrypoint-icon.png` | URL icona opzionale non salvato condiviso dai punti di ingresso selezionati dell’azione | Icona Entrypoint: imposta un&#39;icona di azione condivisa opzionale |
+| `display-settings.png` | Preferenza di avvio del modello, modalità di risorsa supportate e visualizzazione iniziale secondo le impostazioni predefinite dell&#39;host | Modalità di visualizzazione predefinita: preferenze di risorse e lancio del modello |
+| `composer-mentions.png` | Ricerca Indica un&#39;azione di solo testo con l&#39;opzione di menzione attivata | Riferimenti di ricerca - Riferimenti compositore abilitati |
+| `composer-mentions-query.png` | Dettagli dell’azione Cerca menzioni con un input di query String facoltativo | Riferimenti ricerca - Input stringa opzionale denominato query |
+| `composer-mentions-conflict.png` | Attivazione/disattivazione della menzione e dell’avvertenza per la denominazione del provider esistente | Il Compositore fa riferimento a menzioni non disponibili perché Search Mentions è già il provider |
+
+Utilizzare uno staffaggio di catalogo approvato e non sensibile. Conferma il salvataggio automatico dei moduli
+prima di immettere i valori di esempio, ignorare le modifiche non salvate in seguito. Non salvare,
+approva le azioni generate o distribuiscili solo per completare questo elenco di controllo.
+I risultati di terze parti richiedono l’accesso autenticato a un client compatibile. File
+entrypoints richiedono desktop; il browser Lavoro non è classico ChatGPT.
+
+### Aggiornamento della documentazione di Entrypoint, 2026-11-05
+
+- Source: `llm-apps-ui` componenti locali correnti e convalida dell&#39;input, non una
+Procedura dettagliata dell’interfaccia utente di produzione.
+- I controlli ad azione rapida sono stati rimossi. Utilizzo di file, thread e globali
+caselle di controllo che supportano più selezioni per un widget. L’URL dell’icona è un
+impostazione facoltativa a livello di azione condivisa da entrypoints.
+- Se si seleziona File, viene aggiunto un input Oggetto facoltativo denominato `file` quando assente.
+Se si combina File con Global o Thread, l&#39;input deve rimanere facoltativo.
+- L’ispezione del browser è stata bloccata perché entrambi i profili del browser di automazione erano
+già in uso. Non sono state acquisite nuove schermate.
+
+### Testo bozza di provenienza, 2026-11-03
+
+- Ambiente Source: implementazione locale UI/API/runtime/SDK, non completata
+Procedura dettagliata sull’editor delle azioni di produzione.
+- API di estensione confermate con verifica del pacchetto pubblicato in fase di esecuzione 1.3.0 e
+SDK 0.2.1. Si tratta delle versioni di base documentate, non di un&#39;attestazione che ogni
+Questa funzione è stata introdotta esattamente in queste versioni.
+- La specifica dell’estensione pubblica di OpenAI è stata verificata per verificare la presenza di restrizioni della piattaforma.
+- L&#39;accesso di produzione è riuscito in un browser separato controllato dall&#39;agente. Nessuna app
+Le impostazioni sono state salvate, non è stato selezionato alcuno staffaggio né è stata avviata alcuna distribuzione.
+- L’utente ha rinviato le schermate. Non sono state acquisite o sostituite nuove immagini.
+Etichette di controllo di produzione esatte e comportamento dell’host end-to-end richiedono ancora un
+procedura dettagliata live prima della pubblicazione.
 
 ## Distribuzione e test
 

@@ -1,9 +1,9 @@
 ---
 title: Campi azione e widget
 description: Definizioni dei campi per metadati di azioni, parametri, widget, CSP e autorizzazioni nelle app Adobe LLM.
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: 2892acf4b3042c296203377a06bc3ff80fd375a5
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '1257'
 ht-degree: 3%
 ---
 
@@ -19,15 +19,16 @@ Utilizza questa pagina per cercare i campi nell’editor delle azioni. Per i pas
 
 ## Trova le impostazioni
 
-La finestra di dialogo **[!UICONTROL Crea nuova azione]** contiene **[!UICONTROL schede Azione]** e **[!UICONTROL Metadati widget]**.
+La finestra di dialogo **[!UICONTROL Crea nuova azione]** contiene **[!UICONTROL Action]**, **[!UICONTROL Widget Metadata]** e **[!UICONTROL ChatGPT Extensions]** schede.
 
-Dopo la creazione, l’editor delle azioni salvate utilizza tre schede:
+Dopo la creazione, l’editor delle azioni salvate utilizza quattro schede:
 
 | Scheda | Impostazioni |
 |---|---|
 | **[!UICONTROL Dettagli widget LLM]** | Tipo di widget, dominio sandbox, descrizione del widget, URL di modelli e CSP |
 | **[!UICONTROL Dettagli azione]** | Identificatore di codice, descrizione, parametri di input e **[!UICONTROL impostazioni LLM]**, incluse annotazioni, testo dello stato di chiamata e visibilità |
 | **[!UICONTROL Analytics]** | Raccolta e istruzioni per l’intento dell’utente |
+| **[!UICONTROL Estensioni ChatGPT]** | Punti di ingresso con apertura diretta, icone di azione, preferenze di visualizzazione e menzioni del compositore |
 
 Per salvare le modifiche, seleziona **[!UICONTROL Salva modifiche]**. Le azioni generate in attesa di revisione mostrano invece **[!UICONTROL Contrassegna come revisionate]**, che gestisce anche le richieste pull generate.
 
@@ -38,13 +39,15 @@ I parametri di input sono i valori che la piattaforma LLM invia al gestore delle
 | Proprietà | Descrizione |
 |----------|-------------|
 | **Nome** | Identificatore del parametro (ad esempio, `category`, `query`) |
-| **Tipo** | `String`, `Number`, `Integer` o `Boolean` |
+| **Tipo** | `String`, `Number`, `Integer`, `Boolean` o `Object`; l&#39;editor salvato offre anche `File` per i parametri di file caricati |
 | **Descrizione** | Spiegazione leggibile: la piattaforma LLM utilizza la spiegazione per estrarre il valore corretto |
 | **Obbligatorio** | Se questa opzione è selezionata, il modello deve fornire questo parametro prima di richiamare l’azione |
 
 ### Parametri del file
 
 I parametri di file sono nomi di campi di input configurati nell’editor delle azioni. Quando un utente carica un file, l&#39;host fornisce un oggetto file per tali argomenti, in genere inclusi `download_url` e `file_id`.
+
+I parametri del file caricato sono diversi da [Punti di ingresso del file](/help/guides/chatgpt-extensions.md#file-entrypoint). Un elemento Entrypoint File utilizza un parametro Object denominato `file`, contenente i `name` e i `resourceUri` del file aperto.
 
 ## Campi metadati
 
@@ -126,6 +129,36 @@ L’informativa sulla sicurezza dei contenuti controlla quali domini esterni l�
 | **Domini frame** | Le origini sono consentite per gli iframe nidificati; attiva una revisione app più rigorosa |
 | **Domini di reindirizzamento** | Destinazioni attendibili per `openExternal` collegamenti di reindirizzamento ([!DNL ChatGPT] specifici) |
 | **Domini URI di base** | Direttiva CSP `base-uri` (solo SDK delle app MCP, non [!DNL ChatGPT]) |
+
+## Campi dell’estensione ChatGPT {#chatgpt-extension-fields}
+
+Queste impostazioni facoltative sono solo ChatGPT e non configurano Claude o altre piattaforme LLM. La disponibilità varia in base al client ChatGPT. Per i requisiti e i passaggi, consulta [Configurare le estensioni ChatGPT](/help/guides/chatgpt-extensions.md).
+
+### Punti di ingresso e icone delle azioni
+
+I punti di ingresso richiedono un widget. Selezionate una combinazione di Global, Thread e File per lo stesso widget, oppure lasciate deselezionate tutte le opzioni. Global e Thread richiamano l&#39;azione senza input. File fornisce solo l&#39;oggetto `file`. Altri input richiesti impediscono il funzionamento del punto di ingresso corrispondente. Se File è combinato con Global o Thread, `file` deve essere facoltativo.
+
+| Campo | Descrizione |
+|---|---|
+| **Dove gli utenti possono aprire questa app** | Caselle di controllo per Globale (schermo intero dalla navigazione), Thread (una scheda di contenuto lato conversazione) e File (un visualizzatore personalizzato per le estensioni di file corrispondenti). È possibile selezionare più tipi |
+| **URL icona** | Icona azione opzionale condivisa dai relativi punti di ingresso. Accetta un URL HTTP(S) o un URI di dati; preferisci un URL immagine HTTPS pubblico. La modifica o la cancellazione dell’URL sostituisce tutte le varianti di icona salvate |
+| **Estensioni file** | Almeno un&#39;estensione, ad esempio `.csv`, per un punto di ingresso file. Se omesso, l’editor aggiunge un punto iniziale |
+
+Se si seleziona File, viene aggiunto un input Oggetto facoltativo denominato `file`, se mancante. Le definizioni esistenti vengono mantenute e devono accettare `name` e `resourceUri` del file aperto.
+
+### Preferenze visualizzazione
+
+Queste impostazioni del widget sono separate dai punti di ingresso. L’host sceglie la presentazione finale.
+
+| Campo | Scelte e comportamento predefinito |
+|---|---|
+| **Visualizza quando avviato dal modello** | `inline`, `fullscreen` o **Nessuna preferenza** |
+| **Modalità di visualizzazione risorse supportate** | **In linea**, **A schermo intero** o entrambi. Nessuna delle opzioni selezionate lascia attive le impostazioni predefinite host |
+| **Visualizzazione risorsa iniziale** | **Impostazione predefinita host**, **In linea** o **A schermo intero**. Quando sono selezionate le modalità supportate, è necessario includere la modalità iniziale |
+
+### Menzioni del compositore
+
+**Abilita menzioni compositore** indica l&#39;azione di ricerca delle risorse dell&#39;app. Solo una azione per app può fornire la ricerca delle menzioni. L&#39;azione deve essere di sola lettura e visibile all&#39;app, con un parametro String denominato `query` che accetta testo vuoto e nessun altro input richiesto. Un provider può essere di solo testo; per abilitare la visibilità dell’app non è necessario configurare un widget per il provider di ricerca.
 
 ## Autorizzazioni
 

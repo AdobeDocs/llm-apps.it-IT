@@ -1,9 +1,9 @@
 ---
 title: Risoluzione dei problemi relativi alle app Adobe LLM
 description: Risolvere i problemi comuni relativi a infrastruttura, generazione di azioni, gestore, widget, distribuzione, autenticazione e connessione alla piattaforma LLM.
-source-git-commit: a48b4022979d9a13b4fc3aa870c4ee6375e8bc13
+source-git-commit: 2afae0696de15ec4d0a6596e413dd4851761439e
 workflow-type: tm+mt
-source-wordcount: '1350'
+source-wordcount: '1503'
 ht-degree: 0%
 ---
 
@@ -25,7 +25,9 @@ Inizia con il sintomo osservabile. Durante la risoluzione dei problemi, non cond
 | Nessun programma AEM disponibile | Chiedi all’amministratore l’accesso al programma. Se il caricamento non è riuscito, selezionare **Riprova a caricare i programmi** |
 | I nuovi archivi non vengono visualizzati | Utilizza **Connetti un altro archivio** per concedere l&#39;accesso all&#39;app GitHub per le app Adobe LLM, torna alla procedura guidata e seleziona **Aggiorna organizzazioni e archivi** |
 | Convalida dell&#39;archivio azioni o widget non riuscita | Utilizza un progetto esistente compatibile o un archivio vuoto. Usa archivi separati per azioni e widget, quindi seleziona di nuovo **Convalida archivio** |
-| Sincronizzazione codice AEM non rilevata | Installa AEM Code Sync per l&#39;archivio widget, aggiungi te stesso o te stessa come amministratore del sito nella pagina di conferma, torna alla procedura guidata e seleziona **Convalida installazione AEM Code Sync** |
+| Configurazione del sito AEM o convalida dell’accesso non riuscita | Segui [Configurare l&#39;accesso al sito AEM](/help/guides/create-app.md#aem-site-access). Per una nuova installazione di Sincronizzazione codice, completa la procedura guidata della pagina di conferma. Mantenere l&#39;installazione per un sito esistente e richiedere all&#39;amministratore del sito di concedere l&#39;accesso all&#39;account Adobe `admin` tramite l&#39;amministratore utenti di AEM. Verificare che la sincronizzazione codice copra l&#39;archivio widget, quindi selezionare **Convalida installazione AEM** |
+| È richiesto l&#39;accesso in scrittura DA | Chiedi a un amministratore dell’organizzazione DA di concedere all’account Adobe utilizzato nelle app LLM l’accesso in scrittura a tutto il contenuto del sito. Segui [Concedi l&#39;accesso in scrittura ad DA](/help/guides/create-app.md#da-write-access), accedi con tale account, quindi seleziona **Convalida installazione di AEM**. I ruoli del sito AEM non concedono autorizzazioni DA |
+| Impossibile verificare l’accesso ad AEM o DA | Riprovare a **convalidare l&#39;installazione di AEM** per verificare un errore temporaneo. Se invece il messaggio segnala un rifiuto di accesso, correggi le autorizzazioni di AEM o DA seguendo le istruzioni precedenti prima di riprovare |
 | La creazione dell’app non ha generato azioni | La creazione di app imposta solo l’infrastruttura. Nella pagina dell&#39;app, seleziona **Genera automaticamente azioni**, immetti **Il tuo sito Web** e seleziona **Genera le mie azioni**. Vedi [Crea azioni](/help/guides/creating-actions.md) |
 | Le azioni sono ancora in fase di generazione | L’interfaccia utente stima fino a 30 minuti per la generazione. Seguire l&#39;avanzamento nella pagina Azioni oppure uscire dalla pagina e tornare in un secondo momento |
 | Generazione delle azioni segnala un errore | Verifica che il sito web sia pubblico tramite HTTPS e che l’accesso all’archivio sia ancora valido per i tuoi archivi. Se il problema persiste, contatta il team di Beta con il messaggio di errore visibile |
@@ -50,6 +52,10 @@ Inizia con il sintomo osservabile. Durante la risoluzione dei problemi, non cond
 | L’editor intestazioni HTTP non può salvare la configurazione | Utilizza il [Servizio di configurazione AEM](https://aem.live/docs/config-service-setup) o chiedi all&#39;amministratore EDS di inizializzare la configurazione delle intestazioni del sito |
 
 Non registrare valori `bridge.toolResult` completi quando possono contenere dati personali o sensibili.
+
+## Estensioni ChatGPT
+
+Per informazioni sugli errori mancanti relativi a punti di ingresso, visualizzatori di file, URL di icone non validi, impostazioni di visualizzazione o menzioni del compositore, vedere [Risoluzione dei problemi relativi alle estensioni ChatGPT](/help/guides/chatgpt-extensions.md#troubleshooting). Controlla il supporto client prima di modificare l’app: una connessione funzionante non significa che ogni estensione sia supportata in quel client.
 
 ## Distribuzione
 
