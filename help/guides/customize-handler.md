@@ -1,9 +1,9 @@
 ---
 title: Personalizzare un gestore di azioni generato
 description: Comprendi il contratto del gestore Adobe LLM Apps, sostituisci i dati di esempio generati e mantieni l’output del gestore allineato al relativo widget.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '880'
+source-wordcount: '895'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 La piattaforma crea un gestore di lavoro per ogni azione generata. Il gestore restituisce inizialmente dati di esempio per testare l’esperienza completa.
 
@@ -21,7 +19,7 @@ La piattaforma crea un gestore di lavoro per ogni azione generata. Il gestore re
 
 ## Trova il gestore generato
 
-Aprire l&#39;archivio del gestore connesso durante la [configurazione dell&#39;infrastruttura](/help/guides/create-app.md). Se utilizzi l’infrastruttura gestita di Adobe, richiedi l’accesso al codice prima di continuare.
+Aprire l&#39;archivio del gestore connesso durante la [configurazione dell&#39;infrastruttura](/help/guides/create-app.md). Se si utilizza l&#39;infrastruttura gestita [!DNL LLM Apps], richiedere l&#39;accesso al codice prima di continuare.
 
 ```text
 actions/
@@ -38,7 +36,7 @@ test/
     └── <action-slug>.test.js
 ```
 
-Utilizza la richiesta di pull generata per individuare i file esatti. Il margine della cartella utilizza i trattini: la piattaforma genera un&#39;azione con l&#39;identificatore di codice `search_products` in `actions/search-products/`. Il runtime riconosce il modulo sillabato e una cartella che corrisponde esattamente all’identificatore.
+Utilizza la richiesta pull o il ramo generato per individuare i file esatti. Il margine della cartella utilizza i trattini: la piattaforma genera un&#39;azione con l&#39;identificatore di codice `search_products` in `actions/search-products/`. Il runtime riconosce il modulo sillabato e una cartella che corrisponde esattamente all’identificatore.
 
 Modifica `index.js` generato ed eventuali dati di esempio associati. Non modificare i file di runtime come `entry.js`.
 

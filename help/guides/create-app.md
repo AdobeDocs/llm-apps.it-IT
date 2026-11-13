@@ -1,34 +1,33 @@
 ---
 title: Configurazione dell’infrastruttura
-description: Crea un’app Adobe LLM utilizzando l’infrastruttura gestita di Adobe oppure fornisci due archivi GitHub vuoti da inizializzare per la piattaforma.
-source-git-commit: 079eb2403f15a97842c5c336c03ec5bfe10de622
+description: Crea un’app Adobe LLM utilizzando l’infrastruttura gestita delle app LLM o i tuoi archivi aggiunti a Cloud Manager.
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1595'
-ht-degree: 0%
+source-wordcount: '1947'
+ht-degree: 1%
 ---
 
 # Configurazione dell’infrastruttura {#create-first-app}
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 L’infrastruttura è la base tecnica dell’app: gli archivi che memorizzano il codice e i servizi che eseguono i gestori delle azioni e distribuiscono i widget agli utenti.
 
 Come spiegato nella [panoramica](/help/overview/overview.md#key-concepts), un gestore **azioni** esegue un&#39;attività, ad esempio la ricerca di prodotti, mentre un **widget** presenta il risultato come un&#39;esperienza interattiva nella conversazione.
 
-[!DNL LLM Apps] archivia il gestore e il codice sorgente del widget in due archivi [!DNL GitHub] separati:
+[!DNL LLM Apps] archivia il gestore e il codice sorgente del widget in due archivi separati:
 
 - **Archivio azioni**: contiene i gestori lato server e i relativi test.
 - **Archivio widget**: contiene il codice e gli stili dei widget interattivi.
 
 Ad esempio, un gestore di ricerca di prodotti recupera i prodotti corrispondenti e il suo widget li visualizza come schede di prodotto. Gli archivi memorizzano tale codice; Adobe I/O Runtime esegue i gestori distribuiti e Edge Delivery Services fornisce i widget.
 
-La procedura guidata di configurazione prepara questi archivi e collega i servizi necessari per l’app. È consigliabile iniziare con **l&#39;infrastruttura gestita di Adobe**, il modo più veloce per iniziare. Adobe crea e ospita gli archivi per i gestori delle azioni e i widget. Non è necessario configurare manualmente gli archivi.
+La procedura guidata di configurazione prepara questi archivi e collega i servizi necessari per l’app. Scegli una delle due opzioni seguenti:
 
-In alternativa, fornire due archivi [!DNL GitHub] vuoti nel proprio account o organizzazione. La piattaforma li inizializza con i file di progetto richiesti; non è necessario preparare in anticipo il codice dell&#39;azione o del widget.
+- L&#39;infrastruttura gestita **[!DNL LLM Apps]** è il modo più veloce per iniziare. Adobe crea e ospita gli archivi per i gestori delle azioni e i widget, pertanto non devi impostare gli archivi personalmente.
+- **I tuoi archivi** mantengono il codice dell&#39;app negli archivi che possiedi, aggiunti a [!DNL Cloud Manager]. Possono essere ospitati su [!DNL GitHub], [!DNL GitHub Enterprise], [!DNL GitLab], [!DNL Bitbucket] o [!DNL Azure DevOps]. La piattaforma inizializza archivi vuoti con i file di progetto richiesti, quindi non è necessario preparare in anticipo il codice dell’azione o del widget.
 
 **In questa guida:** scopri come scegliere un&#39;opzione di infrastruttura e creare la tua app con la procedura guidata di configurazione. Dopo l&#39;installazione, continuare con [Crea azioni](/help/guides/creating-actions.md).
 
@@ -40,16 +39,16 @@ Apri [App Adobe LLM](https://experience.adobe.com/llm-apps). Dalla pagina di ben
 
 La procedura guidata **[!UICONTROL Crea app LLM]** inizia con **[!UICONTROL Inizia]**. Scegli come impostare l’ambiente tecnico.
 
-![Crea la tua app LLM: scegli tra l&#39;infrastruttura gestita di Adobe e la connessione dei tuoi archivi](/help/assets/guide-infrastructure/setup-choice.png)
+![Crea la tua app LLM — Inizia a utilizzarla e usa la configurazione di Cloud Manager; il contorno rosso indica l&#39;opzione del repository](/help/assets/guide-infrastructure/setup-choice.png)
 
 | Opzione infrastruttura | Seleziona nella procedura guidata | Che cosa significa |
 |---|---|---|
-| **Infrastruttura gestita Adobe** | **[!UICONTROL Gestiamolo]** | Adobe crea e gestisce gli archivi e i servizi connessi per la tua app. L’accesso al codice è disponibile su richiesta. |
-| **Archivi personali** | **[!UICONTROL La configurerò io stesso]** | Fornisci due archivi GitHub vuoti e concedi l’accesso tramite la procedura guidata. La piattaforma inizializza uno per i gestori di azioni e l&#39;altro per i widget. |
+| **[!DNL LLM Apps]infrastruttura gestita** | **[!UICONTROL Gestiamolo]** | Adobe crea e gestisce gli archivi e i servizi connessi per la tua app. L’accesso al codice è disponibile su richiesta. |
+| **Archivi personali** | **[!UICONTROL Usa la mia installazione di Cloud Manager]** | Sono stati selezionati due archivi aggiunti a [!DNL Cloud Manager]: uno per i gestori di azioni e uno per i widget. La piattaforma li inizializza se sono vuoti. |
 
 Entrambe le opzioni supportano la generazione automatica delle azioni in un secondo momento. Nessuna delle due opzioni richiede la scrittura manuale delle azioni.
 
-## Utilizzare l’infrastruttura gestita di Adobe {#adobe-managed-infrastructure}
+## Utilizza infrastruttura gestita [!DNL LLM Apps] {#adobe-managed-infrastructure}
 
 Utilizza questa opzione per consentire ad Adobe di configurare e gestire gli archivi e i servizi connessi per la tua app. Non è necessario creare archivi o installare [!DNL GitHub] app.
 
@@ -66,17 +65,34 @@ Se l&#39;installazione non riesce, leggere l&#39;errore e selezionare **[!UICONT
 
 Al termine dell&#39;installazione, continuare con [Crea azioni](/help/guides/creating-actions.md).
 
-## Collegare i propri archivi {#your-own-repositories}
+## Utilizzare i propri archivi {#your-own-repositories}
 
-Seleziona **[!UICONTROL Imposta io stesso]**, quindi **[!UICONTROL Passaggio successivo]**. Questo percorso prevede quattro passaggi della procedura guidata:
+Seleziona **[!UICONTROL Usa la configurazione di Cloud Manager]**, quindi **[!UICONTROL Passaggio successivo]**. Questo percorso prevede quattro passaggi della procedura guidata:
 
 **Introduzione → configurazione dell&#39;infrastruttura di azioni → Configurazione dell&#39;infrastruttura di widget → Dettagli dell&#39;app.**
 
-È necessario accedere agli archivi selezionati e disporre delle autorizzazioni necessarie per installare o configurare le [!DNL GitHub] app richieste. Per gli archivi di proprietà dell’organizzazione, un amministratore potrebbe dover approvare l’accesso.
+[!DNL LLM Apps] raggiunge gli archivi tramite [!DNL Cloud Manager], utilizzando il tuo account Adobe. Non installare un&#39;app [!DNL GitHub].
 
-Crea due archivi vuoti: uno per i gestori di azioni e uno per i widget. Non inizializzare con un file README, una licenza o `.gitignore`. La piattaforma aggiunge la struttura di progetto richiesta quando si convalida ogni archivio nella procedura guidata.
+### Prima di iniziare {#own-repositories-prerequisites}
 
-Se si dispone già di azioni compatibili e di progetti EDS, è possibile collegarli, ma non è necessario il codice esistente.
+- Accedi al programma [!DNL Cloud Manager] a cui apparterrà l&#39;app.
+- Due archivi, uno per i gestori di azioni e uno per i widget. Gli archivi vuoti vanno bene, incluso un archivio che contiene solo il README il suo host Git creato.
+- Entrambi gli archivi [aggiunti a Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/managing-code/external-repositories) come archivi privati, con proprietà convalidata e stato **Pronto**. [!DNL Cloud Manager] deve essere in grado di scrivervi; un token di accesso di sola lettura non è sufficiente.
+
+Vengono elencati solo gli archivi che ospiti personalmente. Gli archivi ospitati da Adobe in [!DNL Cloud Manager] non sono supportati.
+
+#### L&#39;archivio dei widget è un sito Edge Delivery Services {#widget-repository-is-an-eds-site}
+
+I widget vengono gestiti da un sito [!DNL Edge Delivery Services] (EDS) e l&#39;archivio dei widget contiene il codice di tale sito. Assicurati che l&#39;archivio dei widget appartenga a un sito EDS o farà. Esistono due modi per impostarne uno:
+
+- **Qualsiasi provider Git, con Porta il tuo Git.** Crea il sito EDS in [!DNL Cloud Manager] e collegalo al tuo archivio con **Porta il tuo Git**. [!DNL Cloud Manager] sincronizza quindi il codice del repository con il sito. Eseguire questa operazione prima di avviare la procedura guidata. Vedi [Porta il tuo Git](https://www.aem.live/developer/byo-git).
+- **Un archivio [!DNL GitHub], con AEM Code Sync.** Configurare autonomamente il sito EDS, come nell&#39;[esercitazione di Edge Delivery Services](https://www.aem.live/developer/tutorial). La procedura guidata ti guida attraverso l’installazione di AEM Code Sync e il controllo dell’accesso dopo la convalida dell’archivio.
+
+Il passaggio del widget rileva quale caso si applica. Consulta [Configurare l&#39;infrastruttura del widget](#set-up-the-widget-infrastructure).
+
+>[!TIP]
+>
+>Anche se la società dispone già di un sito EDS, creare un sito EDS separato per i widget [!DNL LLM Apps].
 
 >[!NOTE]
 >
@@ -86,38 +102,44 @@ Se si dispone già di azioni compatibili e di progetti EDS, è possibile collega
 
 Il repository delle azioni contiene i gestori e i test lato server eseguiti quando una piattaforma LLM richiama un&#39;azione.
 
-1. In **[!UICONTROL Origine azioni]**, seleziona **[!UICONTROL GitHub]**. Le altre origini di codice non sono attualmente disponibili.
-2. Risposta **[!UICONTROL Esiste già un archivio GitHub?]**:
-   - Seleziona **[!UICONTROL Sì, utilizzerò un archivio già creato]** per connettere un progetto esistente compatibile o un archivio vuoto.
-   - Seleziona **[!UICONTROL Non ho ancora un archivio]**, quindi **[!UICONTROL Crea archivi su GitHub]**, per creare un archivio azioni vuoto. In seguito, torna alla procedura guidata.
-3. Connettere l&#39;archivio all&#39;app [!DNL GitHub] delle app Adobe LLM:
-   - Se nessuna organizzazione è connessa, selezionare **[!UICONTROL Installa su GitHub]**.
-   - Se un&#39;organizzazione è già connessa, selezionare **[!UICONTROL Connetti repository]** e aggiungere il repository a tale installazione.
-4. In [!DNL GitHub], scegli **[!UICONTROL Seleziona solo archivi]** e concedi l&#39;accesso solo agli archivi utilizzati da questa app.
-5. Torna alla procedura guidata. In **[!UICONTROL Seleziona archivio]**, scegli l&#39;**[!UICONTROL organizzazione]** e il **[!UICONTROL archivio]**.
-6. Selezionare **[!UICONTROL Convalida repository]**. La convalida inizializza un archivio vuoto con il modulo di avvio delle app Adobe LLM. Un archivio esistente deve contenere un progetto di azioni compatibile.
-7. Dopo la convalida, selezionare **[!UICONTROL Passaggio successivo]**.
+1. In **[!UICONTROL Programma Cloud Manager]**, selezionare il programma che contiene l&#39;archivio azioni.
+2. In **[!UICONTROL repository Cloud Manager]**, selezionare il repository delle azioni. Se manca, aggiungerlo in [!DNL Cloud Manager] con **[!UICONTROL Vai a Cloud Manager]**, quindi aggiorna l&#39;elenco.
+3. Selezionare **[!UICONTROL Convalida repository]**. La convalida inizializza un archivio vuoto con il modulo di avvio delle app Adobe LLM. Un archivio esistente deve contenere un progetto di azioni compatibile.
+4. Quando viene visualizzato **[!UICONTROL Archivio convalidato]**, selezionare **[!UICONTROL Passaggio successivo]**.
 
-![Configurazione dell&#39;infrastruttura delle azioni: scegliere GitHub e connettere un repository delle azioni](/help/assets/guide-infrastructure/action-repository.png)
+![Configurazione dell&#39;infrastruttura di azioni: programma Cloud Manager e repository selezionati, con repository convalidato](/help/assets/guide-infrastructure/action-repository.png)
 
-Se manca un&#39;organizzazione o un repository, utilizzare **[!UICONTROL Connetti un&#39;altra organizzazione]** o **[!UICONTROL Connetti un altro repository]** nel relativo selettore. Dopo aver modificato l&#39;accesso in [!DNL GitHub], selezionare **[!UICONTROL Aggiorna organizzazioni e archivi]**.
+La piattaforma invia il codice dell’azione generata a un ramo di questo archivio. Selezionando **[!UICONTROL Contrassegna come revisionato]** il ramo viene unito. Consulta [Creare azioni](/help/guides/creating-actions.md).
 
-### Configurare l’infrastruttura dei widget
+### Configurare l’infrastruttura dei widget {#set-up-the-widget-infrastructure}
 
-I widget sono risposte visive facoltative collegate alle azioni, ad esempio schede di prodotto o moduli di prenotazione. La procedura guidata connette un archivio EDS ([!DNL Edge Delivery Services]) per ospitarli.
-
-Utilizzare lo stesso account Adobe per [!DNL LLM Apps], l&#39;accesso al sito AEM e l&#39;accesso in scrittura DA.
-
-#### Connettere l’archivio dei widget {#connect-widget-repository}
+I widget sono risposte visive facoltative collegate alle azioni, ad esempio schede di prodotto o moduli di prenotazione. Edge Delivery Services (EDS) li fornisce da un sito che utilizza l’archivio dei widget.
 
 1. In **[!UICONTROL Origine widget]**, selezionare **[!UICONTROL Seleziona manualmente l&#39;archivio widget]**.
-2. In **[!UICONTROL Origine codice]**, seleziona **[!UICONTROL GitHub]**.
-3. Scegli se disponi già di un archivio. In caso contrario, selezionare **[!UICONTROL Crea archivi su GitHub]**, creare un archivio widget vuoto e tornare alla procedura guidata.
-4. Installare o configurare l&#39;app Adobe LLM Apps [!DNL GitHub] per questo archivio, come è stato fatto per l&#39;archivio delle azioni.
-5. Selezionare la relativa **[!UICONTROL organizzazione]** e **[!UICONTROL archivio]**. Non selezionare l’archivio delle azioni.
-6. Selezionare **[!UICONTROL Convalida repository]**. La convalida inizializza un archivio vuoto con la boilerplate di AEM. Un repository esistente deve essere un progetto EDS compatibile.
 
-#### &#x200B;7. Configurare l’accesso al sito AEM {#aem-site-access}
+   ![Configurazione infrastruttura widget - Origine widget con selezione manuale archivio widget](/help/assets/guide-infrastructure/widget-source.png)
+
+2. In **[!UICONTROL Programma Cloud Manager]**, selezionare il programma che contiene l&#39;archivio widget. Può essere diverso dal programma dell’archivio delle azioni.
+3. In **[!UICONTROL Archivio Edge Delivery Services]**, selezionare l&#39;archivio widget. Non selezionare l’archivio delle azioni.
+4. Selezionare **[!UICONTROL Convalida repository]**. La convalida inizializza un archivio vuoto con la boilerplate di AEM. Un repository esistente deve essere un progetto EDS compatibile.
+
+Ciò che accade dopo dipende da dove è ospitato l’archivio dei widget.
+
+#### Archivio widget su un altro provider (porta il tuo Git) {#widget-repository-byog}
+
+Per un repository in [!DNL GitLab], [!DNL Bitbucket], [!DNL Azure DevOps] o [!DNL GitHub Enterprise], la convalida trova il sito EDS che [!DNL Cloud Manager] collega al repository. La procedura guidata mostra il sito in **[!UICONTROL sito Edge Delivery Services]**.
+
+![Configurazione infrastruttura widget - Archivio widget convalidato e sito Edge Delivery Services in cui Cloud Manager lo sincronizza](/help/assets/guide-infrastructure/widget-repository.png)
+
+[!DNL Cloud Manager] sincronizza il codice dell&#39;archivio in tale sito, quindi non è necessario AEM Code Sync. Seleziona **[!UICONTROL Passaggio successivo]**.
+
+Se viene segnalato che nessun sito è collegato, collegare l&#39;archivio a un sito EDS in [!DNL Cloud Manager] con **Porta il tuo Git**, quindi eseguire di nuovo la convalida. Vedi [Porta il tuo Git](https://www.aem.live/developer/byo-git).
+
+#### Archivio widget su GitHub {#widget-repository-github}
+
+Un archivio [!DNL GitHub] utilizza AEM Code Sync per pubblicare il proprio codice. Dopo la convalida, la procedura guidata mostra **[!UICONTROL Installa AEM Code Sync]**. Utilizzare lo stesso account Adobe per [!DNL LLM Apps], l&#39;accesso al sito AEM e l&#39;accesso in scrittura DA.
+
+##### Configurare l’accesso al sito AEM {#aem-site-access}
 
 **Nuova installazione:** Seleziona **[!UICONTROL Installa AEM Code Sync]** e concedi l&#39;accesso all&#39;archivio widget. Completare la procedura guidata di configurazione nella pagina di conferma dell&#39;installazione per aggiungere se stessi come amministratore del sito.
 
@@ -125,7 +147,7 @@ Utilizzare lo stesso account Adobe per [!DNL LLM Apps], l&#39;accesso al sito AE
 
 Sostituisci `<org>` e `<site>` con i tuoi nomi di organizzazione e sito AEM. L&#39;amministratore del sito può confermare questi valori.
 
-#### &#x200B;8. Concedere l’accesso in scrittura a DA {#da-write-access}
+##### Concedere l’accesso in scrittura a DA {#da-write-access}
 
 Per i siti nuovi ed esistenti, chiedere a un amministratore dell&#39;organizzazione DA di:
 
@@ -141,7 +163,7 @@ I ruoli del sito AEM non concedono l’accesso in scrittura da. Non è necessari
 
 Per informazioni dettagliate sulla configurazione delle autorizzazioni DA, vedere [Autorizzazioni e sicurezza](https://www.aem.live/docs/ew/administering/permissions).
 
-#### &#x200B;9. Convalidare la configurazione di AEM {#validate-aem-setup}
+##### Convalidare la configurazione di AEM {#validate-aem-setup}
 
 1. Torna a [!DNL LLM Apps] e seleziona **[!UICONTROL Convalida installazione di AEM]**.
 2. Quando viene visualizzata la **[!UICONTROL Configurazione di AEM verificata]**, selezionare **[!UICONTROL Passaggio successivo]**.
@@ -156,20 +178,26 @@ Se la convalida non riesce, segui il messaggio per controllare [l&#39;accesso al
 
 Entrambe le opzioni di infrastruttura terminano con **[!UICONTROL Dettagli app]**.
 
-![Dettagli app — immetti un nome di app, seleziona un programma AEM e scegli l&#39;area dati di Analytics](/help/assets/guide-infrastructure/app-details.png)
+![Dettagli app: il nome dell&#39;app LLM immesso, il programma AEM impostato dall&#39;archivio Cloud Manager e l&#39;area dati Approfondimenti applicazione](/help/assets/guide-infrastructure/app-details.png)
 
 1. Immettere il nome dell&#39;app **[!UICONTROL LLM]**. Utilizza un nome che identifichi il brand o l&#39;esperienza, ad esempio *Frescopa Coffee*.
-2. Seleziona il **[!UICONTROL programma AEM]** a cui appartiene l&#39;app. Se si dispone dell&#39;accesso a un solo programma, la procedura guidata lo seleziona automaticamente.
-3. In **[!UICONTROL Area dati di Analytics]**, scegliere **[!UICONTROL Stati Uniti]** o **[!UICONTROL Europa (UE)]**.
+2. Seleziona il **[!UICONTROL programma AEM]** a cui appartiene l&#39;app. Se si dispone dell&#39;accesso a un solo programma, la procedura guidata lo seleziona automaticamente. Con i tuoi archivi, il programma è il programma dell’archivio azioni e non può essere modificato qui.
+3. In **[!UICONTROL Area dati Approfondimenti applicazione]**, scegliere **[!UICONTROL Stati Uniti]** o **[!UICONTROL Europa (UE)]**.
 4. Selezionare **[!UICONTROL Crea app]**.
 
 >[!IMPORTANT]
 >
->Una volta creata l’app, non è possibile modificare l’area dati Programma AEM e Analisi. L’area di analisi determina dove vengono memorizzati i dati analitici dell’app.
+>Una volta creata l’app, non è possibile modificare l’area dati Programma AEM e Approfondimenti applicazione. L&#39;area determina dove vengono memorizzati i dati di Application Insights dell&#39;app.
 
 Se non è disponibile alcun programma AEM, chiedi all’amministratore di accedervi. Se il caricamento dei programmi non riesce, selezionare **[!UICONTROL Riprova a caricare i programmi]**.
 
-La procedura guidata apre la pagina dell’app dopo la creazione. Con l’infrastruttura gestita di Adobe, attendi il completamento della configurazione dell’infrastruttura prima di continuare.
+La procedura guidata apre la pagina dell’app dopo la creazione. Con l&#39;infrastruttura gestita [!DNL LLM Apps], attendere il completamento della configurazione dell&#39;infrastruttura prima di continuare.
+
+Per controllare gli archivi in un secondo momento, apri le **[!UICONTROL impostazioni]** dell&#39;app. La sezione **[!UICONTROL Archivio]** mostra il programma e il nome di ogni repository e, per un archivio widget che utilizza Bring Your Own Git, il relativo sito EDS e l&#39;origine. Gli archivi non possono essere modificati dopo la creazione dell’app.
+
+![Impostazioni app - Sezione archivio con repository boilerplate e Edge Delivery Services, inclusi il sito e l&#39;origine collegati](/help/assets/guide-infrastructure/settings-repositories.png)
+
+Le app create in precedenza con l&#39;app [!DNL GitHub] di Adobe LLM continuano a funzionare con gli archivi esistenti.
 
 ## Successivo: creare le azioni
 

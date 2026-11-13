@@ -1,9 +1,9 @@
 ---
 title: Risoluzione dei problemi relativi alle app Adobe LLM
 description: Risolvere i problemi comuni relativi a infrastruttura, generazione di azioni, gestore, widget, distribuzione, autenticazione e connessione alla piattaforma LLM.
-source-git-commit: 2afae0696de15ec4d0a6596e413dd4851761439e
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1503'
+source-wordcount: '1602'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Inizia con il sintomo osservabile. Durante la risoluzione dei problemi, non condividere credenziali, token, URL MCP privati o risultati sensibili del gestore.
 
@@ -21,16 +19,17 @@ Inizia con il sintomo osservabile. Durante la risoluzione dei problemi, non cond
 
 | Sintomo | Cosa provare |
 |---------|-------------|
-| L&#39;installazione dell&#39;infrastruttura gestita Adobe non riesce | Lettura dell&#39;errore in **Installazione non riuscita**, quindi selezionare **Riprova**. Se la pagina non riesce a controllare l&#39;avanzamento, selezionare **Controlla di nuovo**; l&#39;installazione continua in background |
+| L&#39;installazione dell&#39;infrastruttura gestita [!DNL LLM Apps] non riesce | Lettura dell&#39;errore in **Installazione non riuscita**, quindi selezionare **Riprova**. Se la pagina non riesce a controllare l&#39;avanzamento, selezionare **Controlla di nuovo**; l&#39;installazione continua in background |
 | Nessun programma AEM disponibile | Chiedi all’amministratore l’accesso al programma. Se il caricamento non è riuscito, selezionare **Riprova a caricare i programmi** |
-| I nuovi archivi non vengono visualizzati | Utilizza **Connetti un altro archivio** per concedere l&#39;accesso all&#39;app GitHub per le app Adobe LLM, torna alla procedura guidata e seleziona **Aggiorna organizzazioni e archivi** |
+| I nuovi archivi non vengono visualizzati | Aggiungere il repository al programma Cloud Manager come repository privato e attendere che il relativo stato sia **Pronto**, quindi riaprire l&#39;elenco dei repository. Gli archivi in hosting da Adobe in Cloud Manager non sono supportati |
+| Nessun sito Edge Delivery Services collegato | Un archivio di widget che non si trova su GitHub deve essere collegato a un sito EDS in Cloud Manager con Bring Your Own Git. Collegalo, quindi seleziona di nuovo **Convalida archivio**. Vedi [Porta il tuo Git](https://www.aem.live/developer/byo-git) |
 | Convalida dell&#39;archivio azioni o widget non riuscita | Utilizza un progetto esistente compatibile o un archivio vuoto. Usa archivi separati per azioni e widget, quindi seleziona di nuovo **Convalida archivio** |
-| Configurazione del sito AEM o convalida dell’accesso non riuscita | Segui [Configurare l&#39;accesso al sito AEM](/help/guides/create-app.md#aem-site-access). Per una nuova installazione di Sincronizzazione codice, completa la procedura guidata della pagina di conferma. Mantenere l&#39;installazione per un sito esistente e richiedere all&#39;amministratore del sito di concedere l&#39;accesso all&#39;account Adobe `admin` tramite l&#39;amministratore utenti di AEM. Verificare che la sincronizzazione codice copra l&#39;archivio widget, quindi selezionare **Convalida installazione AEM** |
+| Configurazione del sito AEM o convalida dell’accesso non riuscita (archivio widget GitHub) | Segui [Configurare l&#39;accesso al sito AEM](/help/guides/create-app.md#aem-site-access). Per una nuova installazione di Sincronizzazione codice, completa la procedura guidata della pagina di conferma. Mantenere l&#39;installazione per un sito esistente e richiedere all&#39;amministratore del sito di concedere l&#39;accesso all&#39;account Adobe `admin` tramite l&#39;amministratore utenti di AEM. Verificare che la sincronizzazione codice copra l&#39;archivio widget, quindi selezionare **Convalida installazione AEM** |
 | È richiesto l&#39;accesso in scrittura DA | Chiedi a un amministratore dell’organizzazione DA di concedere all’account Adobe utilizzato nelle app LLM l’accesso in scrittura a tutto il contenuto del sito. Segui [Concedi l&#39;accesso in scrittura ad DA](/help/guides/create-app.md#da-write-access), accedi con tale account, quindi seleziona **Convalida installazione di AEM**. I ruoli del sito AEM non concedono autorizzazioni DA |
 | Impossibile verificare l’accesso ad AEM o DA | Riprovare a **convalidare l&#39;installazione di AEM** per verificare un errore temporaneo. Se invece il messaggio segnala un rifiuto di accesso, correggi le autorizzazioni di AEM o DA seguendo le istruzioni precedenti prima di riprovare |
 | La creazione dell’app non ha generato azioni | La creazione di app imposta solo l’infrastruttura. Nella pagina dell&#39;app, seleziona **Genera automaticamente azioni**, immetti **Il tuo sito Web** e seleziona **Genera le mie azioni**. Vedi [Crea azioni](/help/guides/creating-actions.md) |
 | Le azioni sono ancora in fase di generazione | L’interfaccia utente stima fino a 30 minuti per la generazione. Seguire l&#39;avanzamento nella pagina Azioni oppure uscire dalla pagina e tornare in un secondo momento |
-| Generazione delle azioni segnala un errore | Verifica che il sito web sia pubblico tramite HTTPS e che l’accesso all’archivio sia ancora valido per i tuoi archivi. Se il problema persiste, contatta il team di Beta con il messaggio di errore visibile |
+| Generazione delle azioni segnala un errore | Verifica che il sito web sia pubblico tramite HTTPS e che l’accesso all’archivio sia ancora valido per i tuoi archivi. Se il problema persiste, contatta il team delle app LLM con il messaggio di errore visibile |
 
 ## Azioni e gestori
 
@@ -39,7 +38,7 @@ Inizia con il sintomo osservabile. Durante la risoluzione dei problemi, non cond
 | Azione non richiamata | Abilita il plug-in o il connettore dell’app nella conversazione. Conferma **Esposizione al modello di intelligenza artificiale** nelle impostazioni delle azioni e l&#39;opzione **Visibilità** dell&#39;azione nella pagina dell&#39;app è attivata. Migliorare la descrizione e ridistribuire le modifiche ai metadati |
 | Risposta vuota o di errore | Esegui `npm test`, quindi chiama il gestore con MCP Inspector o `curl`. Vedi [Sviluppo e test del gestore locale](/help/reference/development.md) |
 | Il gestore funziona localmente, ma non dopo la distribuzione | Controllare l&#39;ultimo commit inviato, confermare la configurazione di runtime e verificare che l&#39;identificatore del codice azione corrisponda a `actions/<code-identifier>/index.js` |
-| L&#39;azione generata non può essere contrassegnata come rivista | Generazione del gestore e del widget di conferma completata. Controlla le richieste pull generate per i conflitti di unione, ricarica l&#39;azione e seleziona **Contrassegna come revisionato** |
+| L&#39;azione generata non può essere contrassegnata come rivista | Generazione del gestore e del widget di conferma completata. Controlla le richieste pull o i rami generati per i conflitti di unione, ricarica l&#39;azione e seleziona **Contrassegna come revisionato** di nuovo. Con i tuoi archivi, se la revisione ti chiede di unire un ramo autonomamente, uniscilo prima con il processo usuale |
 
 ## Widget
 
@@ -100,4 +99,4 @@ Non incollare token di accesso, set di attestazioni o segreti client del provide
 | Il plug-in utilizza l’ambiente errato | Modifica o ricrea il plug-in con l’URL del server MCP di stage o produzione previsto |
 | Il plug-in mostra ancora i metadati dell’azione obsoleti | Distribuisci le modifiche, seleziona **Aggiorna** nella connessione ChatGPT, quindi avvia una nuova conversazione |
 
-Se il problema persiste, registra il nome dell’app, l’ambiente, il passaggio non riuscito, l’ora e il messaggio di errore visibile prima di contattare il team di Beta. Non includere segreti o dati sensibili dei clienti.
+Se il problema persiste, registra il nome dell’app, l’ambiente, il passaggio non riuscito, l’ora e il messaggio di errore visibile prima di contattare il team delle app LLM. Non includere segreti o dati sensibili dei clienti.

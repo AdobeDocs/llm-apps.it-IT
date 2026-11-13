@@ -1,9 +1,9 @@
 ---
 title: Sviluppo e test del gestore locale
 description: Struttura del progetto del gestore, comandi server locali, test MCP e unit test per le app Adobe LLM.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '664'
+source-wordcount: '677'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Utilizza questo riferimento durante lo sviluppo locale di gestori. Per il contratto dei risultati del gestore, vedere [Personalizzare un gestore generato](/help/guides/customize-handler.md).
 
@@ -23,7 +21,7 @@ Utilizza questo riferimento durante lo sviluppo locale di gestori. Per il contra
 - npm.
 - Clone locale dell&#39;archivio del gestore collegato.
 
-Per l’infrastruttura gestita di Adobe, richiedi l’accesso all’archivio prima di seguire questo riferimento. L’esecuzione del gestore locale non richiede le credenziali di Adobe, ma i servizi protetti a monte richiedono ancora il proprio accesso autorizzato.
+Per l&#39;infrastruttura gestita [!DNL LLM Apps], richiedere l&#39;accesso all&#39;archivio prima di seguire questo riferimento. L’esecuzione del gestore locale non richiede le credenziali di Adobe, ma i servizi protetti a monte richiedono ancora il proprio accesso autorizzato.
 
 ## Struttura del progetto
 

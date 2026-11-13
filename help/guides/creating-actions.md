@@ -1,9 +1,9 @@
 ---
 title: Creare azioni
 description: Genera azioni di Adobe LLM App da un sito Web pubblico, segui l’avanzamento della generazione, rivedi il lavoro generato o scegli la creazione manuale delle azioni.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '938'
+source-wordcount: '1039'
 ht-degree: 0%
 ---
 
@@ -11,13 +11,11 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Le azioni sono le funzionalità offerte dall’app all’interno di una conversazione LLM, ad esempio la ricerca di prodotti, il controllo della disponibilità o la prenotazione di un servizio. L&#39;handler di ogni azione esegue l&#39;operazione e un widget facoltativo presenta il risultato.
 
-Dopo la [configurazione dell&#39;infrastruttura](/help/guides/create-app.md), scegli come creare azioni dalla pagina dell&#39;app. La generazione automatica è disponibile sia con l&#39;infrastruttura gestita di Adobe che con i propri archivi.
+Dopo la [configurazione dell&#39;infrastruttura](/help/guides/create-app.md), scegli come creare azioni dalla pagina dell&#39;app. La generazione automatica è disponibile sia con l&#39;infrastruttura gestita [!DNL LLM Apps] che con i propri archivi.
 
 **In questa guida:** scopri come generare azioni dal tuo sito Web o crearle autonomamente. Per la generazione automatica, avvia il processo e controlla i risultati prima di distribuire e testare l’app.
 
@@ -79,15 +77,17 @@ Esamina ogni azione suggerita prima della distribuzione. Conferma che rappresent
 1. Nella pagina **[!UICONTROL Azioni]**, seleziona **[!UICONTROL Rivedi]** per un&#39;azione pronta.
 2. Rivedi la descrizione dell’azione, i parametri di input, le annotazioni, la visibilità e il gestore generato.
 3. Rivedi la configurazione del widget e l&#39;anteprima, se l&#39;azione ha un widget.
-4. Esamina il codice e i test generati, comprese eventuali richieste pull collegate. Scopri cosa è il comportamento di esempio e cosa deve essere sostituito con integrazioni reali.
+4. Esamina il codice e i test generati. Con l&#39;infrastruttura gestita [!DNL LLM Apps], la piattaforma apre le richieste di pull; con i propri archivi, invia un ramo a ciascun archivio. Scopri cosa è il comportamento di esempio e cosa deve essere sostituito con integrazioni reali.
 5. Quando l&#39;azione è pronta, selezionare **[!UICONTROL Contrassegna come revisionato]**.
 6. Torna all’elenco delle azioni e ripeti per le azioni rimanenti.
 
-L&#39;editor delle azioni salvate separa **[!UICONTROL Dettagli widget LLM]**, **[!UICONTROL Dettagli azione]** e **[!UICONTROL Analytics]**. Rivedi le richieste pull di widget e gestore nelle rispettive schede.
+L&#39;editor delle azioni salvate separa **[!UICONTROL Dettagli widget LLM]**, **[!UICONTROL Dettagli azione]** e **[!UICONTROL Analytics]**. Rivedi le modifiche al widget generato e al gestore nelle rispettive schede.
 
 ![Azione generata: schede dell&#39;editor corrente e Contrassegna come revisionato con il collegamento dell&#39;archivio nascosto](/help/assets/guide-creating-actions/generated-action-review.png)
 
-Se si seleziona **[!UICONTROL Contrassegna come revisionato]**, le richieste pull generate dall&#39;azione verranno unite se non rimangono bloccanti di unione. Se una richiesta di pull aperta blocca la revisione, risolvi il blocco e riprova. Non approvare un’implementazione con errori di generazione del codice o di unione non risolti.
+Selezionando **[!UICONTROL Contrassegna come revisionato]** le modifiche generate vengono unite se non rimangono bloccanti di unione: richieste pull con [!DNL LLM Apps] infrastruttura gestita, rami con i tuoi archivi. Se una richiesta di pull aperta blocca la revisione, risolvi il blocco e riprova. Non approvare un’implementazione con errori di generazione del codice o di unione non risolti.
+
+Con i tuoi archivi, il tuo team può anche unire il ramo con il proprio processo, ad esempio una richiesta di pull o unione, prima di selezionare **[!UICONTROL Contrassegna come revisionato]**. Se la piattaforma non è in grado di unire il ramo stesso, ad esempio perché il ramo di destinazione è protetto o il ramo presenta conflitti, la revisione mostra quale ramo unire in quale base. Uniscilo, quindi seleziona di nuovo **[!UICONTROL Contrassegna come revisionato]**.
 
 Dopo aver esaminato tutte le azioni generate, nella pagina Azioni viene visualizzato **[!UICONTROL Tutte le azioni sono state riviste!]**. Per tornare all&#39;app, selezionare **[!UICONTROL Vai alla pagina dell&#39;app]**.
 

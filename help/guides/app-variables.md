@@ -1,9 +1,9 @@
 ---
 title: Configurare le variabili e i segreti dell’app
 description: Aggiungi variabili specifiche dell’ambiente all’app Adobe LLM Apps, leggetele in un gestore delle azioni, distribuitele e risolvi i problemi più comuni.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1184'
 ht-degree: 1%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Utilizza variabili e segreti per configurare l’app senza valori di codifica fissa nei relativi gestori di azioni. Ad esempio, configura l’URL API del catalogo dei prodotti per utilizzare un servizio di test in Stage e il servizio live in Produzione senza modificare il codice del gestore.
 
@@ -169,7 +167,7 @@ L’aggiornamento di una variabile ne modifica solo il valore. **impossibile** r
 | *Esiste già una variabile con questo nome* | Aggiorna invece la variabile esistente. |
 | *La variabile è stata appena modificata altrove* | Aggiorna la pagina e riprova. |
 | *Impossibile caricare le variabili* | Ricarica la pagina. Se l’errore persiste, controlla di avere accesso all’app. |
-| L’azione non utilizza il nuovo valore | Verifica di aver distribuito **dopo** il salvataggio della variabile e di aver testato lo stesso ambiente. Conferma che la modifica del gestore è stata inviata e che il nome della variabile corrisponde esattamente a **1&rbrace;.**&#x200B;**[!UICONTROL Ultimo aggiornamento]** mostra quando hai salvato il valore, non quando hai distribuito l&#39;app. |
+| L’azione non utilizza il nuovo valore | Verifica di aver distribuito **dopo** il salvataggio della variabile e di aver testato lo stesso ambiente. Conferma che la modifica del gestore è stata inviata e che il nome della variabile corrisponde esattamente a **1}.****[!UICONTROL Ultimo aggiornamento]** mostra quando hai salvato il valore, non quando hai distribuito l&#39;app. |
 | `getVariable is not a function` | L’app utilizza un runtime precedente alla versione 1.1.0. Aggiornalo come descritto in [Prima di iniziare](#before-you-begin), quindi distribuiscilo. |
 | L’azione non riesce dopo aver eliminato una variabile | Aggiungi nuovamente la variabile o aggiorna il gestore in modo che non sia più necessario, quindi distribuiscilo. |
 

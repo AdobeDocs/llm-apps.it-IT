@@ -1,9 +1,9 @@
 ---
 title: Configurare le estensioni ChatGPT
 description: Configurare punti di ingresso solo ChatGPT, icone di azione, preferenze di visualizzazione e menzioni del compositore, con requisiti e risoluzione dei problemi.
-source-git-commit: caf0a247e481e1b6e833ade63c5b243a5b7b22ec
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1710'
+source-wordcount: '1724'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 **Si tratta di estensioni solo ChatGPT.** Non configurano funzionalità in [!DNL Claude] o altre piattaforme LLM. L’app può ancora funzionare su tali piattaforme tramite le azioni e i widget standard.
 

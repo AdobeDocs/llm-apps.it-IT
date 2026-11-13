@@ -1,7 +1,7 @@
 ---
-source-git-commit: fa80b7b68e1b905eb22d4789a74b2f0de886d70c
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1180'
 ht-degree: 0%
 ---
 # Procedura di screenshot guidata dall&#39;agente
@@ -68,7 +68,7 @@ Acquisisci gli stati accessibili e segnala lo stato mancante.
 
 Quando sono necessarie nuove risorse, conferma l’organizzazione di destinazione, il sito web,
 opzione infrastruttura, programma AEM e nome dello staffaggio prima della creazione. Per
-Infrastruttura gestita da Adobe, consente alla piattaforma di creare gli archivi. Per
+Le app LLM gestiscono l’infrastruttura, consentendo alla piattaforma di creare gli archivi. Per
 percorso proprio dell’archivio, utilizza due archivi vuoti e ottieni l’approvazione prima di
 la convalida li inizializza.
 

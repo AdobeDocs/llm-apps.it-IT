@@ -1,7 +1,7 @@
 ---
-source-git-commit: fa80b7b68e1b905eb22d4789a74b2f0de886d70c
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1963'
+source-wordcount: '2090'
 ht-degree: 1%
 ---
 # Manifesto della schermata
@@ -23,10 +23,19 @@ Directory di output: `help/assets/guide-infrastructure/`
 
 | Nome file | Stato e contesto utile | Testo alternativo consigliato |
 |---|---|---|
-| `setup-choice.png` | Introduzione a entrambe le opzioni di infrastruttura visibili | Creare l’app LLM: scegli l’infrastruttura gestita di Adobe o i tuoi archivi |
-| `app-details.png` | Nome app, programma AEM, area di analisi e avviso di impostazione immutabile | Dettagli app: inserisci un nome, seleziona un programma AEM e scegli un’area di analisi |
-| `action-repository.png` | Percorso proprio dell’archivio con GitHub selezionato e istruzioni di connessione all’archivio | Configurazione dell’infrastruttura delle azioni: connettere un archivio delle azioni vuoto o compatibile |
-| `provisioning.png` | Configurazione gestita di Adobe approvata in corso | Configurazione dell’app: Adobe sta preparando l’infrastruttura |
+| `setup-choice.png` | Inizia a usare **Gestiamolo** e **Utilizza la mia installazione di Cloud Manager**, callout sull&#39;opzione del repository personale | Creare l’app LLM: guida introduttiva con Gestione e utilizzo della configurazione di Cloud Manager |
+| `action-repository.png` | Programma e repository di Cloud Manager selezionati, **Archivio convalidato** | Configurazione dell’infrastruttura di azione: programma Cloud Manager e archivio selezionati |
+| `widget-source.png` | Origine widget con **Seleziona manualmente l&#39;archivio widget** (EDS Cloud Manager contrassegnato come Disponibile a breve) | Configurazione infrastruttura widget - Origine widget |
+| `widget-repository.png` | Archivio widget non GitHub convalidato, **sito Edge Delivery Services** nota | Configurazione infrastruttura widget - Archivio widget convalidato e relativo sito EDS collegato |
+| `app-details.png` | Nome dell’app, programma AEM impostato dall’archivio, area dati Application Insights | Dettagli app: nome, programma AEM e area dati Approfondimenti applicazione |
+| `settings-repositories.png` | Impostazioni > Archivio con le schede dell’archivio Cloud Manager e il sito collegato | Impostazioni app - Sezione archivio |
+| `provisioning.png` | Installazione gestita delle app LLM approvate in corso | Configurazione dell’app: Adobe sta preparando l’infrastruttura |
+
+Ultima acquisizione (tutte tranne `provisioning.png` e `da-write-permissions.png`): 2026-11-13, Stage
+(`experience-stage.adobe.com/llm-apps`), azioni GitLab e archivi di widget con Porta il tuo
+Proprio Git. I valori di programma, archivio, sito e origine sono nascosti; i contorni rossi sono callout.
+Non acquisito: il percorso del widget GitHub (Installa sincronizzazione codice AEM, Convalida configurazione AEM). Non ancora
+verificato in Produzione.
 
 Escludi dettagli account, ID organizzazione, nomi di programmi reali, archivio
 identificatori e ID delle app. Utilizzare campi vuoti o un nome di staffaggio neutro dove
