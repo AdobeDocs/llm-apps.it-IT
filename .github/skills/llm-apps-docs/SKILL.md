@@ -1,9 +1,9 @@
 ---
 name: llm-apps-docs
 description: Crea, rivedi e convalida la documentazione delle app Adobe LLM, applica gli standard editoriali e acquisisci le schermate correnti dell’interfaccia utente tramite l’automazione del browser. Utilizza per articoli, navigazione, schermate e bundle di revisione offline di llm-apps.en.
-source-git-commit: 14d94a68dabddd2f2ef2cef65c51d31645d4a958
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1382'
 ht-degree: 0%
 ---
 
@@ -40,8 +40,8 @@ solo il comportamento supportato dalle prove disponibili.
 
 ## Regole di authoring
 
-- Guidare gli utenti alle prime **impostazioni infrastruttura**, quindi **azioni creazione**. La procedura guidata Crea-app imposta solo l&#39;infrastruttura; **[!UICONTROL Genera azioni automaticamente]** e **[!UICONTROL Genera le mie azioni]** avviano la generazione di azioni basate su sito Web successivamente, dalla pagina dell&#39;app. Utilizza **Adobe managed infrastructure** per l&#39;opzione con etichetta **[!UICONTROL Gestiamola]** nell&#39;interfaccia utente.
-- Descrivere l&#39;infrastruttura gestita Adobe in modo neutro in base alla creazione e alla gestione dell&#39;infrastruttura Adobe. Non etichettarlo come versione di prova, configurazione temporanea o opzione non di sola produzione e non fare dichiarazioni non confermate sull’idoneità alla produzione.
+- Guidare gli utenti alle prime **impostazioni infrastruttura**, quindi **azioni creazione**. La procedura guidata Crea-app imposta solo l&#39;infrastruttura; **[!UICONTROL Genera azioni automaticamente]** e **[!UICONTROL Genera le mie azioni]** avviano la generazione di azioni basate su sito Web successivamente, dalla pagina dell&#39;app. Utilizza l&#39;infrastruttura gestita **LLM Apps** per l&#39;opzione con etichetta **[!UICONTROL Gestiamola]** nell&#39;interfaccia utente.
+- Descrivere l&#39;infrastruttura gestita delle app LLM in modo neutro in base alla creazione e alla gestione dell&#39;infrastruttura da parte di Adobe. Non etichettarlo come versione di prova, configurazione temporanea o opzione non di sola produzione e non fare dichiarazioni non confermate sull’idoneità alla produzione.
 - Organizza la navigazione tra percorsi di utenti e risultati, non tra gli argomenti relativi all’implementazione.
 - All&#39;inizio di ogni guida, utilizzare **In questa guida:** seguito da una o due frasi in linguaggio semplice che illustrano l&#39;attività e il passaggio successivo. Preferisci &quot;Scopri come...&quot; sulle promesse del futuro. Non utilizzare etichette **Percorso:** o elenchi di passaggi separati da freccia.
 - Non utilizzare nomi in codice interni (ad esempio, &quot;Agente di onboarding&quot;) nei documenti rivolti al cliente; tale funzionalità non viene mai esposta nell’interfaccia utente del prodotto. Descrivilo genericamente (ad esempio, &quot;la piattaforma&quot;) e utilizza la copia corrente esatta dell&#39;interfaccia utente, ad esempio **[!UICONTROL Genera le mie azioni]** per i controlli.

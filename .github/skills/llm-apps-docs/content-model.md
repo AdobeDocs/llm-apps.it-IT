@@ -1,7 +1,7 @@
 ---
-source-git-commit: 14d94a68dabddd2f2ef2cef65c51d31645d4a958
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '717'
 ht-degree: 0%
 ---
 # Modello di contenuto e terminologia
@@ -61,7 +61,7 @@ Inizia da un sintomo osservabile.
 
 - **App Adobe LLM** — nome completo del prodotto alla prima menzione.
 - **App LLM**: un&#39;app gestita dal prodotto.
-- **Infrastruttura gestita da Adobe**: infrastruttura creata e gestita da Adobe; selezionare **Gestiamola** nella procedura guidata di creazione-app. Non descrivere questa opzione come di sola prova o non presentare dichiarazioni non confermate sull’idoneità alla produzione.
+- **Infrastruttura gestita applicazioni LLM**: infrastruttura creata e gestita da Adobe; selezionare **Gestiamola** nella procedura guidata di creazione app. Non descrivere questa opzione come di sola prova o non presentare dichiarazioni non confermate sull’idoneità alla produzione.
 - **Verrà configurato da solo**: opzione della procedura guidata per la connessione dei propri archivi, non è necessario scrivere azioni manualmente. Il percorso predefinito inizia con due archivi vuoti inizializzati dalla piattaforma; i progetti esistenti compatibili sono facoltativi.
 - **Genera azioni automaticamente**: scelta consigliata per la creazione di azioni nella pagina dell&#39;app dopo la configurazione dell&#39;infrastruttura.
 - **Genera le mie azioni** — pulsante che avvia la generazione di azioni basate sul sito Web.
@@ -85,7 +85,7 @@ Il prodotto è indipendente dalla piattaforma: il suo server MCP funziona con qu
 ## Sequenza di lettura consigliata
 
 1. Panoramica.
-2. Crea un’app utilizzando l’infrastruttura gestita di Adobe o i tuoi archivi.
+2. Crea un’app utilizzando l’infrastruttura gestita delle app LLM o i tuoi archivi.
 3. Avvia la generazione di azioni basate su siti web dalla pagina dell’app e controlla le azioni generate.
 4. Distribuire in staging e test in una piattaforma LLM supportata.
 5. Personalizza i gestori e i widget generati.

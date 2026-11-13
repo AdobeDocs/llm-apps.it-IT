@@ -1,9 +1,9 @@
 ---
 title: Riferimento autenticazione
 description: Definizioni dei campi, requisiti dei token, endpoint di individuazione, API del gestore e comportamento della piattaforma LLM per l’autenticazione degli utenti finali nelle app Adobe LLM.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1428'
+source-wordcount: '1442'
 ht-degree: 2%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Utilizzare questa pagina per cercare campi e contratti di autenticazione. Per le istruzioni di installazione, vedere [Autenticare gli utenti finali con il proprio provider di identità](/help/guides/authentication.md).
 

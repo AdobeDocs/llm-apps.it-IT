@@ -1,9 +1,9 @@
 ---
 title: Aggiornare un’app esistente
 description: Aggiorna il runtime di un’app Adobe LLM precedente e il SDK EDS prima di abilitare Adobe Analytics o Customer Journey Analytics.
-source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '803'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Utilizzare questa guida solo se l&#39;app utilizza `@adobe/llm-apps-runtime` prima della versione 1.2.0 o i relativi widget EDS utilizzano il SDK delle app LLM prima del 0.1.13. Le app che soddisfano già entrambi i requisiti possono passare direttamente a [Configura Adobe Analytics e Customer Journey Analytics](/help/guides/analytics-setup.md).
 
@@ -21,7 +19,7 @@ Utilizzare questa guida solo se l&#39;app utilizza `@adobe/llm-apps-runtime` pri
 
 ## Prima di iniziare {#before-you-begin}
 
-È necessario accedere all&#39;archivio del gestore e, per le app con widget EDS, all&#39;archivio EDS collegato all&#39;app. Se la tua app utilizza l’infrastruttura gestita di Adobe, richiedi l’accesso al codice prima di apportare aggiornamenti. Consulta [Utilizzare l&#39;infrastruttura gestita di Adobe](/help/guides/create-app.md#adobe-managed-infrastructure).
+È necessario accedere all&#39;archivio del gestore e, per le app con widget EDS, all&#39;archivio EDS collegato all&#39;app. Se l&#39;app utilizza l&#39;infrastruttura gestita [!DNL LLM Apps], richiedere l&#39;accesso al codice prima di apportare aggiornamenti. Vedi [Utilizzare [!DNL LLM Apps] l&#39;infrastruttura gestita](/help/guides/create-app.md#adobe-managed-infrastructure).
 
 Non è necessario creare un&#39;altra app. Aggiorna solo i componenti che si trovano sotto le versioni supportate. Puoi riutilizzare la configurazione Adobe esistente che soddisfa i [requisiti di installazione di Analytics](/help/guides/analytics-setup.md#setup-checklist).
 
@@ -63,7 +61,7 @@ Per le app con widget EDS, pubblica e verifica prima l’aggiornamento di SDK, q
 
 1. Eseguire il commit dell&#39;aggiornamento delle dipendenze e del relativo file di blocco, quindi inviare e unire l&#39;aggiornamento nel ramo predefinito dell&#39;archivio del gestore, in genere `main`. Cloni di distribuzione di quel ramo. Un aggiornamento presente solo localmente o su un ramo di funzionalità non unito non è incluso nella distribuzione.
 
-   Quando esiste un file di blocco, la distribuzione installa le dipendenze con `npm ci`, che utilizza le versioni registrate. La ridistribuzione non aggiorna automaticamente il runtime. Prima di eseguire la ridistribuzione, verifica la dipendenza aggiornata e la versione risolta nel ramo predefinito in GitHub.
+   Quando esiste un file di blocco, la distribuzione installa le dipendenze con `npm ci`, che utilizza le versioni registrate. La ridistribuzione non aggiorna automaticamente il runtime. Prima di eseguire la ridistribuzione, verifica la dipendenza aggiornata e la versione risolta nel ramo predefinito dell’archivio.
 
 ## Verifica e aggiorna l’archivio dei widget delle app LLM {#upgrade-sdk}
 

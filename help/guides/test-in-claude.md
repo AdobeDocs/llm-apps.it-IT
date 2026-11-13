@@ -1,9 +1,9 @@
 ---
 title: Testare l’app LLM come connettore Claude
 description: Crea un connettore Claude dall’URL del server MCP delle app Adobe LLM e testalo in una conversazione.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '676'
+source-wordcount: '690'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Dopo la distribuzione, l’app LLM espone un URL del server MCP. Aggiungi questo URL a [!DNL Claude] come connettore personalizzato, quindi verifica le azioni e i widget generati.
 

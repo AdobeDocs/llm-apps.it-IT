@@ -1,9 +1,9 @@
 ---
 title: Panoramica delle app Adobe LLM
 description: Scopri cos’è un’app Adobe LLM, come funziona e come iniziare a creare la tua app.
-source-git-commit: d37cb1f4e199d77c94def7a034a55598bd3d8d83
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '642'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 ## Cos&#39;è [!DNL Adobe LLM Apps]?
 
@@ -27,7 +25,7 @@ ht-degree: 0%
 ## Operazioni possibili con [!DNL LLM Apps]
 
 - **Creare azioni LLM di proprietà del brand** — Definire i flussi di business specifici che si desidera attivare negli assistenti AI (ad esempio, *Pianificare un&#39;unità di test*, *Confrontare i prodotti*, *Prenotare un servizio*).
-- **Creare widget LLM interattivi**: creare componenti dell&#39;interfaccia utente visiva (schede prodotto, moduli di prenotazione, localizzatori di store) gestiti come componenti AEM nell&#39;archivio [!DNL GitHub].
+- **Creare widget LLM interattivi**: creare componenti dell&#39;interfaccia utente visiva (schede prodotto, moduli di prenotazione, localizzatori di store) gestiti come componenti AEM nell&#39;archivio Git, su qualsiasi piattaforma Git supportata.
 - **Gestione centralizzata della governance del brand**: autori e sviluppatori mantengono il controllo completo su tutti i contenuti, le copie e gli elementi visivi esposti all&#39;interno della piattaforma LLM, con approvazioni gestite tramite AEM.
 - **Distribuzione a staging e produzione**: una pipeline di distribuzione controllata consente di testare l&#39;esperienza in un ambiente di staging prima di passare alla produzione.
 - **Controlla la visibilità a livello di azione** — abilita o disabilita singole azioni, quindi distribuisci l&#39;app per applicare la modifica.
@@ -53,7 +51,7 @@ La funzione lato server che viene eseguita quando la piattaforma LLM richiama un
 
 ### Widget {#widgets-eds}
 
-La risposta visiva mostrata con la risposta di LLM, ad esempio una scheda, un carosello o una tabella. I widget generati sono blocchi in un archivio [!DNL Edge Delivery Services] (EDS). Con l’infrastruttura gestita di Adobe, Adobe prepara e ospita l’archivio per te. In alternativa, puoi collegare il tuo archivio.
+La risposta visiva mostrata con la risposta di LLM, ad esempio una scheda, un carosello o una tabella. I widget generati sono blocchi in un archivio [!DNL Edge Delivery Services] (EDS). Con l&#39;infrastruttura gestita [!DNL LLM Apps], Adobe prepara e ospita automaticamente l&#39;archivio. In alternativa, puoi collegare il tuo archivio.
 
 ### Server MCP
 
@@ -79,7 +77,7 @@ Per informazioni tecniche su cosa generare e come funzionano i componenti insiem
 
 La creazione di un’app e delle relative azioni è un passaggio separato:
 
-1. [Configura l&#39;infrastruttura](/help/guides/create-app.md). Utilizza l&#39;infrastruttura gestita di Adobe per una configurazione rapida oppure scegli di utilizzare i tuoi archivi [!DNL GitHub].
+1. [Configura l&#39;infrastruttura](/help/guides/create-app.md). Utilizza l&#39;infrastruttura gestita [!DNL LLM Apps] per una configurazione rapida oppure i tuoi archivi aggiunti a [!DNL Cloud Manager].
 2. [Crea le tue azioni](/help/guides/creating-actions.md). Chiedi alla piattaforma di analizzare il tuo sito web e generare azioni, o creale tu stesso.
 3. [Distribuisci e verifica l&#39;app](/help/guides/deploy-your-app.md). Rivedi il lavoro generato, distribuiscilo nell’ambiente di staging e testa in una piattaforma LLM supportata.
 

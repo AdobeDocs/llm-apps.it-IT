@@ -1,19 +1,17 @@
 ---
 title: Campi azione e widget
 description: Definizioni dei campi per metadati di azioni, parametri, widget, CSP e autorizzazioni nelle app Adobe LLM.
-source-git-commit: 2892acf4b3042c296203377a06bc3ff80fd375a5
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1257'
-ht-degree: 3%
+source-wordcount: '1273'
+ht-degree: 2%
 ---
 
 # Campi azione e widget {#action-widget-configuration}
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Utilizza questa pagina per cercare i campi nell’editor delle azioni. Per i passaggi di creazione, consulta [Creare un&#39;azione da zero](/help/guides/create-action.md).
 
@@ -30,7 +28,7 @@ Dopo la creazione, l’editor delle azioni salvate utilizza quattro schede:
 | **[!UICONTROL Analytics]** | Raccolta e istruzioni per l’intento dell’utente |
 | **[!UICONTROL Estensioni ChatGPT]** | Punti di ingresso con apertura diretta, icone di azione, preferenze di visualizzazione e menzioni del compositore |
 
-Per salvare le modifiche, seleziona **[!UICONTROL Salva modifiche]**. Le azioni generate in attesa di revisione mostrano invece **[!UICONTROL Contrassegna come revisionate]**, che gestisce anche le richieste pull generate.
+Per salvare le modifiche, seleziona **[!UICONTROL Salva modifiche]**. Le azioni generate in attesa di revisione mostrano invece **[!UICONTROL Contrassegna come riviste]**, che unisce anche le richieste pull o i rami generati.
 
 ## Parametri azione
 

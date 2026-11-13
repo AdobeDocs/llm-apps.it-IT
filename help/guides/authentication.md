@@ -1,9 +1,9 @@
 ---
 title: Autenticazione degli utenti finali con il proprio provider di identità
 description: Attiva l’autenticazione dell’utente finale per l’app Adobe LLM in modo che una piattaforma LLM supportata firmi l’utente con il provider di identità prima di richiamare azioni protette.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '2136'
+source-wordcount: '2150'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Per impostazione predefinita, ogni azione nell&#39;app è pubblica. Qualsiasi piattaforma LLM con l’URL del server MCP può richiamare tali azioni e il gestore non è in grado di identificare l’utente finale.
 

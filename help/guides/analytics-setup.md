@@ -1,9 +1,9 @@
 ---
 title: Configurare Adobe Analytics e Customer Journey Analytics
 description: Inoltra gli eventi delle app Adobe LLM alla tua suite di rapporti Adobe Analytics e alla visualizzazione dati di Customer Journey Analytics attraverso un flusso di dati Adobe Experience Platform.
-source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '2962'
+source-wordcount: '2976'
 ht-degree: 2%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 2%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Invia gli eventi dell&#39;app a [!DNL Adobe Analytics], [!DNL Customer Journey Analytics] o a entrambi. [!DNL LLM Apps] inoltra gli eventi all&#39;Edge Network [!DNL Adobe Experience Platform] tramite uno stream di dati di tua proprietà. Lo stream di dati indirizza gli eventi a ogni servizio aggiunto.
 

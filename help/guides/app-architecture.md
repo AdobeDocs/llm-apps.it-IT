@@ -1,9 +1,9 @@
 ---
 title: Collegamento di un'app
 description: Comprendi le tre parti di un’app LLM, come funzionano in una conversazione e dove apportare modifiche.
-source-git-commit: af83670aebde1e6f73585c89a891bc7f5e92fb3a
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '587'
 ht-degree: 0%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Un&#39;app **LLM** porta i servizi del tuo marchio in una conversazione AI. Ad esempio, un cliente richiede consigli su caffè, l’app trova prodotti corrispondenti e l’assistente mostra i risultati.
 
@@ -23,7 +21,7 @@ Un&#39;app **LLM** porta i servizi del tuo marchio in una conversazione AI. Ad e
 
 Un&#39;app può raggruppare diverse azioni correlate, ad esempio *Sfoglia prodotti*, *Confronta prodotti* e *Trova uno store*. Ogni azione ha le proprie impostazioni, il proprio gestore e un widget facoltativo. L’aggiunta di un’azione non richiede un’altra coppia di archivi.
 
-Un&#39;app con widget interattivi si compone di tre parti: impostazioni di azione, codice del gestore e codice del widget. Le impostazioni sono gestite in [!DNL LLM Apps]. Il codice del gestore e del widget si trovano in due archivi [!DNL GitHub] separati.
+Un&#39;app con widget interattivi si compone di tre parti: impostazioni di azione, codice del gestore e codice del widget. Le impostazioni sono gestite in [!DNL LLM Apps]. Il codice del gestore e del widget risiedono in due archivi separati.
 
 ```text
 ┌───────────────────────┐   ┌───────────────────────┐   ┌───────────────────────┐

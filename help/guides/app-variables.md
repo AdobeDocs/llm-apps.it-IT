@@ -1,9 +1,9 @@
 ---
 title: Configurare le variabili e i segreti dell’app
 description: Aggiungi variabili specifiche dell’ambiente all’app Adobe LLM Apps, leggetele in un gestore delle azioni, distribuitele e risolvi i problemi più comuni.
-source-git-commit: 0f9dd0a5b1008e183eb8ab5a4c2eae34a78923bb
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '1170'
+source-wordcount: '1184'
 ht-degree: 1%
 ---
 
@@ -11,9 +11,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Utilizza variabili e segreti per configurare l’app senza valori di codifica fissa nei relativi gestori di azioni. Ad esempio, configura l’URL API del catalogo dei prodotti per utilizzare un servizio di test in Stage e il servizio live in Produzione senza modificare il codice del gestore.
 

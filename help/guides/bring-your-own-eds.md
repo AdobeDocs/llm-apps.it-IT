@@ -2,19 +2,17 @@
 title: Portate con voi il vostro progetto Edge Delivery Services
 description: Collega un progetto esistente di Adobe Edge Delivery Services a un’azione di Adobe LLM Apps.
 hidefromtoc: true
-source-git-commit: 557173e8d95325b980efac4d72c06bb3d90dcd72
+source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
 workflow-type: tm+mt
-source-wordcount: '866'
-ht-degree: 1%
+source-wordcount: '900'
+ht-degree: 2%
 ---
 
 # Crea un tuo progetto EDS {#bring-your-own-eds}
 
 >[!IMPORTANT]
 >
->[!DNL Adobe LLM Apps] è attualmente in Beta.
->
->Le funzioni, i flussi di lavoro e l’interfaccia utente mostrati qui non rappresentano necessariamente lo stato finale del prodotto. Per partecipare al Beta, invia un’e-mail a llm-apps-beta@adobe.com.
+>Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 Utilizzare questa guida per collegare un progetto Edge Delivery Services (EDS) esistente compatibile o per aggiungere un widget a un&#39;azione creata personalmente. Un progetto esistente è facoltativo. Se si imposta la propria infrastruttura, il percorso predefinito inizia con due archivi vuoti che la piattaforma inizializza durante la [configurazione dell&#39;infrastruttura](/help/guides/create-app.md).
 
@@ -26,7 +24,7 @@ Se la piattaforma ha creato il widget automaticamente, segui [Personalizzare un 
 
 Hai bisogno di:
 
-- Repository EDS compatibile con AEM boilerplate con [AEM Code Sync](https://github.com/apps/aem-code-sync) installato e un&#39;origine di contenuto configurata.
+- Un archivio EDS compatibile con standard AEM con un&#39;origine di contenuto configurata, il cui codice raggiunge il sito tramite [AEM Code Sync](https://github.com/apps/aem-code-sync) (GitHub) o tramite [!DNL Cloud Manager] con [Porta il tuo Git](https://www.aem.live/developer/byo-git) (altri provider Git).
 - Autorizzazione per aggiungere dipendenze e creare blocchi in tale archivio.
 - Autorizzazione per configurare le intestazioni di risposta per il sito EDS.
 - Azione in [!DNL LLM Apps] con un gestore che restituisce `structuredContent`.
