@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
+source-git-commit: 0276ae4e4627e49157911ad579a42c0e77045eee
 workflow-type: tm+mt
-source-wordcount: '2090'
+source-wordcount: '2314'
 ht-degree: 1%
 ---
 # Manifesto della schermata
@@ -53,7 +53,7 @@ Directory di output: `help/assets/guide-creating-actions/`
 | `build-choice.png` | Azioni di compilazione selezionate automaticamente, è stato inserito un sito Web pubblico e un controllo di avvio stabile, se incluso | Azioni: scegli la generazione automatica e immetti un sito web pubblico |
 | `generating.png` | Esecuzione della generazione, stima del tempo e azioni Vai a | Azioni: la generazione è in esecuzione |
 | `actions-ready-for-review.png` | Fissare i nomi delle azioni, i badge di revisione e i controlli di revisione | Azioni: le azioni generate sono pronte per la revisione e non distribuite |
-| `generated-action-review.png` | Dettagli del widget LLM, dettagli dell’azione, Analytics, un avviso di richiesta di pull generato e Contrassegna come rivisto | Azione generata: esamina il widget e il gestore prima dell’approvazione |
+| `generated-action-review.png` | Dettagli azione, Dettagli widget LLM, Approfondimenti applicazione, Estensioni ChatGPT, l&#39;avviso **Branch inviato** (archivi propri) e Contrassegna come revisionato. Ultima acquisizione: 2026-11-13, Stage, app GitLab; nome app mascherato | Revisione azioni generata: ramo inviato e contrassegna come revisionato |
 
 Mascherare l’archivio privato e richiamare i collegamenti delle richieste. Ritaglia i dati personali generati o
 i dettagli di contatto quando l’articolo necessita solo dello stato di revisione. Non selezionare
@@ -71,19 +71,16 @@ Directory di output: `help/assets/guide-create-action/`
 
 | Nome file | Stato e contesto utile | Testo alternativo consigliato |
 |---|---|---|
-| `action-basic-info.png` | Cerca prodotti, il relativo identificatore derivato, una descrizione utile e annotazioni di sola lettura | Crea nuova azione: informazioni di base e annotazioni |
-| `action-analytics-user-intent.png` | Raccogli le finalità dell’utente e le istruzioni di riepilogo anonime predefinite | Crea nuova azione - Rivedi raccolta intento utente |
-| `widget-metadata.png` | Tipo di blocco Edge Delivery Services e origine sicura della sandbox di esempio | Crea nuova azione: tipo di widget e dominio sandbox |
-| `widget-template-urls.png` | Esempio di URL di script e widget | Crea nuova azione: script e URL widget |
-| `widget-permissions.png` | Autorizzazioni browser facoltative, con autorizzazioni non utilizzate disattivate | Crea nuova azione - Autorizzazioni browser |
-| `widget-csp.png` | Controlli del dominio URI di base, di risorsa, connessione, frame e reindirizzamento | Crea nuova azione: domini dei criteri di sicurezza dei contenuti |
+| `action-basic-info.png` | Dettagli azione: Cerca prodotti, il relativo identificatore di codice, la descrizione e i parametri `category` e `query` | Creare una nuova azione - Dettagli dell’azione con informazioni sull’azione e parametri di input |
+| `action-llm-settings.png` | Impostazioni LLM espanse: sola lettura, idempotente, annotazioni open-world, testi di stato, visibilità | Crea nuova azione - Impostazioni LLM |
+| `action-analytics-user-intent.png` | Application Insights: raccogli le intenzioni dell’utente e le istruzioni predefinite | Crea nuova azione - Approfondimenti applicazione |
+| `widget-metadata.png` | Dettagli del widget LLM: blocco Edge Delivery Services, dominio del widget di esempio, descrizione del widget e URL del modello | Crea nuova azione - Dettagli widget LLM |
+| `widget-csp.png` | Gli URL dei modelli e gli elenchi dei domini di configurazione CSP | Crea nuova azione - Configurazione CSP |
 
-Le acquisizioni esistenti mostrano **Azione** e **Metadati widget** nella creazione
-e **Dettagli widget LLM**, **Dettagli azione** e **Analytics** in
-editor salvato. L&#39;implementazione corrente dispone anche di **Estensioni ChatGPT** in entrambe
-flussi; verifica tale scheda nell’interfaccia utente in esecuzione durante l’aggiornamento delle immagini. Acquisire
-layout utilizzato dalla routine. Compila i campi di esempio senza salvare, quindi
-elimina le modifiche.
+Ultima acquisizione: 2026-11-13, Stage, dopo il refactoring della finestra di dialogo (stesse schede dell’editor azioni:
+Dettagli azione, Dettagli widget LLM, Approfondimenti applicazione, Estensioni ChatGPT; Autorizzazioni,
+Preferisce il bordo e la sezione Parametri file viene rimossa). Solo valori di esempio; la finestra di dialogo
+è stato annullato senza salvare. I contorni rossi sono callout.
 
 ## Autenticazione
 
@@ -226,6 +223,28 @@ nomi, ID suite di rapporti, ID stream di dati, ID set di dati, e-mail e nomi per
 con i seguenti valori fittizi: `example-org`, `demo.<suffix>` suite di rapporti,
 `00000000-0000-0000-0000-000000000000`, `0000…0001`, `user@example.com` e
 `Example User`.
+
+## Preparazione per l’invio
+
+Articolo: `/help/guides/prepare-submission.md`
+
+Directory di output: `help/assets/guide-submission/`
+
+| Nome file | Stato e contesto utile | Testo alternativo consigliato |
+|---|---|---|
+| `submission-card.png` | Pagina app dopo un’implementazione di produzione, Prepara per la scheda di invio con Configura | Preparazione per l’invio: lo stato di preparazione della produzione e la configurazione |
+| `submission-setup.png` | Finestra di dialogo Prepara per l’invio, Configurazione e preparazione, dettagli dell’editore di esempio ed entrambe le icone salvate | Configurazione e preparazione - Editore e dettagli legali, icone Approvate e Salva modifiche |
+| `submission-prepare.png` | È stata aperta la stessa finestra di dialogo per preparare il pacchetto. Pronto per l’uso: mostra Pronto per la preparazione, casella di controllo deselezionata | Prepara il pacchetto: pronto per la preparazione, la casella di controllo di conferma e Prepara il pacchetto |
+| `submission-progress.png` | Stessa finestra di dialogo in corso | Preparazione in corso - barra di avanzamento e ora di inizio |
+| `submission-results.png` | Risultati al termine dell’esecuzione con i collegamenti legali dei segnaposto: la preparazione richiede attenzione, il pacchetto di download è disabilitato | Risultati: riepilogo della preparazione, rapporto sui download, pacchetto di download e registrazione dei download |
+| `submission-test-cases.png` | Risultati, casi di prova, primo caso descritto | Casi di test: un caso di revisione con la relativa richiesta, il comportamento previsto e lo stato Registrato |
+| `submission-before-submit.png` | Risultati, prima di inviare l&#39;elenco e i controlli PASS/WARN/FAIL; ID esecuzione sotto il ritaglio | Prima dell’invio: dettagli rimanenti, Dettagli aggiornamento e controlli del pacchetto |
+
+Acquisito sul palco, 2026-11-13, da un’app implementata in Produzione. Solo uso
+valori di esempio dell&#39;editore (`Frescopa Coffee (example)`, `https://www.example.com/...`)
+icone segnaposto e. Ogni esecuzione di preparazione chiama l’app implementata e richiede circa
+20 minuti; avviane uno solo quando è necessario aggiornare le schermate dei risultati. Mascherare gli URL MCP,
+eseguire ID e nomi di app nelle acquisizioni dei risultati.
 
 ## Provenienza della cattura esistente
 
