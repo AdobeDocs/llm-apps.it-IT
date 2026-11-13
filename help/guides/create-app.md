@@ -77,7 +77,7 @@ Seleziona **[!UICONTROL Usa la configurazione di Cloud Manager]**, quindi **[!UI
 
 - Accedi al programma [!DNL Cloud Manager] a cui apparterrà l&#39;app.
 - Due archivi, uno per i gestori di azioni e uno per i widget. Gli archivi vuoti vanno bene, incluso un archivio che contiene solo il README il suo host Git creato.
-- Entrambi gli archivi [aggiunti a Cloud Manager](https://experienceleague.adobe.com/en/docs/experience-manager-cloud-manager/content/managing-code/external-repositories) come archivi privati, con proprietà convalidata e stato **Pronto**. [!DNL Cloud Manager] deve essere in grado di scrivervi; un token di accesso di sola lettura non è sufficiente.
+- Entrambi gli archivi [aggiunti a Cloud Manager](https://experienceleague.adobe.com/it/docs/experience-manager-cloud-manager/content/managing-code/external-repositories) come archivi privati, con proprietà convalidata e stato **Pronto**. [!DNL Cloud Manager] deve essere in grado di scrivervi; un token di accesso di sola lettura non è sufficiente.
 
 Vengono elencati solo gli archivi che ospiti personalmente. Gli archivi ospitati da Adobe in [!DNL Cloud Manager] non sono supportati.
 
