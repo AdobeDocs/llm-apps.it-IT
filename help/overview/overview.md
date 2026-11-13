@@ -1,17 +1,13 @@
 ---
 title: Panoramica delle app Adobe LLM
 description: Scopri cos’è un’app Adobe LLM, come funziona e come iniziare a creare la tua app.
-source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
+source-git-commit: 07bcd58b3aab70b03f62523b5b25f30f4b6d7004
 workflow-type: tm+mt
-source-wordcount: '642'
-ht-degree: 0%
+source-wordcount: '596'
+ht-degree: 1%
 ---
 
 # App Adobe LLM: panoramica {#adobe-llm-apps-an-overview}
-
->[!IMPORTANT]
->
->Le app LLM sono disponibili per tutti i clienti di AEM Sites Cloud Service che desiderano sviluppare e gestire le proprie app. Una volta avviato il conteggio, ogni chiamata all’app verrà conteggiata nelle richieste di contenuto AEM Sites del cliente. Adobe annuncerà il tasso di misurazione e la data di inizio prima che il conteggio abbia effetto.
 
 ## Cos&#39;è [!DNL Adobe LLM Apps]?
 
