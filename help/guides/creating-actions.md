@@ -1,9 +1,9 @@
 ---
 title: Creare azioni
 description: Genera azioni di Adobe LLM App da un sito Web pubblico, segui l’avanzamento della generazione, rivedi il lavoro generato o scegli la creazione manuale delle azioni.
-source-git-commit: 9b2ec369baba5d533088d2dd4adefcb80f5c9727
+source-git-commit: 0276ae4e4627e49157911ad579a42c0e77045eee
 workflow-type: tm+mt
-source-wordcount: '1039'
+source-wordcount: '1047'
 ht-degree: 0%
 ---
 
@@ -81,9 +81,9 @@ Esamina ogni azione suggerita prima della distribuzione. Conferma che rappresent
 5. Quando l&#39;azione è pronta, selezionare **[!UICONTROL Contrassegna come revisionato]**.
 6. Torna all’elenco delle azioni e ripeti per le azioni rimanenti.
 
-L&#39;editor delle azioni salvate separa **[!UICONTROL Dettagli widget LLM]**, **[!UICONTROL Dettagli azione]** e **[!UICONTROL Analytics]**. Rivedi le modifiche al widget generato e al gestore nelle rispettive schede.
+L&#39;editor delle azioni salvate separa **[!UICONTROL Dettagli azione]**, **[!UICONTROL Dettagli widget LLM]**, **[!UICONTROL Informazioni applicazione]** e **[!UICONTROL Estensioni ChatGPT]**. Rivedi le modifiche al widget generato e al gestore nelle rispettive schede.
 
-![Azione generata: schede dell&#39;editor corrente e Contrassegna come revisionato con il collegamento dell&#39;archivio nascosto](/help/assets/guide-creating-actions/generated-action-review.png)
+![Revisione azioni generata: il ramo inviato spiega come viene unito, con le schede dell&#39;editor e Contrassegna come revisionato](/help/assets/guide-creating-actions/generated-action-review.png)
 
 Selezionando **[!UICONTROL Contrassegna come revisionato]** le modifiche generate vengono unite se non rimangono bloccanti di unione: richieste pull con [!DNL LLM Apps] infrastruttura gestita, rami con i tuoi archivi. Se una richiesta di pull aperta blocca la revisione, risolvi il blocco e riprova. Non approvare un’implementazione con errori di generazione del codice o di unione non risolti.
 
